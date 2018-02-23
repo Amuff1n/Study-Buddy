@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,14 +35,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView mUidTextView;
     private EditText mEmailField;
     private EditText mPasswordField;
+    private Button SignUpButton;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mAuth = FirebaseAuth.getInstance();
+        //checks if user is already signed in
+        if(mAuth.getCurrentUser() != null){
+            startActivity(new Intent(getApplicationContext(), Home.class));
+            finish();
+        }
+        SignUpButton = (Button) findViewById(R.id.sign_up_button);
+        SignUpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //goes to sign up activity
+                startActivity(new Intent(getApplicationContext(), CreateAccount.class));
+            }
+        });
 
-        mEmailTextView = findViewById(R.id.email);
+        mEmailTextView = findViewById(R.id.email_);
         mUidTextView = findViewById(R.id.uid);
         mEmailField = findViewById(R.id.email_field);
         mPasswordField = findViewById(R.id.password_field);
@@ -55,16 +71,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // Build a GoogleSignInClient with the options specified by gso
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
-        mAuth = FirebaseAuth.getInstance();
-
         // Sign in button stuff
         SignInButton signInButton = findViewById(R.id.sign_in_button);
         signInButton.setSize(SignInButton.SIZE_STANDARD);
 
         findViewById(R.id.sign_in_button).setOnClickListener(this);
-        findViewById(R.id.sign_out_button).setOnClickListener(this);
+        //findViewById(R.id.sign_out_button).setOnClickListener(this);
         findViewById(R.id.email_sign_in_button).setOnClickListener(this);
-        findViewById(R.id.sign_up_button).setOnClickListener(this);
+        //findViewById(R.id.sign_up_button).setOnClickListener(this);
     }
 
     @Override
@@ -147,33 +161,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 });
     }
-
-    private void signUp() {
-        mAuth.createUserWithEmailAndPassword(mEmailField.getText().toString(), mPasswordField.getText().toString())
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d(TAG, "createUserWithEmail:success");
-                            Toast.makeText(MainActivity.this, "Authentication succeeded!",
-                                    Toast.LENGTH_SHORT).show();
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            updateUI(user);
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                            Toast.makeText(MainActivity.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
-                            updateUI(null);
-                        }
-
-                        // ...
-                    }
-                });
-    }
-
-    private void signOut() {
+    /*private void signOut() {
         // Firebase sign out
         mAuth.signOut();
 
@@ -184,25 +172,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 updateUI(null);
             }
         });
-    }
+    }*/
 
     private void updateUI(FirebaseUser user) {
         if (user != null) {
             // update buttons and stuff here with user info
-            mEmailTextView.setText(getString(R.string.google_status_fmt, user.getEmail()));
-            mUidTextView.setText(getString(R.string.firebase_status_fmt, user.getUid()));
+            //mEmailTextView.setText(getString(R.string.google_status_fmt, user.getEmail()));
+            //mUidTextView.setText(getString(R.string.firebase_status_fmt, user.getUid()));
+            //go to home screen
+            startActivity(new Intent(getApplicationContext(), Home.class));
+            finish();
 
-            findViewById(R.id.sign_in_button).setVisibility(View.INVISIBLE);
-            findViewById(R.id.sign_out_button).setVisibility(View.VISIBLE);
+            //findViewById(R.id.sign_in_button).setVisibility(View.INVISIBLE);
+            //findViewById(R.id.sign_out_button).setVisibility(View.VISIBLE);
         }
-        else {
+        /*else {
             // update buttons as if user is signed out
             mEmailTextView.setText(R.string.signed_out);
             mUidTextView.setText(null);
 
             findViewById(R.id.sign_in_button).setVisibility(View.VISIBLE);
             findViewById(R.id.sign_out_button).setVisibility(View.INVISIBLE);
-        }
+        }*/
     }
 
     // Do stuff when we click button
@@ -212,12 +203,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int i = v.getId();
         if (i == R.id.sign_in_button) {
             signIn();
-        } else if (i == R.id.sign_out_button) {
+        } /*else if (i == R.id.sign_out_button) {
             signOut();
-        } else if (i == R.id.email_sign_in_button) {
+        }*/ else if (i == R.id.email_sign_in_button) {
             signInEmail();
-        } else if (i == R.id.sign_up_button) {
-            signUp();
         }
     }
 }
