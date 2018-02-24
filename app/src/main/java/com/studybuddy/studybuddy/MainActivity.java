@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(getApplicationContext(), Home.class));
             finish();
         }
-        SignUpButton = (Button) findViewById(R.id.sign_up_button);
+        SignUpButton = findViewById(R.id.sign_up_button);
         SignUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -140,6 +140,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void signInEmail() {
+
         mAuth.signInWithEmailAndPassword(mEmailField.getText().toString(), mPasswordField.getText().toString())
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -206,7 +207,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } /*else if (i == R.id.sign_out_button) {
             signOut();
         }*/ else if (i == R.id.email_sign_in_button) {
-            signInEmail();
+            try {
+                signInEmail();
+            } catch (IllegalArgumentException e) {
+                Log.w(TAG, "signInWithEmptyFields", e);
+                Toast.makeText(MainActivity.this, "Please enter email and password.",
+                        Toast.LENGTH_SHORT).show();
+                updateUI(null);
+            }
         }
     }
 }
