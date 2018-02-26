@@ -9,4 +9,9 @@
     <string name="password_prompt">Enter your Password</string>
     <string name="email_sign_in">Sign In</string>
     <string name="email_sign_up">Sign Up</string>
+    <string name="first_name">First Name: %1$s</string>
+    <string name="last_name">Last Name: %1$s</string>
+    <string name="major">Major: %1$s</string>
+    <string name="year">Year: %1$s</string>
+    <string name="save">Save</string>
 </resources>
