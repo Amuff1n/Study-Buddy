@@ -4,6 +4,7 @@
     <string name="profile_label_name">Name</string>
     <string name="profile_label_school">School:</string>
     <string name="profile_label_major">Major:</string>
+    <string name="profile_label_year">Year:</string>
     <string name="profile_label_classes">Classes</string>
 
 

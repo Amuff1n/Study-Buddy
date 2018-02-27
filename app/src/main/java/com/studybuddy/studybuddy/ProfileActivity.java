@@ -8,12 +8,16 @@ import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
 
 
 public class ProfileActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
-    private TextView mEmailTextView;
-    private TextView mUidTextView;
+    private DatabaseReference mDatabase;
+    private TextView mNameTextView;
+    private TextView mSchoolTextView;
+    private TextView mYearTextView;
+    private TextView mClassesTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,24 +26,28 @@ public class ProfileActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        mNameTextView = findViewById(R.id.profile_name);
+        mSchoolTextView = findViewById(R.id.profile_school);
+        mYearTextView = findViewById(R.id.profile_year);
+        mClassesTextView = findViewById(R.id.profile_classes);
+
+        mDatabase = 
         mAuth = FirebaseAuth.getInstance();
         if(mAuth.getCurrentUser() != null) {
-            startActivity(new Intent(getApplicationContext(), Home.class));
-            finish();
+            fetchProfile(mAuth.getCurrentUser());
+            //startActivity(new Intent(getApplicationContext(), Home.class));
+            //finish();
         }
 
-        //TODO currently these textviews show incorrect demo information
-        mEmailTextView = findViewById(R.id.profile_name);
-        mUidTextView = findViewById(R.id.profile_classes);
     }  // void onCreate()
 
-    private void updateUI(FirebaseUser user) {
+    private void fetchProfile(FirebaseUser user) {
         if(user != null) {
-            mEmailTextView.setText(getString(R.string.firebase_status_fmt, user.getEmail()));
-            mUidTextView.setText(getString(R.string.firebase_status_fmt, user.getUid()));
+            String uid = user.getUid();
+
         }
         else {
-            mEmailTextView.setText("Nobody's logged in!");
+            mNameTextView.setText("Nobody's logged in!");
         }
     }
 }  // class ProfileActivity
