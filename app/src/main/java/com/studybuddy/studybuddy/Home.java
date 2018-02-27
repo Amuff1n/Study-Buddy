@@ -1,5 +1,6 @@
 package com.studybuddy.studybuddy;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.support.v7.widget.Toolbar;
 
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -20,13 +22,10 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     private DrawerLayout DL;
     private ActionBarDrawerToggle AB_toggle;
 
-    private Toolbar tool;
-
-    private Button signOut;
     private FirebaseAuth mAuth;
 
     private void setNavigationViewListner() {
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_action);
+        NavigationView navigationView = findViewById(R.id.nav_action);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -36,10 +35,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         setContentView(R.layout.activity_home);
         //setNavigationViewListener();
 
-        /*tool = findViewById(R.id.nav_action);
-        setSupportActionBar(tool);*/
-
-        DL = (DrawerLayout) findViewById(R.id.drawerLayout);
+        DL = findViewById(R.id.drawerLayout);
         AB_toggle = new ActionBarDrawerToggle(this, DL, R.string.open, R.string.close);
         DL.addDrawerListener(AB_toggle);
         AB_toggle.syncState();
@@ -47,14 +43,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mAuth = FirebaseAuth.getInstance();
-        signOut = (Button) findViewById(R.id.testSignOut);
-        //delete later
-        signOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mAuth.signOut();
-            }
-        });
     }
 
 
@@ -74,6 +62,9 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
         if (id == R.id.nav_logout) {
             mAuth.signOut();
+
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            finish();
             return true;
         }
 
@@ -81,13 +72,15 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
            //Open settings activity
             return true;
         }
-
+        // TODO figure out why this doesn't work. It doesn't throw errors, just doesn't pull up page
         else if (id == R.id.nav_account) {
             //Open account activity
+            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+            finish();
             return true;
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawerLayout);
+        DrawerLayout drawer = findViewById(R.id.drawerLayout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
