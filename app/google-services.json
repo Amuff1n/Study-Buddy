@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "549249470284-g5p690danfob63p8c7f9ni8ek36hlgdb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.studybuddy.studybuddy",
+            "certificate_hash": "586b3a91df1ddb60d19ddb140942372273c9dc11"
+          }
+        },
+        {
           "client_id": "549249470284-76uai25vm6qre428i7av1i63h4obc8bf.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
