@@ -9,52 +9,84 @@
     tools:showIn="@layout/activity_profile">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imageView"
-        android:layout_width="161dp"
-        android:layout_height="156dp"
+        android:id="@+id/profile_image"
+        android:layout_width="203dp"
+        android:layout_height="165dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="5dp"
         android:src="@drawable/ansel_adams_snake_river_grand"
-        tools:layout_editor_absoluteX="112dp"
-        tools:layout_editor_absoluteY="5dp" />
+        app:layout_constraintBottom_toTopOf="@+id/profile_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/profile_name"
         android:layout_width="385dp"
-        android:layout_height="63dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/profile_label_name"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        app:layout_constraintBottom_toTopOf="@+id/profile_school"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="173dp" />
+        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
 
     <EditText
-        android:id="@+id/editText2"
-        android:layout_width="67dp"
-        android:layout_height="40dp"
+        android:id="@+id/profile_school"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="19dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/profile_label_school"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="244dp" />
+        app:layout_constraintBottom_toTopOf="@+id/profile_major"
+        app:layout_constraintEnd_toEndOf="@+id/profile_major"
+        app:layout_constraintStart_toStartOf="@+id/profile_major"
+        app:layout_constraintTop_toBottomOf="@+id/profile_name" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/profile_major"
         android:layout_width="67dp"
-        android:layout_height="41dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="22dp"
+        android:layout_marginStart="16dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/profile_label_major"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="303dp" />
+        app:layout_constraintBottom_toTopOf="@+id/profile_classes_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_school" />
 
     <EditText
-        android:id="@+id/editText4"
-        android:layout_width="354dp"
-        android:layout_height="46dp"
+        android:id="@+id/profile_classes_label"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="124dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginStart="14dp"
         android:ems="10"
         android:inputType="textMultiLine"
         android:text="@string/profile_label_classes"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="366dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_major" />
+
+    <TextView
+        android:id="@+id/profile_classes"
+        android:layout_width="353dp"
+        android:layout_height="76dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_classes_label"
+        app:layout_constraintVertical_bias="0.093" />
 </android.support.constraint.ConstraintLayout>
