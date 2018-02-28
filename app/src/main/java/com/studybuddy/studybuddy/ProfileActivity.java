@@ -78,10 +78,9 @@ public class ProfileActivity extends AppCompatActivity {
     }  // void onCreate()
 
     private void fetchProfile(FirebaseUser user) {
-        if(true) { //user != null) {
-            String uid = "ftE8vUlZdgUktuxQyj6XeS94RDJ3"; //user.getUid();
+        if(user != null) {
             CollectionReference collectionReference = db.collection("users");
-            Query query = collectionReference.whereEqualTo("uid", uid);
+            Query query = collectionReference.whereEqualTo("uid", user.getUid());
             query.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                 @Override
                 public void onComplete(@NonNull Task<QuerySnapshot> task) {
@@ -143,7 +142,7 @@ public class ProfileActivity extends AppCompatActivity {
                   @Override
                   public void onSuccess(Void aVoid) {
                       Log.d(TAG, "DocumentSnapshot successfully written!");
-                      Toast.makeText(ProfileActivity.this, "Profiel updated successfully!",
+                      Toast.makeText(ProfileActivity.this, "Profile updated successfully!",
                               Toast.LENGTH_SHORT).show();
                   }
               })
