@@ -79,8 +79,10 @@ public class ProfileActivity extends AppCompatActivity {
 
     private void fetchProfile(FirebaseUser user) {
         if(user != null) {
+            String uid = "ftE8vUlZdgUktuxQyj6XeS94RDJ3";
             CollectionReference collectionReference = db.collection("users");
-            Query query = collectionReference.whereEqualTo("uid", user.getUid());
+            //Query query = collectionReference.whereEqualTo("uid", user.getUid());
+            Query query = collectionReference.whereEqualTo("uid", uid);
             query.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                 @Override
                 public void onComplete(@NonNull Task<QuerySnapshot> task) {
