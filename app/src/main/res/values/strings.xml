@@ -6,6 +6,7 @@
     <string name="profile_label_major">Major:</string>
     <string name="profile_label_year">Year:</string>
     <string name="profile_label_classes">Classes</string>
+    <string name="profile_button_save">Save changes</string>
 
 
     <!-- General Strings -->

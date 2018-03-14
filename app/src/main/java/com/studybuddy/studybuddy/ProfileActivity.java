@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -65,7 +66,7 @@ public class ProfileActivity extends AppCompatActivity {
         // Build a GoogleSignInClient with the options specified by gso
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
-        //saveButton = findViewById(R.id.profile_save_button);
+        saveButton = findViewById(R.id.profile_save_button);
         mNameTextView = findViewById(R.id.profile_name);
         mSchoolTextView = findViewById(R.id.profile_school);
         mMajorTextView = findViewById(R.id.profile_major);
@@ -73,6 +74,14 @@ public class ProfileActivity extends AppCompatActivity {
         mClassesTextView = findViewById(R.id.profile_classes);
 
         fetchProfile(mAuth.getCurrentUser());
+
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                saveInfo();
+            }
+        });
+
         //startActivity(new Intent(getApplicationContext(), Home.class));
         //finish()
     }  // void onCreate()
@@ -80,7 +89,8 @@ public class ProfileActivity extends AppCompatActivity {
     private void fetchProfile(FirebaseUser user) {
         if(user != null) {
             CollectionReference collectionReference = db.collection("users");
-            Query query = collectionReference.whereEqualTo("uid", user.getUid());
+            String uid = "ftE8vUlZdgUktuxQyj6XeS94RDJ3";
+            Query query = collectionReference.whereEqualTo("uid", uid);
             query.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                 @Override
                 public void onComplete(@NonNull Task<QuerySnapshot> task) {
@@ -97,14 +107,14 @@ public class ProfileActivity extends AppCompatActivity {
                             String name = firstName + " " + lastName.substring(0, 1).toUpperCase() + ".";
                             mNameTextView.setText(name);
 
-                            String school = "School: " + document.get("school").toString();
+                            String school = document.get("school").toString();
                             mSchoolTextView.setText(school);
 
                             String major = document.get("major").toString();
-                            major = "Major: " + major.substring(0, 1).toUpperCase() + major.substring(1).toLowerCase();
+                            major = major.substring(0, 1).toUpperCase() + major.substring(1).toLowerCase();
                             mMajorTextView.setText(major);
 
-                            String year = "Year: " + document.get("year").toString();
+                            String year = document.get("year").toString();
                             mYearTextView.setText(year);
 
                             mClassesTextView.setText(document.get("classes").toString());
@@ -126,10 +136,11 @@ public class ProfileActivity extends AppCompatActivity {
         Map<String, Object> user = new HashMap<>();
 
         try {
-            user.put("firstName", mNameTextView.getText().toString());
-            user.put("lastName", mNameTextView.getText().toString());
             user.put("major", mMajorTextView.getText().toString());
             user.put("year", mYearTextView.getText().toString());
+            user.put("school", mSchoolTextView.getText().toString());
+            user.put("classes", mClassesTextView.getText().toString());
+
         }
         catch(IllegalArgumentException iae) {
             Log.w(TAG, "updateProfileWithEmptyFields", iae);
