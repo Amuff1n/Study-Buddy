@@ -17,6 +17,10 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.ProviderQueryResult;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class CreateAccount extends AppCompatActivity {
 
@@ -26,6 +30,7 @@ public class CreateAccount extends AppCompatActivity {
     private EditText mPasswordField;
     private EditText mConfirmPassword;
     private Button mCreateAccountBtn;
+    private FirebaseFirestore mFirestore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,10 +41,11 @@ public class CreateAccount extends AppCompatActivity {
         mPasswordField = findViewById(R.id.password_);
         mConfirmPassword = findViewById(R.id.confirm_password);
         mCreateAccountBtn = findViewById(R.id.SignUp);
+        mFirestore = FirebaseFirestore.getInstance();
         mCreateAccountBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = mEmailField.getText().toString().trim();
+                final String email = mEmailField.getText().toString().trim();
                 String password = mPasswordField.getText().toString().trim();
                 String confirmPassword = mConfirmPassword.getText().toString().trim();
                 //checks to make sure email and password are valid
@@ -65,6 +71,10 @@ public class CreateAccount extends AppCompatActivity {
                                         Log.d(TAG, "createUserWithEmail:success");
                                         Toast.makeText(getApplicationContext(), "Authentication succeeded!",
                                                 Toast.LENGTH_SHORT).show();
+                                        Map<String, Object> emailMap = new HashMap<>();
+                                        emailMap.put("email", email);
+                                        //adds email to database
+                                        mFirestore.collection("users").document(mAuth.getUid()).set(emailMap);
                                         //starts activity to enter account information
                                         startActivity(new Intent(getApplicationContext(), SetUpAccount.class));
                                     } else {
