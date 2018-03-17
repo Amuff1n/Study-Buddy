@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 # Study-Buddy
 An android application to aide students in forming study groups.
 
 test push please ignore
-=======
 # Study Buddy
 
 ## How to contribute
@@ -20,4 +18,3 @@ git push origin your-new-branch
 - activity_home
 - activity_main
 - activity_set_up_account
->>>>>>> origin/master
