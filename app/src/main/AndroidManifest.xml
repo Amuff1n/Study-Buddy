@@ -23,7 +23,7 @@
         <activity
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile"
-            android:parentActivityName="com.studybuddy.studybuddy.Home"></activity>
+            android:parentActivityName="com.studybuddy.studybuddy.Home">
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
