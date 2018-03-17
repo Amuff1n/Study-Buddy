@@ -903,6 +903,7 @@
     <string name="facebook_login_protocol_scheme" translatable="false">fbYOUR_APP_ID</string>
     <string name="firebase_database_url" translatable="false">https://study-buddy-b98c8.firebaseio.com</string>
     <string name="firebase_status_fmt">Firebase User: %s</string>
+    <string name="first_name">First Name: %1$s</string>
     <string name="fui_accessibility_logo" translation_description="Content description for app logo">App logo</string>
     <string name="fui_button_text_save" translation_description="Button text to save input form">Save</string>
     <string name="fui_button_text_send" translation_description="Button text to send recovery email">Send</string>
@@ -1077,6 +1078,8 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="last_name">Last Name: %1$s</string>
+    <string name="major">Major: %1$s</string>
     <string name="open">Open</string>
     <string name="password_prompt">Enter your Password</string>
     <string name="password_toggle_content_description">Toggle password visibility</string>
@@ -1085,6 +1088,7 @@
     <string name="path_password_eye_mask_visible" translatable="false">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
     <string name="project_id" translatable="false">study-buddy-b98c8</string>
+    <string name="save">Save</string>
     <string name="search_menu_title">Search</string>
     <string name="signed_out">Signed Out</string>
     <string name="signout">SignOut</string>
@@ -1094,6 +1098,7 @@
     <string name="title_activity_profile">ProfileActivity</string>
     <string name="twitter_consumer_key" translatable="false">CHANGE-ME</string>
     <string name="twitter_consumer_secret" translatable="false">CHANGE-ME</string>
+    <string name="year">Year: %1$s</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
