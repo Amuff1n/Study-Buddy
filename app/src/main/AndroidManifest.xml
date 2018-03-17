@@ -13,14 +13,19 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".CreateAccount"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".SetUpAccount" />
+        <activity android:name=".Home" />
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/title_activity_profile"
+<<<<<<< HEAD
+            android:parentActivityName="com.studybuddy.studybuddy.Home"></activity>
+=======
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,12 +33,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SetUpAccount" />
-        <activity android:name=".Home" />
-        <activity
-            android:name=".ProfileActivity"
-            android:label="@string/title_activity_profile"
-            android:parentActivityName="com.studybuddy.studybuddy.Home"></activity>
+>>>>>>> profile
     </application>
 
 </manifest>

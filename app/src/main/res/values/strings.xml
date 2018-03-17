@@ -1,4 +1,15 @@
 <resources>
+
+    <!-- Profile Strings -->
+    <string name="profile_label_name">Name</string>
+    <string name="profile_label_school">School:</string>
+    <string name="profile_label_major">Major:</string>
+    <string name="profile_label_year">Year:</string>
+    <string name="profile_label_classes">Classes</string>
+    <string name="profile_button_save">Save changes</string>
+
+
+    <!-- General Strings -->
     <string name="app_name">Study Buddy</string>
     <string name="studdybuddy_welcome">Welcome to Study Buddy</string>
     <string name="studybuddy_signout">Sign Out</string>
