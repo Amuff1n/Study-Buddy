@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.support.v7.widget.Toolbar;
+import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 =======
@@ -217,7 +218,8 @@ public class Home extends AppCompatActivity {
 
         if (id == R.id.nav_logout) {
             mAuth.signOut();
-
+            Toast.makeText(Home.this, "Logging out",
+                    Toast.LENGTH_SHORT).show();
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
             finish();
             return true;
@@ -225,13 +227,14 @@ public class Home extends AppCompatActivity {
 
         else if (id == R.id.nav_settings) {
            //Open settings activity
+            Toast.makeText(Home.this, "Nothing yet!",
+                    Toast.LENGTH_SHORT).show();
             return true;
         }
-        // TODO figure out why this doesn't work. It doesn't throw errors, just doesn't pull up page
+
         else if (id == R.id.nav_account) {
             //Open account activity
             startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
-            finish();
             return true;
         }
 

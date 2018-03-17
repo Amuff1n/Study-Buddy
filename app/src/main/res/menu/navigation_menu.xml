@@ -4,10 +4,12 @@
     <item
         android:id="@+id/nav_account"
         android:icon="@mipmap/ic_person_black_24dp"
+        android:onClick="onNavigationItemSelected"
         android:title="My Account" />
 
     <item android:id="@+id/nav_settings"
         android:icon="@mipmap/ic_settings_black_24dp"
+        android:onClick="onNavigationItemSelected"
         android:title="Settings" />
 
     <item android:id="@+id/nav_logout"
