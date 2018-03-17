@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(getApplicationContext(), Home.class));
             finish();
         }
-        SignUpButton = findViewById(R.id.sign_up_button);
+        SignUpButton = (Button) findViewById(R.id.sign_up_button);
         SignUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,13 +76,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         signInButton.setSize(SignInButton.SIZE_STANDARD);
 
         findViewById(R.id.sign_in_button).setOnClickListener(this);
+        //findViewById(R.id.sign_out_button).setOnClickListener(this);
         findViewById(R.id.email_sign_in_button).setOnClickListener(this);
+        //findViewById(R.id.sign_up_button).setOnClickListener(this);
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        //Check if user is signed in
+
+        // Check if user is signed in
         FirebaseUser user = mAuth.getCurrentUser();
         updateUI(user);
     }
@@ -137,7 +140,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void signInEmail() {
-
         mAuth.signInWithEmailAndPassword(mEmailField.getText().toString(), mPasswordField.getText().toString())
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -159,18 +161,37 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 });
     }
+    /*private void signOut() {
+        // Firebase sign out
+        mAuth.signOut();
+        // Google sign out
+        mGoogleSignInClient.signOut().addOnCompleteListener(this, new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                updateUI(null);
+            }
+        });
+    }*/
 
     private void updateUI(FirebaseUser user) {
         if (user != null) {
+            // update buttons and stuff here with user info
+            //mEmailTextView.setText(getString(R.string.google_status_fmt, user.getEmail()));
+            //mUidTextView.setText(getString(R.string.firebase_status_fmt, user.getUid()));
+            //go to home screen
             startActivity(new Intent(getApplicationContext(), Home.class));
             finish();
+
+            //findViewById(R.id.sign_in_button).setVisibility(View.INVISIBLE);
+            //findViewById(R.id.sign_out_button).setVisibility(View.VISIBLE);
         }
-        else {
+        /*else {
             // update buttons as if user is signed out
             mEmailTextView.setText(R.string.signed_out);
             mUidTextView.setText(null);
             findViewById(R.id.sign_in_button).setVisibility(View.VISIBLE);
-        }
+            findViewById(R.id.sign_out_button).setVisibility(View.INVISIBLE);
+        }*/
     }
 
     // Do stuff when we click button
@@ -183,14 +204,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } /*else if (i == R.id.sign_out_button) {
             signOut();
         }*/ else if (i == R.id.email_sign_in_button) {
-            try {
-                signInEmail();
-            } catch (IllegalArgumentException e) {
-                Log.w(TAG, "signInWithEmptyFields", e);
-                Toast.makeText(MainActivity.this, "Please enter email and password.",
-                        Toast.LENGTH_SHORT).show();
-                updateUI(null);
-            }
+            signInEmail();
         }
     }
 }

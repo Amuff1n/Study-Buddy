@@ -1,30 +1,33 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-39:12
+ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-35:12
+MERGED from [com.google.firebase:firebase-database:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-database-11.8.0.aar/002c2a7bf7769b3f53e19bb469c6c6af/AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.firebase:firebase-firestore:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-firestore-11.8.0.aar/9ee725b04d539a4c12ca1f7e9a4b57f9/AndroidManifest.xml:2:1-8:12
 MERGED from [com.firebaseui:firebase-ui-auth:3.2.1] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-3.2.1.aar/1e0901494c7d8eda0e8c8eceb7db4782/AndroidManifest.xml:2:1-81:12
 MERGED from [com.google.android.gms:play-services-auth:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/0e57d5e6c44367ecc0dbfa047c7dcd6e/AndroidManifest.xml:17:1-39:12
-MERGED from [com.google.firebase:firebase-firestore:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-firestore-11.8.0.aar/9ee725b04d539a4c12ca1f7e9a4b57f9/AndroidManifest.xml:2:1-8:12
 MERGED from [com.android.support:design:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/6d5485ede9ab24e29bccbf19f58e80b0/AndroidManifest.xml:17:1-22:12
 MERGED from [de.hdodenhof:circleimageview:2.2.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/51fc2f401bd86e7565c4a13cd6ebdc5f/AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:appcompat-v7:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/0fed216cff48debc5e0c7ae65d66cfd3/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.0-beta3] /home/kyle/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0-beta3.aar/3d0f824ce6ba1a951d81600a0536f919/AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:firebase-auth:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-auth-11.8.0.aar/e40eb441f147aef4b29264c2c99748e0/AndroidManifest.xml:17:1-32:12
 MERGED from [com.google.firebase:firebase-core:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-core-11.8.0.aar/7d4ad5b752a5006acf41c2734054cc99/AndroidManifest.xml:2:1-6:12
-MERGED from [com.android.support:customtabs:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/customtabs-27.0.2.aar/7c8b942d34a26d19e367c6e1d63e9b26/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:extensions:1.0.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/2763a3db060940e4d20b04de77c9599a/AndroidManifest.xml:17:1-32:12
-MERGED from [com.android.support:cardview-v7:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.0.2.aar/920419c5ef03131f91399b6d47daa015/AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.gms:play-services-auth-api-phone:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-11.8.0.aar/7d32e51f616f39513f4bf2bd4ea55e66/AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.android.gms:play-services-auth-base:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-11.8.0.aar/80a1d2fd1a9eebafa18efb3a6e185554/AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.android.gms:play-services-base:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c63d1136467c517449a22362a8d5969c/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.firebase:firebase-database-connection:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-11.8.0.aar/239a451459046dfc963cb8abf976332a/AndroidManifest.xml:2:1-8:12
 MERGED from [com.google.firebase:firebase-analytics:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.8.0.aar/12bb9add2e6e8a7ebdc5874ba4b5c55e/AndroidManifest.xml:17:1-54:12
 MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-11.8.0.aar/3ace94930fd2ab699794ea1393189aaf/AndroidManifest.xml:17:1-40:12
 MERGED from [com.google.firebase:firebase-iid:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.8.0.aar/21e5adb836b284ab75cf320ea41c0ac4/AndroidManifest.xml:17:1-59:12
 MERGED from [com.google.firebase:firebase-common:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-common-11.8.0.aar/d9c706d55e15dae094971282a4d86c36/AndroidManifest.xml:2:1-15:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-11.8.0.aar/7d32e51f616f39513f4bf2bd4ea55e66/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-base:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-11.8.0.aar/80a1d2fd1a9eebafa18efb3a6e185554/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c63d1136467c517449a22362a8d5969c/AndroidManifest.xml:17:1-29:12
 MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/d75c3d7ecd0b1f2a83d502ed33e5d193/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-basement:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/a55a33c5ffada53e02053fa7df1a7546/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.firebase:firebase-database-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-database-license-11.8.0.aar/a85bed4c82183e0d3b0773f5eaf76932/AndroidManifest.xml:2:1-6:12
+MERGED from [com.android.support:customtabs:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/customtabs-27.0.2.aar/7c8b942d34a26d19e367c6e1d63e9b26/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:extensions:1.0.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/2763a3db060940e4d20b04de77c9599a/AndroidManifest.xml:17:1-32:12
+MERGED from [com.android.support:cardview-v7:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.0.2.aar/920419c5ef03131f91399b6d47daa015/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-v4:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/947b909dabe30316a84198e543e2f7d7/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:recyclerview-v7:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/e7e4d6bdf83cef2063e085e8584375d5/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:transition:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/add73cd52d613076b629ba3a53af9473/AndroidManifest.xml:17:1-22:12
@@ -38,34 +41,35 @@ MERGED from [com.android.support:support-compat:27.0.2] /home/kyle/.gradle/cache
 MERGED from [android.arch.lifecycle:runtime:1.0.3] /home/kyle/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/d9e0621ab398edeff9477bdedadaeeb2/AndroidManifest.xml:17:1-24:12
 MERGED from [android.arch.core:runtime:1.0.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/7929b803f0694843a09779cc48dea688/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-auth-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-auth-license-11.8.0.aar/0b82891306771f0eda167dc1a5d7b181/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.firebase:firebase-database-connection-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-license-11.8.0.aar/7911b112b0b2f03ad450f18a02e801ad/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/c6fa36eb50025a4b3cb07e53317cce14/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.firebase:firebase-common-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-common-license-11.8.0.aar/0b4bdbfeee2ea000a9bfa5d4a57cf564/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/fb31923731a7e7c2a1d2db2dd71d4b73/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-license-11.8.0.aar/50785c6ca6574a129abaa3d14f1ad50a/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-auth-base-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-license-11.8.0.aar/880dae19d39265e9efadbde7cca9530a/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/a95582d73861532743b55b7759088cfd/AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/c6fa36eb50025a4b3cb07e53317cce14/AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/fb31923731a7e7c2a1d2db2dd71d4b73/AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.firebase:firebase-common-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-common-license-11.8.0.aar/0b4bdbfeee2ea000a9bfa5d4a57cf564/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-analytics-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-analytics-license-11.8.0.aar/9a507038a48fe1e83aec9f999a80eae1/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-license-11.8.0.aar/ee1b2da8bd283c9fa9f1bfc5ce7131d3/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-iid-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-iid-license-11.8.0.aar/2da7839b809c796a1431637615e67eda/AndroidManifest.xml:2:1-6:12
-INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-39:12
+INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-35:12
 	package
 		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:3:5-40
 		INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml
 		INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml
-		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-39:12
+		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-35:12
 		INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml
-		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-39:12
+		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-35:12
 		INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:5:5-37:19
+ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:5:5-33:19
 MERGED from [com.firebaseui:firebase-ui-auth:3.2.1] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-3.2.1.aar/1e0901494c7d8eda0e8c8eceb7db4782/AndroidManifest.xml:15:5-79:19
 MERGED from [com.firebaseui:firebase-ui-auth:3.2.1] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-3.2.1.aar/1e0901494c7d8eda0e8c8eceb7db4782/AndroidManifest.xml:15:5-79:19
 MERGED from [com.google.android.gms:play-services-auth:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/0e57d5e6c44367ecc0dbfa047c7dcd6e/AndroidManifest.xml:22:5-37:19
@@ -78,10 +82,6 @@ MERGED from [com.google.firebase:firebase-auth:11.8.0] /home/kyle/.gradle/caches
 MERGED from [com.google.firebase:firebase-auth:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-auth-11.8.0.aar/e40eb441f147aef4b29264c2c99748e0/AndroidManifest.xml:22:5-30:19
 MERGED from [com.google.firebase:firebase-core:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-core-11.8.0.aar/7d4ad5b752a5006acf41c2734054cc99/AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-core:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-core-11.8.0.aar/7d4ad5b752a5006acf41c2734054cc99/AndroidManifest.xml:5:5-20
-MERGED from [android.arch.lifecycle:extensions:1.0.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/2763a3db060940e4d20b04de77c9599a/AndroidManifest.xml:24:5-30:19
-MERGED from [android.arch.lifecycle:extensions:1.0.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/2763a3db060940e4d20b04de77c9599a/AndroidManifest.xml:24:5-30:19
-MERGED from [com.google.android.gms:play-services-base:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c63d1136467c517449a22362a8d5969c/AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c63d1136467c517449a22362a8d5969c/AndroidManifest.xml:22:5-27:19
 MERGED from [com.google.firebase:firebase-analytics:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.8.0.aar/12bb9add2e6e8a7ebdc5874ba4b5c55e/AndroidManifest.xml:27:5-52:19
 MERGED from [com.google.firebase:firebase-analytics:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.8.0.aar/12bb9add2e6e8a7ebdc5874ba4b5c55e/AndroidManifest.xml:27:5-52:19
 MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-11.8.0.aar/3ace94930fd2ab699794ea1393189aaf/AndroidManifest.xml:27:5-38:19
@@ -90,24 +90,32 @@ MERGED from [com.google.firebase:firebase-iid:11.8.0] /home/kyle/.gradle/caches/
 MERGED from [com.google.firebase:firebase-iid:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.8.0.aar/21e5adb836b284ab75cf320ea41c0ac4/AndroidManifest.xml:34:5-57:19
 MERGED from [com.google.firebase:firebase-common:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-common-11.8.0.aar/d9c706d55e15dae094971282a4d86c36/AndroidManifest.xml:7:5-13:19
 MERGED from [com.google.firebase:firebase-common:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-common-11.8.0.aar/d9c706d55e15dae094971282a4d86c36/AndroidManifest.xml:7:5-13:19
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c63d1136467c517449a22362a8d5969c/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c63d1136467c517449a22362a8d5969c/AndroidManifest.xml:22:5-27:19
 MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/d75c3d7ecd0b1f2a83d502ed33e5d193/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/d75c3d7ecd0b1f2a83d502ed33e5d193/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-basement:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/a55a33c5ffada53e02053fa7df1a7546/AndroidManifest.xml:22:5-26:19
 MERGED from [com.google.android.gms:play-services-basement:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/a55a33c5ffada53e02053fa7df1a7546/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.firebase:firebase-database-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-database-license-11.8.0.aar/a85bed4c82183e0d3b0773f5eaf76932/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-database-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-database-license-11.8.0.aar/a85bed4c82183e0d3b0773f5eaf76932/AndroidManifest.xml:5:5-20
+MERGED from [android.arch.lifecycle:extensions:1.0.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/2763a3db060940e4d20b04de77c9599a/AndroidManifest.xml:24:5-30:19
+MERGED from [android.arch.lifecycle:extensions:1.0.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/2763a3db060940e4d20b04de77c9599a/AndroidManifest.xml:24:5-30:19
 MERGED from [com.google.firebase:firebase-auth-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-auth-license-11.8.0.aar/0b82891306771f0eda167dc1a5d7b181/AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-auth-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-auth-license-11.8.0.aar/0b82891306771f0eda167dc1a5d7b181/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-database-connection-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-license-11.8.0.aar/7911b112b0b2f03ad450f18a02e801ad/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-database-connection-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-license-11.8.0.aar/7911b112b0b2f03ad450f18a02e801ad/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/c6fa36eb50025a4b3cb07e53317cce14/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/c6fa36eb50025a4b3cb07e53317cce14/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-common-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-common-license-11.8.0.aar/0b4bdbfeee2ea000a9bfa5d4a57cf564/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-common-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-common-license-11.8.0.aar/0b4bdbfeee2ea000a9bfa5d4a57cf564/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/fb31923731a7e7c2a1d2db2dd71d4b73/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/fb31923731a7e7c2a1d2db2dd71d4b73/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-license-11.8.0.aar/50785c6ca6574a129abaa3d14f1ad50a/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-license-11.8.0.aar/50785c6ca6574a129abaa3d14f1ad50a/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-auth-base-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-license-11.8.0.aar/880dae19d39265e9efadbde7cca9530a/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-auth-base-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-license-11.8.0.aar/880dae19d39265e9efadbde7cca9530a/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/a95582d73861532743b55b7759088cfd/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/a95582d73861532743b55b7759088cfd/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/c6fa36eb50025a4b3cb07e53317cce14/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/c6fa36eb50025a4b3cb07e53317cce14/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/fb31923731a7e7c2a1d2db2dd71d4b73/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/fb31923731a7e7c2a1d2db2dd71d4b73/AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-common-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-common-license-11.8.0.aar/0b4bdbfeee2ea000a9bfa5d4a57cf564/AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-common-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-common-license-11.8.0.aar/0b4bdbfeee2ea000a9bfa5d4a57cf564/AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-analytics-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-analytics-license-11.8.0.aar/9a507038a48fe1e83aec9f999a80eae1/AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-analytics-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-analytics-license-11.8.0.aar/9a507038a48fe1e83aec9f999a80eae1/AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-license-11.8.0.aar/ee1b2da8bd283c9fa9f1bfc5ce7131d3/AndroidManifest.xml:5:5-20
@@ -129,53 +137,55 @@ MERGED from [com.google.firebase:firebase-iid-license:11.8.0] /home/kyle/.gradle
 	android:theme
 		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:12:9-40
 activity#com.studybuddy.studybuddy.MainActivity
-ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:13:9-21:20
+ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:13:9-20:20
 	android:theme
 		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:15:13-56
 	android:name
 		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:14:13-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:16:13-20:29
+ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:16:13-19:29
 action#android.intent.action.MAIN
 ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:17:17-69
 	android:name
 		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:17:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:19:17-77
+ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:18:17-77
 	android:name
-		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:19:27-74
+		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:18:27-74
 activity#com.studybuddy.studybuddy.CreateAccount
-ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:22:9-30:20
+ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:21:9-24:20
 	android:theme
-		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:24:13-56
+		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:23:13-56
 	android:name
-		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:23:13-42
+		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:22:13-42
 activity#com.studybuddy.studybuddy.SetUpAccount
-ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:31:9-50
+ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:25:9-50
 	android:name
-		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:31:19-47
+		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:25:19-47
 activity#com.studybuddy.studybuddy.Home
-ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:32:9-42
+ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:26:9-42
 	android:name
-		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:32:19-39
+		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:26:19-39
 activity#com.studybuddy.studybuddy.ProfileActivity
-ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:33:9-36:84
+ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:27:9-32:20
 	android:parentActivityName
-		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:36:13-72
+		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:30:13-72
 	android:label
-		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:35:13-59
+		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:29:13-59
 	android:name
-		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:34:13-44
+		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:28:13-44
 uses-sdk
 INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml
 INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml
+MERGED from [com.google.firebase:firebase-database:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-database-11.8.0.aar/002c2a7bf7769b3f53e19bb469c6c6af/AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-database:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-database-11.8.0.aar/002c2a7bf7769b3f53e19bb469c6c6af/AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-firestore:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-firestore-11.8.0.aar/9ee725b04d539a4c12ca1f7e9a4b57f9/AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-firestore:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-firestore-11.8.0.aar/9ee725b04d539a4c12ca1f7e9a4b57f9/AndroidManifest.xml:6:5-44
 MERGED from [com.firebaseui:firebase-ui-auth:3.2.1] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-3.2.1.aar/1e0901494c7d8eda0e8c8eceb7db4782/AndroidManifest.xml:8:5-10:41
 MERGED from [com.firebaseui:firebase-ui-auth:3.2.1] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-3.2.1.aar/1e0901494c7d8eda0e8c8eceb7db4782/AndroidManifest.xml:8:5-10:41
 MERGED from [com.google.android.gms:play-services-auth:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/0e57d5e6c44367ecc0dbfa047c7dcd6e/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/0e57d5e6c44367ecc0dbfa047c7dcd6e/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-firestore:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-firestore-11.8.0.aar/9ee725b04d539a4c12ca1f7e9a4b57f9/AndroidManifest.xml:6:5-44
-MERGED from [com.google.firebase:firebase-firestore:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-firestore-11.8.0.aar/9ee725b04d539a4c12ca1f7e9a4b57f9/AndroidManifest.xml:6:5-44
 MERGED from [com.android.support:design:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/6d5485ede9ab24e29bccbf19f58e80b0/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:design:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/6d5485ede9ab24e29bccbf19f58e80b0/AndroidManifest.xml:20:5-44
 MERGED from [de.hdodenhof:circleimageview:2.2.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/51fc2f401bd86e7565c4a13cd6ebdc5f/AndroidManifest.xml:5:5-7:41
@@ -188,18 +198,8 @@ MERGED from [com.google.firebase:firebase-auth:11.8.0] /home/kyle/.gradle/caches
 MERGED from [com.google.firebase:firebase-auth:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-auth-11.8.0.aar/e40eb441f147aef4b29264c2c99748e0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-core:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-core-11.8.0.aar/7d4ad5b752a5006acf41c2734054cc99/AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-core:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-core-11.8.0.aar/7d4ad5b752a5006acf41c2734054cc99/AndroidManifest.xml:4:5-43
-MERGED from [com.android.support:customtabs:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/customtabs-27.0.2.aar/7c8b942d34a26d19e367c6e1d63e9b26/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customtabs:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/customtabs-27.0.2.aar/7c8b942d34a26d19e367c6e1d63e9b26/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:extensions:1.0.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/2763a3db060940e4d20b04de77c9599a/AndroidManifest.xml:20:5-22:41
-MERGED from [android.arch.lifecycle:extensions:1.0.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/2763a3db060940e4d20b04de77c9599a/AndroidManifest.xml:20:5-22:41
-MERGED from [com.android.support:cardview-v7:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.0.2.aar/920419c5ef03131f91399b6d47daa015/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.0.2.aar/920419c5ef03131f91399b6d47daa015/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-auth-api-phone:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-11.8.0.aar/7d32e51f616f39513f4bf2bd4ea55e66/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-api-phone:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-11.8.0.aar/7d32e51f616f39513f4bf2bd4ea55e66/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-base:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-11.8.0.aar/80a1d2fd1a9eebafa18efb3a6e185554/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-base:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-11.8.0.aar/80a1d2fd1a9eebafa18efb3a6e185554/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-base:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c63d1136467c517449a22362a8d5969c/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c63d1136467c517449a22362a8d5969c/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-database-connection:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-11.8.0.aar/239a451459046dfc963cb8abf976332a/AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-database-connection:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-11.8.0.aar/239a451459046dfc963cb8abf976332a/AndroidManifest.xml:6:5-44
 MERGED from [com.google.firebase:firebase-analytics:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.8.0.aar/12bb9add2e6e8a7ebdc5874ba4b5c55e/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-analytics:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.8.0.aar/12bb9add2e6e8a7ebdc5874ba4b5c55e/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-11.8.0.aar/3ace94930fd2ab699794ea1393189aaf/AndroidManifest.xml:20:5-44
@@ -208,10 +208,24 @@ MERGED from [com.google.firebase:firebase-iid:11.8.0] /home/kyle/.gradle/caches/
 MERGED from [com.google.firebase:firebase-iid:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-iid-11.8.0.aar/21e5adb836b284ab75cf320ea41c0ac4/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-common:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-common-11.8.0.aar/d9c706d55e15dae094971282a4d86c36/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-common:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-common-11.8.0.aar/d9c706d55e15dae094971282a4d86c36/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-11.8.0.aar/7d32e51f616f39513f4bf2bd4ea55e66/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-11.8.0.aar/7d32e51f616f39513f4bf2bd4ea55e66/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-11.8.0.aar/80a1d2fd1a9eebafa18efb3a6e185554/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-11.8.0.aar/80a1d2fd1a9eebafa18efb3a6e185554/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c63d1136467c517449a22362a8d5969c/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c63d1136467c517449a22362a8d5969c/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/d75c3d7ecd0b1f2a83d502ed33e5d193/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/d75c3d7ecd0b1f2a83d502ed33e5d193/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-basement:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/a55a33c5ffada53e02053fa7df1a7546/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-basement:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/a55a33c5ffada53e02053fa7df1a7546/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-database-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-database-license-11.8.0.aar/a85bed4c82183e0d3b0773f5eaf76932/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-database-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-database-license-11.8.0.aar/a85bed4c82183e0d3b0773f5eaf76932/AndroidManifest.xml:4:5-43
+MERGED from [com.android.support:customtabs:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/customtabs-27.0.2.aar/7c8b942d34a26d19e367c6e1d63e9b26/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customtabs:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/customtabs-27.0.2.aar/7c8b942d34a26d19e367c6e1d63e9b26/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:extensions:1.0.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/2763a3db060940e4d20b04de77c9599a/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:extensions:1.0.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/2763a3db060940e4d20b04de77c9599a/AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.support:cardview-v7:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.0.2.aar/920419c5ef03131f91399b6d47daa015/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.0.2.aar/920419c5ef03131f91399b6d47daa015/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/947b909dabe30316a84198e543e2f7d7/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/947b909dabe30316a84198e543e2f7d7/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:recyclerview-v7:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/e7e4d6bdf83cef2063e085e8584375d5/AndroidManifest.xml:20:5-44
@@ -238,18 +252,20 @@ MERGED from [android.arch.core:runtime:1.0.0] /home/kyle/.gradle/caches/transfor
 MERGED from [android.arch.core:runtime:1.0.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/7929b803f0694843a09779cc48dea688/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-auth-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-auth-license-11.8.0.aar/0b82891306771f0eda167dc1a5d7b181/AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-auth-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-auth-license-11.8.0.aar/0b82891306771f0eda167dc1a5d7b181/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-database-connection-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-license-11.8.0.aar/7911b112b0b2f03ad450f18a02e801ad/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-database-connection-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-license-11.8.0.aar/7911b112b0b2f03ad450f18a02e801ad/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/c6fa36eb50025a4b3cb07e53317cce14/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/c6fa36eb50025a4b3cb07e53317cce14/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-common-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-common-license-11.8.0.aar/0b4bdbfeee2ea000a9bfa5d4a57cf564/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-common-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-common-license-11.8.0.aar/0b4bdbfeee2ea000a9bfa5d4a57cf564/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/fb31923731a7e7c2a1d2db2dd71d4b73/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/fb31923731a7e7c2a1d2db2dd71d4b73/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-license-11.8.0.aar/50785c6ca6574a129abaa3d14f1ad50a/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-license-11.8.0.aar/50785c6ca6574a129abaa3d14f1ad50a/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-auth-base-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-license-11.8.0.aar/880dae19d39265e9efadbde7cca9530a/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-auth-base-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-license-11.8.0.aar/880dae19d39265e9efadbde7cca9530a/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/a95582d73861532743b55b7759088cfd/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/a95582d73861532743b55b7759088cfd/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/c6fa36eb50025a4b3cb07e53317cce14/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/c6fa36eb50025a4b3cb07e53317cce14/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/fb31923731a7e7c2a1d2db2dd71d4b73/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/fb31923731a7e7c2a1d2db2dd71d4b73/AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-common-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-common-license-11.8.0.aar/0b4bdbfeee2ea000a9bfa5d4a57cf564/AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-common-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-common-license-11.8.0.aar/0b4bdbfeee2ea000a9bfa5d4a57cf564/AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-analytics-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-analytics-license-11.8.0.aar/9a507038a48fe1e83aec9f999a80eae1/AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-analytics-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-analytics-license-11.8.0.aar/9a507038a48fe1e83aec9f999a80eae1/AndroidManifest.xml:4:5-43
 MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-license-11.8.0.aar/ee1b2da8bd283c9fa9f1bfc5ce7131d3/AndroidManifest.xml:4:5-43
@@ -442,24 +458,6 @@ ADDED from [com.google.firebase:firebase-auth:11.8.0] /home/kyle/.gradle/caches/
 		ADDED from [com.google.firebase:firebase-auth:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-auth-11.8.0.aar/e40eb441f147aef4b29264c2c99748e0/AndroidManifest.xml:29:13-72
 	android:name
 		ADDED from [com.google.firebase:firebase-auth:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-auth-11.8.0.aar/e40eb441f147aef4b29264c2c99748e0/AndroidManifest.xml:24:13-85
-provider#android.arch.lifecycle.ProcessLifecycleOwnerInitializer
-ADDED from [android.arch.lifecycle:extensions:1.0.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/2763a3db060940e4d20b04de77c9599a/AndroidManifest.xml:25:9-29:43
-	android:authorities
-		ADDED from [android.arch.lifecycle:extensions:1.0.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/2763a3db060940e4d20b04de77c9599a/AndroidManifest.xml:27:13-68
-	android:multiprocess
-		ADDED from [android.arch.lifecycle:extensions:1.0.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/2763a3db060940e4d20b04de77c9599a/AndroidManifest.xml:29:13-40
-	android:exported
-		ADDED from [android.arch.lifecycle:extensions:1.0.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/2763a3db060940e4d20b04de77c9599a/AndroidManifest.xml:28:13-37
-	android:name
-		ADDED from [android.arch.lifecycle:extensions:1.0.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/2763a3db060940e4d20b04de77c9599a/AndroidManifest.xml:26:13-83
-activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c63d1136467c517449a22362a8d5969c/AndroidManifest.xml:23:9-26:75
-	android:exported
-		ADDED from [com.google.android.gms:play-services-base:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c63d1136467c517449a22362a8d5969c/AndroidManifest.xml:25:13-37
-	android:theme
-		ADDED from [com.google.android.gms:play-services-base:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c63d1136467c517449a22362a8d5969c/AndroidManifest.xml:26:13-72
-	android:name
-		ADDED from [com.google.android.gms:play-services-base:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c63d1136467c517449a22362a8d5969c/AndroidManifest.xml:24:13-79
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [com.google.firebase:firebase-analytics:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-analytics-11.8.0.aar/12bb9add2e6e8a7ebdc5874ba4b5c55e/AndroidManifest.xml:25:5-68
 MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-11.8.0.aar/3ace94930fd2ab699794ea1393189aaf/AndroidManifest.xml:25:5-68
@@ -586,3 +584,21 @@ ADDED from [com.google.firebase:firebase-common:11.8.0] /home/kyle/.gradle/cache
 		ADDED from [com.google.firebase:firebase-common:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-common-11.8.0.aar/d9c706d55e15dae094971282a4d86c36/AndroidManifest.xml:12:13-36
 	android:name
 		ADDED from [com.google.firebase:firebase-common:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-common-11.8.0.aar/d9c706d55e15dae094971282a4d86c36/AndroidManifest.xml:9:13-77
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c63d1136467c517449a22362a8d5969c/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c63d1136467c517449a22362a8d5969c/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c63d1136467c517449a22362a8d5969c/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c63d1136467c517449a22362a8d5969c/AndroidManifest.xml:24:13-79
+provider#android.arch.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [android.arch.lifecycle:extensions:1.0.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/2763a3db060940e4d20b04de77c9599a/AndroidManifest.xml:25:9-29:43
+	android:authorities
+		ADDED from [android.arch.lifecycle:extensions:1.0.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/2763a3db060940e4d20b04de77c9599a/AndroidManifest.xml:27:13-68
+	android:multiprocess
+		ADDED from [android.arch.lifecycle:extensions:1.0.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/2763a3db060940e4d20b04de77c9599a/AndroidManifest.xml:29:13-40
+	android:exported
+		ADDED from [android.arch.lifecycle:extensions:1.0.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/2763a3db060940e4d20b04de77c9599a/AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from [android.arch.lifecycle:extensions:1.0.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/extensions-1.0.0.aar/2763a3db060940e4d20b04de77c9599a/AndroidManifest.xml:26:13-83

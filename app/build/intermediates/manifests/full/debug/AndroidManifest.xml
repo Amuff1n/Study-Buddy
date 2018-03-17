@@ -41,18 +41,15 @@
         <activity
             android:name="com.studybuddy.studybuddy.CreateAccount"
             android:theme="@style/AppTheme.NoActionBar" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name="com.studybuddy.studybuddy.SetUpAccount" />
         <activity android:name="com.studybuddy.studybuddy.Home" />
         <activity
             android:name="com.studybuddy.studybuddy.ProfileActivity"
             android:label="@string/title_activity_profile"
-            android:parentActivityName="com.studybuddy.studybuddy.Home" />
+            android:parentActivityName="com.studybuddy.studybuddy.Home" >
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -138,17 +135,6 @@
             android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
-        <provider
-            android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"
-            android:authorities="com.studybuddy.studybuddy.lifecycle-trojan"
-            android:exported="false"
-            android:multiprocess="true" />
-
-        <activity
-            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-            android:exported="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
             android:enabled="true"
@@ -201,6 +187,17 @@
             android:authorities="com.studybuddy.studybuddy.firebaseinitprovider"
             android:exported="false"
             android:initOrder="100" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <provider
+            android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="com.studybuddy.studybuddy.lifecycle-trojan"
+            android:exported="false"
+            android:multiprocess="true" />
     </application>
 
 </manifest>
