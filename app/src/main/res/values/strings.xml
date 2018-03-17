@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Study Buddy</string>
+    <string name="studdybuddy_welcome">Welcome to Study Buddy</string>
+    <string name="studybuddy_signout">Sign Out</string>
+    <string name="google_status_fmt">Google User: %s</string>
+    <string name="firebase_status_fmt">Firebase User: %s</string>
+    <string name="signed_out">Signed Out</string>
+    <string name="email_prompt">Enter your email</string>
+    <string name="password_prompt">Enter your Password</string>
+    <string name="email_sign_in">Sign In</string>
+    <string name="email_sign_up">Sign Up</string>
+</resources>

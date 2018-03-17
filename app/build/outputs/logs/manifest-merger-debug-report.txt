@@ -1,14 +1,12 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-39:12
+ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-35:12
 MERGED from [com.firebaseui:firebase-ui-auth:3.2.1] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-3.2.1.aar/1e0901494c7d8eda0e8c8eceb7db4782/AndroidManifest.xml:2:1-81:12
 MERGED from [com.google.android.gms:play-services-auth:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/0e57d5e6c44367ecc0dbfa047c7dcd6e/AndroidManifest.xml:17:1-39:12
-MERGED from [com.google.firebase:firebase-firestore:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-firestore-11.8.0.aar/9ee725b04d539a4c12ca1f7e9a4b57f9/AndroidManifest.xml:2:1-8:12
 MERGED from [com.android.support:design:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/6d5485ede9ab24e29bccbf19f58e80b0/AndroidManifest.xml:17:1-22:12
-MERGED from [de.hdodenhof:circleimageview:2.2.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/51fc2f401bd86e7565c4a13cd6ebdc5f/AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:appcompat-v7:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/0fed216cff48debc5e0c7ae65d66cfd3/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.0-beta3] /home/kyle/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0-beta3.aar/3d0f824ce6ba1a951d81600a0536f919/AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:firebase-auth:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-auth-11.8.0.aar/e40eb441f147aef4b29264c2c99748e0/AndroidManifest.xml:17:1-32:12
@@ -26,12 +24,12 @@ MERGED from [com.google.firebase:firebase-common:11.8.0] /home/kyle/.gradle/cach
 MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/d75c3d7ecd0b1f2a83d502ed33e5d193/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-basement:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/a55a33c5ffada53e02053fa7df1a7546/AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:support-v4:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/947b909dabe30316a84198e543e2f7d7/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/e7e4d6bdf83cef2063e085e8584375d5/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/add73cd52d613076b629ba3a53af9473/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-fragment:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/9330b7f00016365e8617a647508876f6/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-core-utils:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/8e6d7d6dcb79968df204fdbcb22e372b/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:animated-vector-drawable:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/3107c0c3c7ac17484ff9e45e5832d29a/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-vector-drawable:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/f049582701eaf65665b25386d7c5f1d8/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/e7e4d6bdf83cef2063e085e8584375d5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/add73cd52d613076b629ba3a53af9473/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-core-ui:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/e9340b5ea9389bca706fe5e0db7544f8/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-media-compat:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/16eef1ccd447f7be5a78d38809947e2f/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-compat:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/e783e03ed2c147a6eec90f31ae903b78/AndroidManifest.xml:17:1-22:12
@@ -47,31 +45,29 @@ MERGED from [com.google.firebase:firebase-common-license:11.8.0] /home/kyle/.gra
 MERGED from [com.google.firebase:firebase-analytics-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-analytics-license-11.8.0.aar/9a507038a48fe1e83aec9f999a80eae1/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-license-11.8.0.aar/ee1b2da8bd283c9fa9f1bfc5ce7131d3/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-iid-license:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-iid-license-11.8.0.aar/2da7839b809c796a1431637615e67eda/AndroidManifest.xml:2:1-6:12
-INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-39:12
-INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-39:12
+INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-35:12
 	package
 		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:3:5-40
 		INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml
 		INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml
-		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-39:12
+		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-35:12
 		INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml
-		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-39:12
+		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:1-35:12
 		INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:5:5-37:19
+ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:5:5-33:19
 MERGED from [com.firebaseui:firebase-ui-auth:3.2.1] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-3.2.1.aar/1e0901494c7d8eda0e8c8eceb7db4782/AndroidManifest.xml:15:5-79:19
 MERGED from [com.firebaseui:firebase-ui-auth:3.2.1] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-3.2.1.aar/1e0901494c7d8eda0e8c8eceb7db4782/AndroidManifest.xml:15:5-79:19
 MERGED from [com.google.android.gms:play-services-auth:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/0e57d5e6c44367ecc0dbfa047c7dcd6e/AndroidManifest.xml:22:5-37:19
 MERGED from [com.google.android.gms:play-services-auth:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/0e57d5e6c44367ecc0dbfa047c7dcd6e/AndroidManifest.xml:22:5-37:19
-MERGED from [de.hdodenhof:circleimageview:2.2.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/51fc2f401bd86e7565c4a13cd6ebdc5f/AndroidManifest.xml:9:5-20
-MERGED from [de.hdodenhof:circleimageview:2.2.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/51fc2f401bd86e7565c4a13cd6ebdc5f/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.0-beta3] /home/kyle/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0-beta3.aar/3d0f824ce6ba1a951d81600a0536f919/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.0-beta3] /home/kyle/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0-beta3.aar/3d0f824ce6ba1a951d81600a0536f919/AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-auth:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-auth-11.8.0.aar/e40eb441f147aef4b29264c2c99748e0/AndroidManifest.xml:22:5-30:19
@@ -155,17 +151,9 @@ ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidMani
 	android:name
 		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:31:19-47
 activity#com.studybuddy.studybuddy.Home
-ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:32:9-42
+ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:32:9-51
 	android:name
 		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:32:19-39
-activity#com.studybuddy.studybuddy.ProfileActivity
-ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:33:9-36:68
-	android:label
-		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:35:13-59
-	android:theme
-		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:36:13-56
-	android:name
-		ADDED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml:34:13-44
 uses-sdk
 INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/kyle/AndroidStudioProjects/Study-Buddy/app/src/main/AndroidManifest.xml
@@ -174,12 +162,8 @@ MERGED from [com.firebaseui:firebase-ui-auth:3.2.1] /home/kyle/.gradle/caches/tr
 MERGED from [com.firebaseui:firebase-ui-auth:3.2.1] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-3.2.1.aar/1e0901494c7d8eda0e8c8eceb7db4782/AndroidManifest.xml:8:5-10:41
 MERGED from [com.google.android.gms:play-services-auth:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/0e57d5e6c44367ecc0dbfa047c7dcd6e/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/0e57d5e6c44367ecc0dbfa047c7dcd6e/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-firestore:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-firestore-11.8.0.aar/9ee725b04d539a4c12ca1f7e9a4b57f9/AndroidManifest.xml:6:5-44
-MERGED from [com.google.firebase:firebase-firestore:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-firestore-11.8.0.aar/9ee725b04d539a4c12ca1f7e9a4b57f9/AndroidManifest.xml:6:5-44
 MERGED from [com.android.support:design:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/6d5485ede9ab24e29bccbf19f58e80b0/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:design:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/6d5485ede9ab24e29bccbf19f58e80b0/AndroidManifest.xml:20:5-44
-MERGED from [de.hdodenhof:circleimageview:2.2.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/51fc2f401bd86e7565c4a13cd6ebdc5f/AndroidManifest.xml:5:5-7:41
-MERGED from [de.hdodenhof:circleimageview:2.2.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/circleimageview-2.2.0.aar/51fc2f401bd86e7565c4a13cd6ebdc5f/AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support:appcompat-v7:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/0fed216cff48debc5e0c7ae65d66cfd3/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/0fed216cff48debc5e0c7ae65d66cfd3/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support.constraint:constraint-layout:1.1.0-beta3] /home/kyle/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0-beta3.aar/3d0f824ce6ba1a951d81600a0536f919/AndroidManifest.xml:5:5-7:41
@@ -214,10 +198,6 @@ MERGED from [com.google.android.gms:play-services-basement:11.8.0] /home/kyle/.g
 MERGED from [com.google.android.gms:play-services-basement:11.8.0] /home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/a55a33c5ffada53e02053fa7df1a7546/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/947b909dabe30316a84198e543e2f7d7/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/947b909dabe30316a84198e543e2f7d7/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/e7e4d6bdf83cef2063e085e8584375d5/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/e7e4d6bdf83cef2063e085e8584375d5/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/add73cd52d613076b629ba3a53af9473/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/add73cd52d613076b629ba3a53af9473/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/9330b7f00016365e8617a647508876f6/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/9330b7f00016365e8617a647508876f6/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-utils:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/8e6d7d6dcb79968df204fdbcb22e372b/AndroidManifest.xml:20:5-44
@@ -226,6 +206,10 @@ MERGED from [com.android.support:animated-vector-drawable:27.0.2] /home/kyle/.gr
 MERGED from [com.android.support:animated-vector-drawable:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/3107c0c3c7ac17484ff9e45e5832d29a/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/f049582701eaf65665b25386d7c5f1d8/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/f049582701eaf65665b25386d7c5f1d8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/e7e4d6bdf83cef2063e085e8584375d5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.0.2.aar/e7e4d6bdf83cef2063e085e8584375d5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/add73cd52d613076b629ba3a53af9473/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/transition-27.0.2.aar/add73cd52d613076b629ba3a53af9473/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-ui:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/e9340b5ea9389bca706fe5e0db7544f8/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-ui:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/e9340b5ea9389bca706fe5e0db7544f8/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-media-compat:27.0.2] /home/kyle/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/16eef1ccd447f7be5a78d38809947e2f/AndroidManifest.xml:20:5-44
