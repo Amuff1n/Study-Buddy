@@ -78,7 +78,7 @@ public class ProfileActivity extends AppCompatActivity {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                saveInfo();
+                saveProfile();
             }
         });
 
@@ -132,7 +132,7 @@ public class ProfileActivity extends AppCompatActivity {
         }
     }  // void fetchProfile()
 
-    private void saveInfo() {
+    private void saveProfile() {
         Map<String, Object> user = new HashMap<>();
 
         try {
