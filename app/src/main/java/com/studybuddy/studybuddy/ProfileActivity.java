@@ -10,8 +10,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -33,9 +31,7 @@ import java.util.Map;
 public class ProfileActivity extends AppCompatActivity {
     private static final String TAG = "GoogleActivity";
 
-    private FirebaseAuth mAuth;
     private FirebaseFirestore db;
-    private GoogleSignInClient mGoogleSignInClient;
     private String userProfileId;
 
     private DocumentReference userProfile;
@@ -44,29 +40,29 @@ public class ProfileActivity extends AppCompatActivity {
     private TextView mMajorTextView;
     private TextView mYearTextView;
     private TextView mClassesTextView;
-    private Button saveButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         db = FirebaseFirestore.getInstance();
-        mAuth = FirebaseAuth.getInstance();
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
         // Configure sign-in to request the user's ID, email address, etc.
         GoogleSignInOptions.Builder builder =
                 new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN);
         builder.requestIdToken(getString(R.string.default_web_client_id));
         builder.requestEmail();
-        GoogleSignInOptions gso = builder.build();
+        //GoogleSignInOptions gso = builder.build();
 
         // Build a GoogleSignInClient with the options specified by gso
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+        //GoogleSignInClient mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
-        saveButton = findViewById(R.id.profile_save_button);
+        Button saveButton = findViewById(R.id.profile_save_button);
         mNameTextView = findViewById(R.id.profile_name);
         mSchoolTextView = findViewById(R.id.profile_school);
         mMajorTextView = findViewById(R.id.profile_major);
@@ -78,7 +74,7 @@ public class ProfileActivity extends AppCompatActivity {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                saveInfo();
+                saveProfile();
             }
         });
 
@@ -87,7 +83,7 @@ public class ProfileActivity extends AppCompatActivity {
     }  // void onCreate()
 
     private void fetchProfile(FirebaseUser user) {
-        if(user != null) {
+        if (user != null) {
             CollectionReference collectionReference = db.collection("users");
             String uid = "ftE8vUlZdgUktuxQyj6XeS94RDJ3";
             Query query = collectionReference.whereEqualTo("uid", uid);
@@ -96,7 +92,7 @@ public class ProfileActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<QuerySnapshot> task) {
 
                     if (task.isSuccessful()) {
-                        for(DocumentSnapshot document : task.getResult()) {
+                        for (DocumentSnapshot document : task.getResult()) {
                             userProfileId = task.getResult().getDocuments().get(0).getId();
                             userProfile = db.collection("users").document(userProfileId);
                             Log.d(TAG, document.getId() + " => " + document.getData());
@@ -119,20 +115,18 @@ public class ProfileActivity extends AppCompatActivity {
 
                             mClassesTextView.setText(document.get("classes").toString());
                         }
-                    }
-                    else {
-                        mNameTextView.setText("Error reading from database");
+                    } else {
+                        mNameTextView.setText(R.string.profile_error_databaseread);
                         Log.w(TAG, "Error getting documents.", task.getException());
                     }
                 }
             });
-        }
-        else {
-            mNameTextView.setText("Nobody's logged in!");
+        } else {
+            mNameTextView.setText(R.string.profile_error_notlogged);
         }
     }  // void fetchProfile()
 
-    private void saveInfo() {
+    private void saveProfile() {
         Map<String, Object> user = new HashMap<>();
 
         try {
@@ -141,29 +135,28 @@ public class ProfileActivity extends AppCompatActivity {
             user.put("school", mSchoolTextView.getText().toString());
             user.put("classes", mClassesTextView.getText().toString());
 
-        }
-        catch(IllegalArgumentException iae) {
+        } catch (IllegalArgumentException iae) {
             Log.w(TAG, "updateProfileWithEmptyFields", iae);
             Toast.makeText(ProfileActivity.this, "Please fill out all fields.",
                     Toast.LENGTH_SHORT).show();
             return;
         }
-      userProfile.set(user, SetOptions.merge())
-              .addOnSuccessListener(new OnSuccessListener<Void>() {
-                  @Override
-                  public void onSuccess(Void aVoid) {
-                      Log.d(TAG, "DocumentSnapshot successfully written!");
-                      Toast.makeText(ProfileActivity.this, "Profile updated successfully!",
-                              Toast.LENGTH_SHORT).show();
-                  }
-              })
-              .addOnFailureListener(new OnFailureListener() {
-                  @Override
-                  public void onFailure(@NonNull Exception e) {
-                      Log.w(TAG, "Error writing document", e);
-                      Toast.makeText(ProfileActivity.this, "Failed to update Profile!",
-                              Toast.LENGTH_SHORT).show();
-                  }
-              });
+        userProfile.set(user, SetOptions.merge())
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d(TAG, "DocumentSnapshot successfully written!");
+                        Toast.makeText(ProfileActivity.this, "Profile updated successfully!",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w(TAG, "Error writing document", e);
+                        Toast.makeText(ProfileActivity.this, "Failed to update Profile!",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
     } // void saveInfo()
 }  // class ProfileActivity
