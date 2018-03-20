@@ -111,4 +111,6 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="profile_error_notlogged">Nobody\'s logged in!</string>
+    <string name="profile_error_databaseread">Error reading from database</string>
 </resources>
