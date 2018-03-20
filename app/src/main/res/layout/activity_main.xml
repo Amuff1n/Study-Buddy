@@ -86,23 +86,26 @@
         android:id="@+id/email_sign_in_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="72dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:text="@string/email_sign_in"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sign_up_button"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password_field"
-        tools:text="@string/email_sign_in"
-        android:layout_marginRight="72dp" />
+        tools:text="@string/email_sign_in" />
 
     <Button
         android:id="@+id/sign_up_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="72dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginLeft="208dp"
         android:text="@string/email_sign_up"
         app:layout_constraintBaseline_toBaselineOf="@+id/email_sign_in_button"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        tools:text="@string/email_sign_up"
-        android:layout_marginStart="72dp" />
+        tools:text="@string/email_sign_up" />
 
 </android.support.constraint.ConstraintLayout>

@@ -164,7 +164,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     /*private void signOut() {
         // Firebase sign out
         mAuth.signOut();
-
         // Google sign out
         mGoogleSignInClient.signOut().addOnCompleteListener(this, new OnCompleteListener<Void>() {
             @Override
@@ -190,7 +189,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             // update buttons as if user is signed out
             mEmailTextView.setText(R.string.signed_out);
             mUidTextView.setText(null);
-
             findViewById(R.id.sign_in_button).setVisibility(View.VISIBLE);
             findViewById(R.id.sign_out_button).setVisibility(View.INVISIBLE);
         }*/

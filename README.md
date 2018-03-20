@@ -1,3 +1,6 @@
+# Study-Buddy
+An android application to aid students in forming study groups.
+
 # Study Buddy
 
 ## How to contribute
