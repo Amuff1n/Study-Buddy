@@ -28,7 +28,6 @@
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile"
             android:parentActivityName="com.studybuddy.studybuddy.Home">
-            android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>
 

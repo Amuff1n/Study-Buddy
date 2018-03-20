@@ -114,7 +114,6 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
-
     <string name="signout">SignOut</string>
     <string name="first_name">First Name: %1$s</string>
     <string name="last_name">Last Name: %1$s</string>

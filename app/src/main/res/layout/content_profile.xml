@@ -18,7 +18,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/profile_save_button"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="28dp" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile_image"
@@ -42,7 +43,6 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:text="@string/profile_label_name"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
@@ -59,7 +59,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/profile_major"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="24dp" />
 
     <EditText
         android:id="@+id/profile_major"
@@ -70,7 +71,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/profile_year"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="28dp" />
 
     <EditText
         android:id="@+id/profile_classes"
@@ -86,7 +88,8 @@
         app:layout_constraintBottom_toTopOf="@+id/profile_school"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_name" />
+        app:layout_constraintTop_toBottomOf="@+id/profile_name"
+        android:inputType="" />
 
     <Button
         android:id="@+id/profile_save_button"
