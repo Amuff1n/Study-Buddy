@@ -1,7 +1,6 @@
 # Study-Buddy
-An android application to aide students in forming study groups.
+An android application to aid students in forming study groups.
 
-test push please ignore
 # Study Buddy
 
 ## How to contribute
