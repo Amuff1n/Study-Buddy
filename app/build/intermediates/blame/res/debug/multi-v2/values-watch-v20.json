@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/kyle/AndroidStudioProjects/Study-Buddy/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "C:\\Users\\Alex\\AndroidStudioProjects\\Study-Buddy\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/home/kyle/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/0e57d5e6c44367ecc0dbfa047c7dcd6e/res/values-watch-v20/values.xml",
+                    "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-auth-11.8.0.aar\\0bd6e3bbebd9153418e0c3d83905b20c\\res\\values-watch-v20\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",

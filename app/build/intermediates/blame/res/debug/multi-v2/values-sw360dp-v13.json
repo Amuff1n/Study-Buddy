@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/kyle/AndroidStudioProjects/Study-Buddy/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw360dp-v13/values-sw360dp-v13.xml",
+            "outputFile": "C:\\Users\\Alex\\AndroidStudioProjects\\Study-Buddy\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw360dp-v13\\values-sw360dp-v13.xml",
             "map": [
                 {
-                    "source": "/home/kyle/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-3.2.1.aar/1e0901494c7d8eda0e8c8eceb7db4782/res/values-sw360dp-v13/values-sw360dp-v13.xml",
+                    "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\firebase-ui-auth-3.2.1.aar\\9043b431a39aa5c16902147af7741467\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",
