@@ -32,22 +32,25 @@
         <activity
             android:name="com.studybuddy.studybuddy.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.studybuddy.studybuddy.CreateAccount"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.studybuddy.studybuddy.SetUpAccount" />
         <activity android:name="com.studybuddy.studybuddy.Home" />
         <activity
             android:name="com.studybuddy.studybuddy.ProfileActivity"
             android:label="@string/title_activity_profile"
-            android:parentActivityName="com.studybuddy.studybuddy.Home" >
+            android:parentActivityName="com.studybuddy.studybuddy.Home" />
+        <activity
+            android:name="com.studybuddy.studybuddy.ViewGroupsActivity"
+            android:label="@string/title_activity_view_groups"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <meta-data
