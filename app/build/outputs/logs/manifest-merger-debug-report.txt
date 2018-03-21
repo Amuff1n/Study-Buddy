@@ -1,604 +1,608 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:2:1-34:12
-MERGED from [com.google.firebase:firebase-database:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-database-11.8.0.aar\302a69ef9d58beb08e9b26290b7a855a\AndroidManifest.xml:2:1-8:12
-MERGED from [com.google.firebase:firebase-firestore:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-firestore-11.8.0.aar\b1e46e09b9218bd331f4e669bb0230e6\AndroidManifest.xml:2:1-8:12
-MERGED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:2:1-81:12
-MERGED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\0bd6e3bbebd9153418e0c3d83905b20c\AndroidManifest.xml:17:1-39:12
-MERGED from [com.android.support:design:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\design-27.0.2.aar\3c6429276ad09751f3f70609a799ed39\AndroidManifest.xml:17:1-22:12
-MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\02ce40641a439f563a90dce8a1e6bf27\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\ac007ef9a9eab742f2e7c304f6fdee58\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0-beta3] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0-beta3.aar\9a892b531c46c7831036439e74b147d8\AndroidManifest.xml:2:1-11:12
-MERGED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\dc245169d1f8868b6663b50bc727e6dc\AndroidManifest.xml:17:1-32:12
-MERGED from [com.google.firebase:firebase-core:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-core-11.8.0.aar\8dcb5dc6164414fb6b71e287269d476c\AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.firebase:firebase-database-connection:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-11.8.0.aar\6204e52ff3e2ce83b4fbc5e77261a4c4\AndroidManifest.xml:2:1-8:12
-MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:17:1-54:12
-MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\92e4eefd12c83c1b5f52b18d117cb981\AndroidManifest.xml:17:1-40:12
-MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:17:1-59:12
-MERGED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\989de710c898563ad0c0794c5757eae7\AndroidManifest.xml:2:1-15:12
-MERGED from [com.google.android.gms:play-services-auth-api-phone:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-11.8.0.aar\febd0f5fa3f9313a8e7bafc4c4f754c7\AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.android.gms:play-services-auth-base:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-11.8.0.aar\02964dda5f82ae324e287df851f747dc\AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\e5934f73fe1dabdd22838fa8c423e469\AndroidManifest.xml:17:1-29:12
-MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\75670b6766ea5eaa93dc8703e1c53d41\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\7a6cc7fd3b508172301ceec995366304\AndroidManifest.xml:17:1-28:12
-MERGED from [com.google.firebase:firebase-database-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-database-license-11.8.0.aar\4a6afd4c4319947759323fb4509f5cd5\AndroidManifest.xml:2:1-6:12
-MERGED from [com.android.support:customtabs:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\customtabs-27.0.2.aar\b7f5bb7b03c74cbeaa707d48d80bf23e\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\c63277785b9dd69c73fb4dc0f76ef4b6\AndroidManifest.xml:17:1-32:12
-MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\72f6d478a43c39db999abd574efdc51f\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-v4:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\support-v4-27.0.2.aar\fdfe8bba70c4fd13eddb2bad860fc158\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.0.2.aar\585b88cc118c24a39a71532bdf62d4b7\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\transition-27.0.2.aar\827d5f8ed8901e0f60cc85923f6f3868\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\support-fragment-27.0.2.aar\b3e88bad76c7a141001df1caf05723a6\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.0.2.aar\da05119b3117df69d811d7b2d4fbacd0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.0.2.aar\c0efcc39dec471993b932967650beac0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.0.2.aar\3fea8a99bb5fc02e653e7e67c26168a8\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\e432faf3fe6733c302ef358cbc7306a8\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.0.2.aar\0bd68f887b8d0aa57da9116acb073931\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\9c40d518bcf1caf6f799ff900e943d55\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\1042d0464a5f629e099454131ace5c38\AndroidManifest.xml:17:1-24:12
-MERGED from [android.arch.core:runtime:1.0.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\1ba5b14a65e73168e880be3f28659687\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.firebase:firebase-auth-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-auth-license-11.8.0.aar\d47058944269633f1fd233602a9d55cd\AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.firebase:firebase-database-connection-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-license-11.8.0.aar\8a63859260907a88360b1e0dd87e3ed0\AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\5ccc3eeb06cd737f4b64ccef8d634289\AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.firebase:firebase-common-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-common-license-11.8.0.aar\00b199624e4d211f6751d66b75e02719\AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\ae78fcc974c01d86cd90a8f87976c6ce\AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-license-11.8.0.aar\ad03d3ed090d71cb9481f8a246e20192\AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.android.gms:play-services-auth-base-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-license-11.8.0.aar\28156f199d85043a26d76583d5eb94e3\AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\b419ab3fb0f2fbb8398a08365a6e29ee\AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.firebase:firebase-analytics-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-11.8.0.aar\87e36a9517b267e9655e40229bee00f6\AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-11.8.0.aar\71d39585a8bff13ffec5aedb170d971a\AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.firebase:firebase-iid-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-11.8.0.aar\050a1b6c159f2b5fda2ba4dbdb376861\AndroidManifest.xml:2:1-6:12
-INJECTED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:2:1-34:12
+ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:2:1-34:12
+MERGED from [com.google.firebase:firebase-database:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-database-11.8.0.aar\27ec25af63c6b7595008692301dd002a\AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.firebase:firebase-firestore:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-firestore-11.8.0.aar\58aebf6f45f6bddb0345040051e4faaf\AndroidManifest.xml:2:1-8:12
+MERGED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:2:1-81:12
+MERGED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\f3463e5e92e2e18dc9b3171470daebb6\AndroidManifest.xml:17:1-39:12
+MERGED from [com.android.support:design:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\design-27.0.2.aar\0673a166d92fc3aefe498d3634d15e53\AndroidManifest.xml:17:1-22:12
+MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\fb720f41457eb75a5f5d821da67a6c1e\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\129b41dc47607d7e13b1cfd3cc5e4bde\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0-beta3] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0-beta3.aar\8998c7dde14e5ffd030fee2e1b150543\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\243bf5f1335bf349dbee7dc2d7f0ed31\AndroidManifest.xml:17:1-32:12
+MERGED from [com.google.firebase:firebase-core:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-core-11.8.0.aar\ca011effbe0e9aa55f3316b7eb9cbc63\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.firebase:firebase-database-connection:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-11.8.0.aar\bc71d16ad236f554382e54cba9c9cbd1\AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:17:1-54:12
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\e593665326477aabf57cd0a5ac0b74fb\AndroidManifest.xml:17:1-40:12
+MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:17:1-59:12
+MERGED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\e6ca9787245a7aeaf90bfede1907674b\AndroidManifest.xml:2:1-15:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-11.8.0.aar\bdcab835fc22c7dfedf3a7fca38ab88c\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-base:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-11.8.0.aar\da27c43c7f08d6819a8b6a96f27a670e\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\473bfa89f4b61893efa6d2ecf09021ad\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\2843af98ed843eb075598a79d3dee28a\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\431aa5c59a660989eb1830b849ce22e9\AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.firebase:firebase-database-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-database-license-11.8.0.aar\ced2296f1aa772f1151038d309d64a23\AndroidManifest.xml:2:1-6:12
+MERGED from [com.android.support:customtabs:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\customtabs-27.0.2.aar\2d835ddd4720f191ea10bc80d979ad51\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\72b7566a296222c102f6e3be7f7051f7\AndroidManifest.xml:17:1-32:12
+MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\dbc22f80e2f56e2d6c0d4e4e40fa2c85\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\support-v4-27.0.2.aar\0221b97dd712b5cad3c2d6f114ed00ff\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.0.2.aar\5b9324da2bb479ed4616d682c17a16f9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\transition-27.0.2.aar\a13c5032cda4e6cd97547d61ad220494\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\support-fragment-27.0.2.aar\8e149945da2a11ca89b04d0f2f78c05e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.0.2.aar\b3eb59853dcd30a9523f69db3f1509e9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.0.2.aar\65610c19617693a4338933d3a793a211\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.0.2.aar\d84ae47fff958d9d61baad87261fdf79\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\b0faaf919df427a6e74555c17f1050fd\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.0.2.aar\ff205edad8c6e93191120b124570bc8d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\da90593d1589d8717905b67a810a56c2\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\3368c9b0df947c5ad478441493d2c935\AndroidManifest.xml:17:1-24:12
+MERGED from [android.arch.core:runtime:1.0.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\a8ad22aa96506ef67743879b11638cc3\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-auth-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-auth-license-11.8.0.aar\be0c59fdbb8d455631d866e94565f869\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.firebase:firebase-database-connection-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-license-11.8.0.aar\915120866c5e3722cf6d95370e19de2d\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\9136cd531a0829bc3ff7eca286e00d2e\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.firebase:firebase-common-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-common-license-11.8.0.aar\3d8f8740eb51c5ddb9b3b3b2d68f8073\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\716e0dbc2173e4b0d06ac2ced362ec8d\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-license-11.8.0.aar\8535bdb5b19e839d944e7fd3c11a951b\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-auth-base-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-license-11.8.0.aar\81126ceb3134fd59cd1a49a23083069f\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\8669fd25d25b4854c38ccfd3e0e0c8b8\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.firebase:firebase-analytics-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-11.8.0.aar\3bf12cbf123a822e68c981d51fcce0c6\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-11.8.0.aar\d2a77d3fd31a47ab8f7d797e72f51401\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.firebase:firebase-iid-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-11.8.0.aar\7ce50f4492a68650365bee6cdbf6c715\AndroidManifest.xml:2:1-6:12
+INJECTED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:2:1-34:12
 	package
-		ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:3:5-40
-		INJECTED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:3:5-40
+		INJECTED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:2:1-34:12
-		INJECTED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:2:1-34:12
+		INJECTED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:2:1-34:12
-		INJECTED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:2:1-34:12
+		INJECTED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:5:5-32:19
-MERGED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:15:5-79:19
-MERGED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:15:5-79:19
-MERGED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\0bd6e3bbebd9153418e0c3d83905b20c\AndroidManifest.xml:22:5-37:19
-MERGED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\0bd6e3bbebd9153418e0c3d83905b20c\AndroidManifest.xml:22:5-37:19
-MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\02ce40641a439f563a90dce8a1e6bf27\AndroidManifest.xml:9:5-20
-MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\02ce40641a439f563a90dce8a1e6bf27\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0-beta3] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0-beta3.aar\9a892b531c46c7831036439e74b147d8\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0-beta3] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0-beta3.aar\9a892b531c46c7831036439e74b147d8\AndroidManifest.xml:9:5-20
-MERGED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\dc245169d1f8868b6663b50bc727e6dc\AndroidManifest.xml:22:5-30:19
-MERGED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\dc245169d1f8868b6663b50bc727e6dc\AndroidManifest.xml:22:5-30:19
-MERGED from [com.google.firebase:firebase-core:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-core-11.8.0.aar\8dcb5dc6164414fb6b71e287269d476c\AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-core:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-core-11.8.0.aar\8dcb5dc6164414fb6b71e287269d476c\AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:27:5-52:19
-MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:27:5-52:19
-MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\92e4eefd12c83c1b5f52b18d117cb981\AndroidManifest.xml:27:5-38:19
-MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\92e4eefd12c83c1b5f52b18d117cb981\AndroidManifest.xml:27:5-38:19
-MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:34:5-57:19
-MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:34:5-57:19
-MERGED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\989de710c898563ad0c0794c5757eae7\AndroidManifest.xml:7:5-13:19
-MERGED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\989de710c898563ad0c0794c5757eae7\AndroidManifest.xml:7:5-13:19
-MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\e5934f73fe1dabdd22838fa8c423e469\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\e5934f73fe1dabdd22838fa8c423e469\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\75670b6766ea5eaa93dc8703e1c53d41\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\75670b6766ea5eaa93dc8703e1c53d41\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\7a6cc7fd3b508172301ceec995366304\AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\7a6cc7fd3b508172301ceec995366304\AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.firebase:firebase-database-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-database-license-11.8.0.aar\4a6afd4c4319947759323fb4509f5cd5\AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-database-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-database-license-11.8.0.aar\4a6afd4c4319947759323fb4509f5cd5\AndroidManifest.xml:5:5-20
-MERGED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\c63277785b9dd69c73fb4dc0f76ef4b6\AndroidManifest.xml:24:5-30:19
-MERGED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\c63277785b9dd69c73fb4dc0f76ef4b6\AndroidManifest.xml:24:5-30:19
-MERGED from [com.google.firebase:firebase-auth-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-auth-license-11.8.0.aar\d47058944269633f1fd233602a9d55cd\AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-auth-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-auth-license-11.8.0.aar\d47058944269633f1fd233602a9d55cd\AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-database-connection-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-license-11.8.0.aar\8a63859260907a88360b1e0dd87e3ed0\AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-database-connection-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-license-11.8.0.aar\8a63859260907a88360b1e0dd87e3ed0\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\5ccc3eeb06cd737f4b64ccef8d634289\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\5ccc3eeb06cd737f4b64ccef8d634289\AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-common-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-common-license-11.8.0.aar\00b199624e4d211f6751d66b75e02719\AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-common-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-common-license-11.8.0.aar\00b199624e4d211f6751d66b75e02719\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\ae78fcc974c01d86cd90a8f87976c6ce\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\ae78fcc974c01d86cd90a8f87976c6ce\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-license-11.8.0.aar\ad03d3ed090d71cb9481f8a246e20192\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-license-11.8.0.aar\ad03d3ed090d71cb9481f8a246e20192\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-auth-base-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-license-11.8.0.aar\28156f199d85043a26d76583d5eb94e3\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-auth-base-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-license-11.8.0.aar\28156f199d85043a26d76583d5eb94e3\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\b419ab3fb0f2fbb8398a08365a6e29ee\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\b419ab3fb0f2fbb8398a08365a6e29ee\AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-analytics-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-11.8.0.aar\87e36a9517b267e9655e40229bee00f6\AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-analytics-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-11.8.0.aar\87e36a9517b267e9655e40229bee00f6\AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-11.8.0.aar\71d39585a8bff13ffec5aedb170d971a\AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-11.8.0.aar\71d39585a8bff13ffec5aedb170d971a\AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-iid-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-11.8.0.aar\050a1b6c159f2b5fda2ba4dbdb376861\AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-iid-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-11.8.0.aar\050a1b6c159f2b5fda2ba4dbdb376861\AndroidManifest.xml:5:5-20
+ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:5:5-32:19
+MERGED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:15:5-79:19
+MERGED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:15:5-79:19
+MERGED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\f3463e5e92e2e18dc9b3171470daebb6\AndroidManifest.xml:22:5-37:19
+MERGED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\f3463e5e92e2e18dc9b3171470daebb6\AndroidManifest.xml:22:5-37:19
+MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\fb720f41457eb75a5f5d821da67a6c1e\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\fb720f41457eb75a5f5d821da67a6c1e\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0-beta3] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0-beta3.aar\8998c7dde14e5ffd030fee2e1b150543\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0-beta3] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0-beta3.aar\8998c7dde14e5ffd030fee2e1b150543\AndroidManifest.xml:9:5-20
+MERGED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\243bf5f1335bf349dbee7dc2d7f0ed31\AndroidManifest.xml:22:5-30:19
+MERGED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\243bf5f1335bf349dbee7dc2d7f0ed31\AndroidManifest.xml:22:5-30:19
+MERGED from [com.google.firebase:firebase-core:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-core-11.8.0.aar\ca011effbe0e9aa55f3316b7eb9cbc63\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-core:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-core-11.8.0.aar\ca011effbe0e9aa55f3316b7eb9cbc63\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:27:5-52:19
+MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:27:5-52:19
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\e593665326477aabf57cd0a5ac0b74fb\AndroidManifest.xml:27:5-38:19
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\e593665326477aabf57cd0a5ac0b74fb\AndroidManifest.xml:27:5-38:19
+MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:34:5-57:19
+MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:34:5-57:19
+MERGED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\e6ca9787245a7aeaf90bfede1907674b\AndroidManifest.xml:7:5-13:19
+MERGED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\e6ca9787245a7aeaf90bfede1907674b\AndroidManifest.xml:7:5-13:19
+MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\473bfa89f4b61893efa6d2ecf09021ad\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\473bfa89f4b61893efa6d2ecf09021ad\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\2843af98ed843eb075598a79d3dee28a\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\2843af98ed843eb075598a79d3dee28a\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\431aa5c59a660989eb1830b849ce22e9\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\431aa5c59a660989eb1830b849ce22e9\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.firebase:firebase-database-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-database-license-11.8.0.aar\ced2296f1aa772f1151038d309d64a23\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-database-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-database-license-11.8.0.aar\ced2296f1aa772f1151038d309d64a23\AndroidManifest.xml:5:5-20
+MERGED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\72b7566a296222c102f6e3be7f7051f7\AndroidManifest.xml:24:5-30:19
+MERGED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\72b7566a296222c102f6e3be7f7051f7\AndroidManifest.xml:24:5-30:19
+MERGED from [com.google.firebase:firebase-auth-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-auth-license-11.8.0.aar\be0c59fdbb8d455631d866e94565f869\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-auth-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-auth-license-11.8.0.aar\be0c59fdbb8d455631d866e94565f869\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-database-connection-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-license-11.8.0.aar\915120866c5e3722cf6d95370e19de2d\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-database-connection-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-license-11.8.0.aar\915120866c5e3722cf6d95370e19de2d\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\9136cd531a0829bc3ff7eca286e00d2e\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\9136cd531a0829bc3ff7eca286e00d2e\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-common-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-common-license-11.8.0.aar\3d8f8740eb51c5ddb9b3b3b2d68f8073\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-common-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-common-license-11.8.0.aar\3d8f8740eb51c5ddb9b3b3b2d68f8073\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\716e0dbc2173e4b0d06ac2ced362ec8d\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\716e0dbc2173e4b0d06ac2ced362ec8d\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-license-11.8.0.aar\8535bdb5b19e839d944e7fd3c11a951b\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-license-11.8.0.aar\8535bdb5b19e839d944e7fd3c11a951b\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-auth-base-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-license-11.8.0.aar\81126ceb3134fd59cd1a49a23083069f\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-auth-base-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-license-11.8.0.aar\81126ceb3134fd59cd1a49a23083069f\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\8669fd25d25b4854c38ccfd3e0e0c8b8\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\8669fd25d25b4854c38ccfd3e0e0c8b8\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-11.8.0.aar\3bf12cbf123a822e68c981d51fcce0c6\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-11.8.0.aar\3bf12cbf123a822e68c981d51fcce0c6\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-11.8.0.aar\d2a77d3fd31a47ab8f7d797e72f51401\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-11.8.0.aar\d2a77d3fd31a47ab8f7d797e72f51401\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-iid-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-11.8.0.aar\7ce50f4492a68650365bee6cdbf6c715\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-iid-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-11.8.0.aar\7ce50f4492a68650365bee6cdbf6c715\AndroidManifest.xml:5:5-20
 	android:supportsRtl
-		ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:11:9-35
 	android:label
-		ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:9:9-41
+		ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:9:9-41
 	android:fullBackupContent
-		ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:7:9-59
+		ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:7:9-59
 	android:roundIcon
-		ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:10:9-54
+		ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:10:9-54
 	android:icon
-		ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:8:9-43
+		ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:8:9-43
 	android:allowBackup
-		ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:12:9-40
+		ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:12:9-40
 activity#com.studybuddy.studybuddy.MainActivity
-ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:13:9-20:20
+ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:13:9-21:20
 	android:theme
-		ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:15:13-56
+		ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:15:13-56
 	android:name
-		ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:14:13-41
+		ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:14:13-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:16:13-19:29
+ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:16:13-20:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:17:17-69
+ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:17:17-69
 	android:name
-		ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:17:25-66
+		ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:17:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:18:17-77
+ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:19:17-77
 	android:name
-		ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:18:27-74
+		ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:19:27-74
 activity#com.studybuddy.studybuddy.CreateAccount
-ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:21:9-24:20
+ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:22:9-24:68
 	android:theme
-		ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:23:13-56
+		ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:24:13-56
 	android:name
-		ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:22:13-42
+		ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:23:13-42
 activity#com.studybuddy.studybuddy.SetUpAccount
-ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:25:9-50
+ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:25:9-50
 	android:name
-		ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:25:19-47
+		ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:25:19-47
 activity#com.studybuddy.studybuddy.Home
-ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:26:9-42
+ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:26:9-42
 	android:name
-		ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:26:19-39
+		ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:26:19-39
 activity#com.studybuddy.studybuddy.ProfileActivity
-ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:27:9-31:20
+ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:27:9-30:59
 	android:parentActivityName
-		ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:30:13-72
+		ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:30:13-47
 	android:label
-		ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:29:13-59
+		ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:29:13-59
 	android:name
-		ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:28:13-44
+		ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:28:13-44
+activity#com.studybuddy.studybuddy.CreateGroup
+ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:31:9-58
+	android:name
+		ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml:31:19-46
 uses-sdk
-INJECTED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
-MERGED from [com.google.firebase:firebase-database:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-database-11.8.0.aar\302a69ef9d58beb08e9b26290b7a855a\AndroidManifest.xml:6:5-44
-MERGED from [com.google.firebase:firebase-database:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-database-11.8.0.aar\302a69ef9d58beb08e9b26290b7a855a\AndroidManifest.xml:6:5-44
-MERGED from [com.google.firebase:firebase-firestore:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-firestore-11.8.0.aar\b1e46e09b9218bd331f4e669bb0230e6\AndroidManifest.xml:6:5-44
-MERGED from [com.google.firebase:firebase-firestore:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-firestore-11.8.0.aar\b1e46e09b9218bd331f4e669bb0230e6\AndroidManifest.xml:6:5-44
-MERGED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:8:5-10:41
-MERGED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:8:5-10:41
-MERGED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\0bd6e3bbebd9153418e0c3d83905b20c\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\0bd6e3bbebd9153418e0c3d83905b20c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\design-27.0.2.aar\3c6429276ad09751f3f70609a799ed39\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\design-27.0.2.aar\3c6429276ad09751f3f70609a799ed39\AndroidManifest.xml:20:5-44
-MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\02ce40641a439f563a90dce8a1e6bf27\AndroidManifest.xml:5:5-7:41
-MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\02ce40641a439f563a90dce8a1e6bf27\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\ac007ef9a9eab742f2e7c304f6fdee58\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\ac007ef9a9eab742f2e7c304f6fdee58\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0-beta3] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0-beta3.aar\9a892b531c46c7831036439e74b147d8\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.0-beta3] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0-beta3.aar\9a892b531c46c7831036439e74b147d8\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\dc245169d1f8868b6663b50bc727e6dc\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\dc245169d1f8868b6663b50bc727e6dc\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-core:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-core-11.8.0.aar\8dcb5dc6164414fb6b71e287269d476c\AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-core:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-core-11.8.0.aar\8dcb5dc6164414fb6b71e287269d476c\AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-database-connection:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-11.8.0.aar\6204e52ff3e2ce83b4fbc5e77261a4c4\AndroidManifest.xml:6:5-44
-MERGED from [com.google.firebase:firebase-database-connection:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-11.8.0.aar\6204e52ff3e2ce83b4fbc5e77261a4c4\AndroidManifest.xml:6:5-44
-MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\92e4eefd12c83c1b5f52b18d117cb981\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\92e4eefd12c83c1b5f52b18d117cb981\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\989de710c898563ad0c0794c5757eae7\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\989de710c898563ad0c0794c5757eae7\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-api-phone:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-11.8.0.aar\febd0f5fa3f9313a8e7bafc4c4f754c7\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-api-phone:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-11.8.0.aar\febd0f5fa3f9313a8e7bafc4c4f754c7\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-base:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-11.8.0.aar\02964dda5f82ae324e287df851f747dc\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-base:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-11.8.0.aar\02964dda5f82ae324e287df851f747dc\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\e5934f73fe1dabdd22838fa8c423e469\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\e5934f73fe1dabdd22838fa8c423e469\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\75670b6766ea5eaa93dc8703e1c53d41\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\75670b6766ea5eaa93dc8703e1c53d41\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\7a6cc7fd3b508172301ceec995366304\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\7a6cc7fd3b508172301ceec995366304\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-database-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-database-license-11.8.0.aar\4a6afd4c4319947759323fb4509f5cd5\AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-database-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-database-license-11.8.0.aar\4a6afd4c4319947759323fb4509f5cd5\AndroidManifest.xml:4:5-43
-MERGED from [com.android.support:customtabs:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\customtabs-27.0.2.aar\b7f5bb7b03c74cbeaa707d48d80bf23e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customtabs:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\customtabs-27.0.2.aar\b7f5bb7b03c74cbeaa707d48d80bf23e\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\c63277785b9dd69c73fb4dc0f76ef4b6\AndroidManifest.xml:20:5-22:41
-MERGED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\c63277785b9dd69c73fb4dc0f76ef4b6\AndroidManifest.xml:20:5-22:41
-MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\72f6d478a43c39db999abd574efdc51f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\72f6d478a43c39db999abd574efdc51f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\support-v4-27.0.2.aar\fdfe8bba70c4fd13eddb2bad860fc158\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\support-v4-27.0.2.aar\fdfe8bba70c4fd13eddb2bad860fc158\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.0.2.aar\585b88cc118c24a39a71532bdf62d4b7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.0.2.aar\585b88cc118c24a39a71532bdf62d4b7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\transition-27.0.2.aar\827d5f8ed8901e0f60cc85923f6f3868\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\transition-27.0.2.aar\827d5f8ed8901e0f60cc85923f6f3868\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\support-fragment-27.0.2.aar\b3e88bad76c7a141001df1caf05723a6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\support-fragment-27.0.2.aar\b3e88bad76c7a141001df1caf05723a6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.0.2.aar\da05119b3117df69d811d7b2d4fbacd0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.0.2.aar\da05119b3117df69d811d7b2d4fbacd0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.0.2.aar\c0efcc39dec471993b932967650beac0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.0.2.aar\c0efcc39dec471993b932967650beac0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.0.2.aar\3fea8a99bb5fc02e653e7e67c26168a8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.0.2.aar\3fea8a99bb5fc02e653e7e67c26168a8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\e432faf3fe6733c302ef358cbc7306a8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\e432faf3fe6733c302ef358cbc7306a8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.0.2.aar\0bd68f887b8d0aa57da9116acb073931\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.0.2.aar\0bd68f887b8d0aa57da9116acb073931\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\9c40d518bcf1caf6f799ff900e943d55\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.0.2] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\9c40d518bcf1caf6f799ff900e943d55\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\1042d0464a5f629e099454131ace5c38\AndroidManifest.xml:20:5-22:41
-MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\1042d0464a5f629e099454131ace5c38\AndroidManifest.xml:20:5-22:41
-MERGED from [android.arch.core:runtime:1.0.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\1ba5b14a65e73168e880be3f28659687\AndroidManifest.xml:20:5-22:41
-MERGED from [android.arch.core:runtime:1.0.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\1ba5b14a65e73168e880be3f28659687\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.firebase:firebase-auth-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-auth-license-11.8.0.aar\d47058944269633f1fd233602a9d55cd\AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-auth-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-auth-license-11.8.0.aar\d47058944269633f1fd233602a9d55cd\AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-database-connection-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-license-11.8.0.aar\8a63859260907a88360b1e0dd87e3ed0\AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-database-connection-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-license-11.8.0.aar\8a63859260907a88360b1e0dd87e3ed0\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\5ccc3eeb06cd737f4b64ccef8d634289\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\5ccc3eeb06cd737f4b64ccef8d634289\AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-common-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-common-license-11.8.0.aar\00b199624e4d211f6751d66b75e02719\AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-common-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-common-license-11.8.0.aar\00b199624e4d211f6751d66b75e02719\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\ae78fcc974c01d86cd90a8f87976c6ce\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\ae78fcc974c01d86cd90a8f87976c6ce\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-license-11.8.0.aar\ad03d3ed090d71cb9481f8a246e20192\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-license-11.8.0.aar\ad03d3ed090d71cb9481f8a246e20192\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-auth-base-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-license-11.8.0.aar\28156f199d85043a26d76583d5eb94e3\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-auth-base-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-license-11.8.0.aar\28156f199d85043a26d76583d5eb94e3\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\b419ab3fb0f2fbb8398a08365a6e29ee\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\b419ab3fb0f2fbb8398a08365a6e29ee\AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-analytics-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-11.8.0.aar\87e36a9517b267e9655e40229bee00f6\AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-analytics-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-11.8.0.aar\87e36a9517b267e9655e40229bee00f6\AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-11.8.0.aar\71d39585a8bff13ffec5aedb170d971a\AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-11.8.0.aar\71d39585a8bff13ffec5aedb170d971a\AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-iid-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-11.8.0.aar\050a1b6c159f2b5fda2ba4dbdb376861\AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-iid-license:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-11.8.0.aar\050a1b6c159f2b5fda2ba4dbdb376861\AndroidManifest.xml:4:5-43
-INJECTED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
+MERGED from [com.google.firebase:firebase-database:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-database-11.8.0.aar\27ec25af63c6b7595008692301dd002a\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-database:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-database-11.8.0.aar\27ec25af63c6b7595008692301dd002a\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-firestore:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-firestore-11.8.0.aar\58aebf6f45f6bddb0345040051e4faaf\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-firestore:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-firestore-11.8.0.aar\58aebf6f45f6bddb0345040051e4faaf\AndroidManifest.xml:6:5-44
+MERGED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:8:5-10:41
+MERGED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:8:5-10:41
+MERGED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\f3463e5e92e2e18dc9b3171470daebb6\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\f3463e5e92e2e18dc9b3171470daebb6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\design-27.0.2.aar\0673a166d92fc3aefe498d3634d15e53\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\design-27.0.2.aar\0673a166d92fc3aefe498d3634d15e53\AndroidManifest.xml:20:5-44
+MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\fb720f41457eb75a5f5d821da67a6c1e\AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\fb720f41457eb75a5f5d821da67a6c1e\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\129b41dc47607d7e13b1cfd3cc5e4bde\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\129b41dc47607d7e13b1cfd3cc5e4bde\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0-beta3] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0-beta3.aar\8998c7dde14e5ffd030fee2e1b150543\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0-beta3] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0-beta3.aar\8998c7dde14e5ffd030fee2e1b150543\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\243bf5f1335bf349dbee7dc2d7f0ed31\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\243bf5f1335bf349dbee7dc2d7f0ed31\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-core:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-core-11.8.0.aar\ca011effbe0e9aa55f3316b7eb9cbc63\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-core:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-core-11.8.0.aar\ca011effbe0e9aa55f3316b7eb9cbc63\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-database-connection:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-11.8.0.aar\bc71d16ad236f554382e54cba9c9cbd1\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-database-connection:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-11.8.0.aar\bc71d16ad236f554382e54cba9c9cbd1\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\e593665326477aabf57cd0a5ac0b74fb\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\e593665326477aabf57cd0a5ac0b74fb\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\e6ca9787245a7aeaf90bfede1907674b\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\e6ca9787245a7aeaf90bfede1907674b\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-11.8.0.aar\bdcab835fc22c7dfedf3a7fca38ab88c\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-11.8.0.aar\bdcab835fc22c7dfedf3a7fca38ab88c\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-11.8.0.aar\da27c43c7f08d6819a8b6a96f27a670e\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-11.8.0.aar\da27c43c7f08d6819a8b6a96f27a670e\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\473bfa89f4b61893efa6d2ecf09021ad\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\473bfa89f4b61893efa6d2ecf09021ad\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\2843af98ed843eb075598a79d3dee28a\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\2843af98ed843eb075598a79d3dee28a\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\431aa5c59a660989eb1830b849ce22e9\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\431aa5c59a660989eb1830b849ce22e9\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-database-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-database-license-11.8.0.aar\ced2296f1aa772f1151038d309d64a23\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-database-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-database-license-11.8.0.aar\ced2296f1aa772f1151038d309d64a23\AndroidManifest.xml:4:5-43
+MERGED from [com.android.support:customtabs:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\customtabs-27.0.2.aar\2d835ddd4720f191ea10bc80d979ad51\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customtabs:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\customtabs-27.0.2.aar\2d835ddd4720f191ea10bc80d979ad51\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\72b7566a296222c102f6e3be7f7051f7\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\72b7566a296222c102f6e3be7f7051f7\AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\dbc22f80e2f56e2d6c0d4e4e40fa2c85\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\dbc22f80e2f56e2d6c0d4e4e40fa2c85\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\support-v4-27.0.2.aar\0221b97dd712b5cad3c2d6f114ed00ff\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\support-v4-27.0.2.aar\0221b97dd712b5cad3c2d6f114ed00ff\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.0.2.aar\5b9324da2bb479ed4616d682c17a16f9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.0.2.aar\5b9324da2bb479ed4616d682c17a16f9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\transition-27.0.2.aar\a13c5032cda4e6cd97547d61ad220494\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\transition-27.0.2.aar\a13c5032cda4e6cd97547d61ad220494\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\support-fragment-27.0.2.aar\8e149945da2a11ca89b04d0f2f78c05e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\support-fragment-27.0.2.aar\8e149945da2a11ca89b04d0f2f78c05e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.0.2.aar\b3eb59853dcd30a9523f69db3f1509e9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.0.2.aar\b3eb59853dcd30a9523f69db3f1509e9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.0.2.aar\65610c19617693a4338933d3a793a211\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.0.2.aar\65610c19617693a4338933d3a793a211\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.0.2.aar\d84ae47fff958d9d61baad87261fdf79\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.0.2.aar\d84ae47fff958d9d61baad87261fdf79\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\b0faaf919df427a6e74555c17f1050fd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\b0faaf919df427a6e74555c17f1050fd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.0.2.aar\ff205edad8c6e93191120b124570bc8d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.0.2.aar\ff205edad8c6e93191120b124570bc8d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\da90593d1589d8717905b67a810a56c2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.2] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\da90593d1589d8717905b67a810a56c2\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\3368c9b0df947c5ad478441493d2c935\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\3368c9b0df947c5ad478441493d2c935\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.core:runtime:1.0.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\a8ad22aa96506ef67743879b11638cc3\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.core:runtime:1.0.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\a8ad22aa96506ef67743879b11638cc3\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-auth-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-auth-license-11.8.0.aar\be0c59fdbb8d455631d866e94565f869\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-auth-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-auth-license-11.8.0.aar\be0c59fdbb8d455631d866e94565f869\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-database-connection-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-license-11.8.0.aar\915120866c5e3722cf6d95370e19de2d\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-database-connection-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-license-11.8.0.aar\915120866c5e3722cf6d95370e19de2d\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\9136cd531a0829bc3ff7eca286e00d2e\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\9136cd531a0829bc3ff7eca286e00d2e\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-common-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-common-license-11.8.0.aar\3d8f8740eb51c5ddb9b3b3b2d68f8073\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-common-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-common-license-11.8.0.aar\3d8f8740eb51c5ddb9b3b3b2d68f8073\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\716e0dbc2173e4b0d06ac2ced362ec8d\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\716e0dbc2173e4b0d06ac2ced362ec8d\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-license-11.8.0.aar\8535bdb5b19e839d944e7fd3c11a951b\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-auth-api-phone-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-license-11.8.0.aar\8535bdb5b19e839d944e7fd3c11a951b\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-auth-base-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-license-11.8.0.aar\81126ceb3134fd59cd1a49a23083069f\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-auth-base-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-license-11.8.0.aar\81126ceb3134fd59cd1a49a23083069f\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\8669fd25d25b4854c38ccfd3e0e0c8b8\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\8669fd25d25b4854c38ccfd3e0e0c8b8\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-analytics-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-11.8.0.aar\3bf12cbf123a822e68c981d51fcce0c6\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-analytics-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-license-11.8.0.aar\3bf12cbf123a822e68c981d51fcce0c6\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-11.8.0.aar\d2a77d3fd31a47ab8f7d797e72f51401\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-11.8.0.aar\d2a77d3fd31a47ab8f7d797e72f51401\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-iid-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-11.8.0.aar\7ce50f4492a68650365bee6cdbf6c715\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-iid-license:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-11.8.0.aar\7ce50f4492a68650365bee6cdbf6c715\AndroidManifest.xml:4:5-43
+INJECTED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Alex\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Kolby\AndroidStudioProjects\Study-Buddy\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:12:5-79
-MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\92e4eefd12c83c1b5f52b18d117cb981\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\92e4eefd12c83c1b5f52b18d117cb981\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:22:5-79
+ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:12:5-79
+MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\e593665326477aabf57cd0a5ac0b74fb\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\e593665326477aabf57cd0a5ac0b74fb\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:22:5-79
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:12:22-76
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:12:22-76
 uses-permission#android.permission.INTERNET
-ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:13:5-67
-MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\92e4eefd12c83c1b5f52b18d117cb981\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\92e4eefd12c83c1b5f52b18d117cb981\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:23:5-67
+ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:13:5-67
+MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\e593665326477aabf57cd0a5ac0b74fb\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\e593665326477aabf57cd0a5ac0b74fb\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:23:5-67
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:13:22-64
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:13:22-64
 meta-data#com.google.android.gms.version
-ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:16:9-18:69
-MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\7a6cc7fd3b508172301ceec995366304\AndroidManifest.xml:23:9-25:69
-MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\7a6cc7fd3b508172301ceec995366304\AndroidManifest.xml:23:9-25:69
+ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:16:9-18:69
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\431aa5c59a660989eb1830b849ce22e9\AndroidManifest.xml:23:9-25:69
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\431aa5c59a660989eb1830b849ce22e9\AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:18:13-66
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:18:13-66
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:17:13-58
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:17:13-58
 meta-data#com.facebook.sdk.ApplicationId
-ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:19:9-21:63
+ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:19:9-21:63
 	android:value
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:21:13-60
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:21:13-60
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:20:13-58
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:20:13-58
 activity#com.firebase.ui.auth.KickoffActivity
-ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:23:9-27:61
+ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:23:9-27:61
 	android:label
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:26:13-29
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:26:13-29
 	android:exported
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:25:13-37
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:25:13-37
 	android:theme
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:27:13-58
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:27:13-58
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:24:13-64
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:24:13-64
 activity#com.firebase.ui.auth.ui.email.RecoverPasswordActivity
-ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:28:9-31:75
+ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:28:9-31:75
 	android:label
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:31:13-72
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:31:13-72
 	android:exported
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:30:13-37
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:30:13-37
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:29:13-81
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:29:13-81
 activity#com.firebase.ui.auth.ui.email.EmailActivity
-ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:32:9-36:58
+ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:32:9-36:58
 	android:label
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:35:13-56
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:35:13-56
 	android:windowSoftInputMode
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:36:13-55
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:36:13-55
 	android:exported
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:34:13-37
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:34:13-37
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:33:13-71
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:33:13-71
 activity#com.firebase.ui.auth.ui.phone.PhoneActivity
-ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:37:9-41:77
+ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:37:9-41:77
 	android:label
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:40:13-66
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:40:13-66
 	android:windowSoftInputMode
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:41:13-74
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:41:13-74
 	android:exported
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:39:13-37
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:39:13-37
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:38:13-71
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:38:13-71
 activity#com.firebase.ui.auth.ui.idp.WelcomeBackIdpPrompt
-ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:42:9-45:73
+ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:42:9-45:73
 	android:label
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:45:13-70
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:45:13-70
 	android:exported
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:44:13-37
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:44:13-37
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:43:13-76
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:43:13-76
 activity#com.firebase.ui.auth.ui.email.WelcomeBackPasswordPrompt
-ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:46:9-50:58
+ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:46:9-50:58
 	android:label
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:49:13-75
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:49:13-75
 	android:windowSoftInputMode
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:50:13-55
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:50:13-55
 	android:exported
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:48:13-37
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:48:13-37
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:47:13-83
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:47:13-83
 activity#com.firebase.ui.auth.ui.idp.AuthMethodPickerActivity
-ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:51:9-54:65
+ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:51:9-54:65
 	android:label
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:54:13-62
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:54:13-62
 	android:exported
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:53:13-37
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:53:13-37
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:52:13-80
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:52:13-80
 activity#com.facebook.FacebookActivity
-ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:55:9-59:48
+ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:55:9-59:48
 	android:label
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:58:13-45
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:58:13-45
 	tools:ignore
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:59:13-45
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:59:13-45
 	android:configChanges
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:57:13-96
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:57:13-96
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:56:13-57
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:56:13-57
 activity#com.facebook.CustomTabActivity
-ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:60:9-72:20
+ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:60:9-72:20
 	android:exported
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:62:13-36
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:62:13-36
 	tools:ignore
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:63:13-45
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:63:13-45
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:61:13-58
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:61:13-58
 intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
-ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:64:13-71:29
+ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:64:13-71:29
 action#android.intent.action.VIEW
-ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:65:17-69
+ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:65:17-69
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:65:25-66
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:65:25-66
 category#android.intent.category.DEFAULT
-ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:67:17-76
+ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:67:17-76
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:67:27-73
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:67:27-73
 category#android.intent.category.BROWSABLE
-ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:68:17-78
+ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:68:17-78
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:68:27-75
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:68:27-75
 data
-ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:70:17-81
+ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:70:17-81
 	android:scheme
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:70:23-78
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:70:23-78
 provider#com.firebase.ui.auth.data.client.AuthUiInitProvider
-ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:74:9-78:38
+ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:74:9-78:38
 	android:authorities
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:76:13-70
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:76:13-70
 	android:exported
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:77:13-37
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:77:13-37
 	android:initOrder
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:78:13-35
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:78:13-35
 	android:name
-		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\9043b431a39aa5c16902147af7741467\AndroidManifest.xml:75:13-79
+		ADDED from [com.firebaseui:firebase-ui-auth:3.2.1] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-ui-auth-3.2.1.aar\4fbde6739075b6ca4a2c876a665336cb\AndroidManifest.xml:75:13-79
 activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
-ADDED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\0bd6e3bbebd9153418e0c3d83905b20c\AndroidManifest.xml:23:9-27:75
+ADDED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\f3463e5e92e2e18dc9b3171470daebb6\AndroidManifest.xml:23:9-27:75
 	android:excludeFromRecents
-		ADDED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\0bd6e3bbebd9153418e0c3d83905b20c\AndroidManifest.xml:25:13-46
+		ADDED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\f3463e5e92e2e18dc9b3171470daebb6\AndroidManifest.xml:25:13-46
 	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\0bd6e3bbebd9153418e0c3d83905b20c\AndroidManifest.xml:26:13-37
+		ADDED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\f3463e5e92e2e18dc9b3171470daebb6\AndroidManifest.xml:26:13-37
 	android:theme
-		ADDED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\0bd6e3bbebd9153418e0c3d83905b20c\AndroidManifest.xml:27:13-72
+		ADDED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\f3463e5e92e2e18dc9b3171470daebb6\AndroidManifest.xml:27:13-72
 	android:name
-		ADDED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\0bd6e3bbebd9153418e0c3d83905b20c\AndroidManifest.xml:24:13-93
+		ADDED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\f3463e5e92e2e18dc9b3171470daebb6\AndroidManifest.xml:24:13-93
 service#com.google.android.gms.auth.api.signin.RevocationBoundService
-ADDED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\0bd6e3bbebd9153418e0c3d83905b20c\AndroidManifest.xml:33:9-36:110
+ADDED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\f3463e5e92e2e18dc9b3171470daebb6\AndroidManifest.xml:33:9-36:110
 	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\0bd6e3bbebd9153418e0c3d83905b20c\AndroidManifest.xml:35:13-36
+		ADDED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\f3463e5e92e2e18dc9b3171470daebb6\AndroidManifest.xml:35:13-36
 	android:permission
-		ADDED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\0bd6e3bbebd9153418e0c3d83905b20c\AndroidManifest.xml:36:13-107
+		ADDED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\f3463e5e92e2e18dc9b3171470daebb6\AndroidManifest.xml:36:13-107
 	android:name
-		ADDED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\0bd6e3bbebd9153418e0c3d83905b20c\AndroidManifest.xml:34:13-89
+		ADDED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.8.0.aar\f3463e5e92e2e18dc9b3171470daebb6\AndroidManifest.xml:34:13-89
 activity#com.google.firebase.auth.internal.FederatedSignInActivity
-ADDED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\dc245169d1f8868b6663b50bc727e6dc\AndroidManifest.xml:23:9-29:75
+ADDED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\243bf5f1335bf349dbee7dc2d7f0ed31\AndroidManifest.xml:23:9-29:75
 	android:excludeFromRecents
-		ADDED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\dc245169d1f8868b6663b50bc727e6dc\AndroidManifest.xml:25:13-46
+		ADDED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\243bf5f1335bf349dbee7dc2d7f0ed31\AndroidManifest.xml:25:13-46
 	android:launchMode
-		ADDED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\dc245169d1f8868b6663b50bc727e6dc\AndroidManifest.xml:27:13-48
+		ADDED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\243bf5f1335bf349dbee7dc2d7f0ed31\AndroidManifest.xml:27:13-48
 	android:exported
-		ADDED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\dc245169d1f8868b6663b50bc727e6dc\AndroidManifest.xml:26:13-36
+		ADDED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\243bf5f1335bf349dbee7dc2d7f0ed31\AndroidManifest.xml:26:13-36
 	android:permission
-		ADDED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\dc245169d1f8868b6663b50bc727e6dc\AndroidManifest.xml:28:13-102
+		ADDED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\243bf5f1335bf349dbee7dc2d7f0ed31\AndroidManifest.xml:28:13-102
 	android:theme
-		ADDED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\dc245169d1f8868b6663b50bc727e6dc\AndroidManifest.xml:29:13-72
+		ADDED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\243bf5f1335bf349dbee7dc2d7f0ed31\AndroidManifest.xml:29:13-72
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\dc245169d1f8868b6663b50bc727e6dc\AndroidManifest.xml:24:13-85
+		ADDED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\243bf5f1335bf349dbee7dc2d7f0ed31\AndroidManifest.xml:24:13-85
 uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:25:5-68
-MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\92e4eefd12c83c1b5f52b18d117cb981\AndroidManifest.xml:25:5-68
-MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\92e4eefd12c83c1b5f52b18d117cb981\AndroidManifest.xml:25:5-68
-MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:24:5-68
-MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:24:5-68
+ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\e593665326477aabf57cd0a5ac0b74fb\AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\e593665326477aabf57cd0a5ac0b74fb\AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:24:5-68
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:25:22-65
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:25:22-65
 receiver#com.google.android.gms.measurement.AppMeasurementReceiver
-ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:28:9-32:20
-MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\92e4eefd12c83c1b5f52b18d117cb981\AndroidManifest.xml:28:9-32:20
-MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\92e4eefd12c83c1b5f52b18d117cb981\AndroidManifest.xml:28:9-32:20
+ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:28:9-32:20
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\e593665326477aabf57cd0a5ac0b74fb\AndroidManifest.xml:28:9-32:20
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\e593665326477aabf57cd0a5ac0b74fb\AndroidManifest.xml:28:9-32:20
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:30:13-35
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:30:13-35
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:31:13-37
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:31:13-37
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:29:13-85
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:29:13-85
 receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
-ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:33:9-41:20
+ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:33:9-41:20
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:35:13-35
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:35:13-35
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:36:13-36
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:36:13-36
 	android:permission
-		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:37:13-69
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:37:13-69
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:34:13-100
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:34:13-100
 intent-filter#com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:38:13-40:29
+ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:38:13-40:29
 action#com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:39:17-79
+ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:39:17-79
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:39:25-76
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:39:25-76
 service#com.google.android.gms.measurement.AppMeasurementService
-ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:43:9-46:40
-MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\92e4eefd12c83c1b5f52b18d117cb981\AndroidManifest.xml:34:9-37:40
-MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\92e4eefd12c83c1b5f52b18d117cb981\AndroidManifest.xml:34:9-37:40
+ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:43:9-46:40
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\e593665326477aabf57cd0a5ac0b74fb\AndroidManifest.xml:34:9-37:40
+MERGED from [com.google.firebase:firebase-analytics-impl:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.8.0.aar\e593665326477aabf57cd0a5ac0b74fb\AndroidManifest.xml:34:9-37:40
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:45:13-35
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:45:13-35
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:46:13-37
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:46:13-37
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:44:13-84
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:44:13-84
 service#com.google.android.gms.measurement.AppMeasurementJobService
-ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:47:9-51:72
+ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:47:9-51:72
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:49:13-35
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:49:13-35
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:50:13-37
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:50:13-37
 	android:permission
-		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:51:13-69
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:51:13-69
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\fc6e38b49c26cb7873e77850db0b6ac6\AndroidManifest.xml:48:13-87
+		ADDED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\ff1f5d7957e5e873ac31a4aa79cbeefb\AndroidManifest.xml:48:13-87
 uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:26:5-82
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:26:5-82
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:26:22-79
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:26:22-79
 permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:28:5-30:47
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:28:5-30:47
 	android:protectionLevel
-		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:30:9-44
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:30:9-44
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:29:9-63
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:29:9-63
 permission#com.studybuddy.studybuddy.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:28:5-30:47
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:28:5-30:47
 	android:protectionLevel
-		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:30:9-44
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:30:9-44
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:29:9-63
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:29:9-63
 uses-permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:32:5-79
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:32:5-79
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:32:22-76
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:32:22-76
 uses-permission#com.studybuddy.studybuddy.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:32:5-79
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:32:5-79
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:32:22-76
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:32:22-76
 receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
-ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:35:9-44:20
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:35:9-44:20
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:37:13-36
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:37:13-36
 	android:permission
-		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:38:13-73
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:38:13-73
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:36:13-78
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:36:13-78
 intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:39:13-43:29
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:39:13-43:29
 intent-filter#com.google.android.c2dm.intent.RECEIVE+com.studybuddy.studybuddy
-ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:39:13-43:29
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:39:13-43:29
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:40:17-81
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:40:17-81
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:40:25-78
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:40:25-78
 category#${applicationId}
-ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:42:17-61
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:42:17-61
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:42:27-58
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:42:27-58
 category#com.studybuddy.studybuddy
-ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:42:17-61
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:42:17-61
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:42:27-58
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:42:27-58
 service#com.google.firebase.iid.FirebaseInstanceIdService
-ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:50:9-56:19
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:50:9-56:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:52:13-36
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:52:13-36
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:51:13-77
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:51:13-77
 intent-filter#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:53:13-55:29
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:53:13-55:29
 	android:priority
-		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:53:28-51
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:53:28-51
 action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:54:17-80
+ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:54:17-80
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\51e38306930442c1c5a10a15780a4ac3\AndroidManifest.xml:54:25-77
+		ADDED from [com.google.firebase:firebase-iid:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.8.0.aar\62a464dc6cac21a4688a5d06355f30ab\AndroidManifest.xml:54:25-77
 provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\989de710c898563ad0c0794c5757eae7\AndroidManifest.xml:8:9-12:39
+ADDED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\e6ca9787245a7aeaf90bfede1907674b\AndroidManifest.xml:8:9-12:39
 	android:authorities
-		ADDED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\989de710c898563ad0c0794c5757eae7\AndroidManifest.xml:10:13-72
+		ADDED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\e6ca9787245a7aeaf90bfede1907674b\AndroidManifest.xml:10:13-72
 	android:exported
-		ADDED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\989de710c898563ad0c0794c5757eae7\AndroidManifest.xml:11:13-37
+		ADDED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\e6ca9787245a7aeaf90bfede1907674b\AndroidManifest.xml:11:13-37
 	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\989de710c898563ad0c0794c5757eae7\AndroidManifest.xml:12:13-36
+		ADDED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\e6ca9787245a7aeaf90bfede1907674b\AndroidManifest.xml:12:13-36
 	android:name
-		ADDED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\989de710c898563ad0c0794c5757eae7\AndroidManifest.xml:9:13-77
+		ADDED from [com.google.firebase:firebase-common:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\e6ca9787245a7aeaf90bfede1907674b\AndroidManifest.xml:9:13-77
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\e5934f73fe1dabdd22838fa8c423e469\AndroidManifest.xml:23:9-26:75
+ADDED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\473bfa89f4b61893efa6d2ecf09021ad\AndroidManifest.xml:23:9-26:75
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\e5934f73fe1dabdd22838fa8c423e469\AndroidManifest.xml:25:13-37
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\473bfa89f4b61893efa6d2ecf09021ad\AndroidManifest.xml:25:13-37
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\e5934f73fe1dabdd22838fa8c423e469\AndroidManifest.xml:26:13-72
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\473bfa89f4b61893efa6d2ecf09021ad\AndroidManifest.xml:26:13-72
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\e5934f73fe1dabdd22838fa8c423e469\AndroidManifest.xml:24:13-79
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\473bfa89f4b61893efa6d2ecf09021ad\AndroidManifest.xml:24:13-79
 provider#android.arch.lifecycle.ProcessLifecycleOwnerInitializer
-ADDED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\c63277785b9dd69c73fb4dc0f76ef4b6\AndroidManifest.xml:25:9-29:43
+ADDED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\72b7566a296222c102f6e3be7f7051f7\AndroidManifest.xml:25:9-29:43
 	android:authorities
-		ADDED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\c63277785b9dd69c73fb4dc0f76ef4b6\AndroidManifest.xml:27:13-68
+		ADDED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\72b7566a296222c102f6e3be7f7051f7\AndroidManifest.xml:27:13-68
 	android:multiprocess
-		ADDED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\c63277785b9dd69c73fb4dc0f76ef4b6\AndroidManifest.xml:29:13-40
+		ADDED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\72b7566a296222c102f6e3be7f7051f7\AndroidManifest.xml:29:13-40
 	android:exported
-		ADDED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\c63277785b9dd69c73fb4dc0f76ef4b6\AndroidManifest.xml:28:13-37
+		ADDED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\72b7566a296222c102f6e3be7f7051f7\AndroidManifest.xml:28:13-37
 	android:name
-		ADDED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Alex\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\c63277785b9dd69c73fb4dc0f76ef4b6\AndroidManifest.xml:26:13-83
+		ADDED from [android.arch.lifecycle:extensions:1.0.0] C:\Users\Kolby\.gradle\caches\transforms-1\files-1.1\extensions-1.0.0.aar\72b7566a296222c102f6e3be7f7051f7\AndroidManifest.xml:26:13-83
