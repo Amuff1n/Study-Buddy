@@ -1,10 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Alex\\AndroidStudioProjects\\Study-Buddy\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldltr-v21\\values-ldltr-v21.xml",
+            "outputFile": "/home/kyle/AndroidStudioProjects/Study-Buddy/C:\\Users\\Alex\\AndroidStudioProjects\\Study-Buddy\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldltr-v21\\values-ldltr-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\ac007ef9a9eab742f2e7c304f6fdee58\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
+                    "source": "/home/kyle/AndroidStudioProjects/Study-Buddy/C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\ac007ef9a9eab742f2e7c304f6fdee58\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "112",
+                        "endOffsets": "163"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/home/kyle/AndroidStudioProjects/Study-Buddy/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml",
+            "map": [
+                {
+                    "source": "/home/kyle/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/0fed216cff48debc5e0c7ae65d66cfd3/res/values-ldltr-v21/values-ldltr-v21.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

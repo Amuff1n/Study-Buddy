@@ -1,10 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Alex\\AndroidStudioProjects\\Study-Buddy\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xlarge-v4\\values-xlarge-v4.xml",
+            "outputFile": "/home/kyle/AndroidStudioProjects/Study-Buddy/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\ac007ef9a9eab742f2e7c304f6fdee58\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "source": "/home/kyle/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/0fed216cff48debc5e0c7ae65d66cfd3/res/values-xlarge-v4/values-xlarge-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,126,197,267,337,405",
+                        "endColumns": "70,70,69,69,67,67",
+                        "endOffsets": "121,192,262,332,400,468"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/home/kyle/AndroidStudioProjects/Study-Buddy/C:\\Users\\Alex\\AndroidStudioProjects\\Study-Buddy\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xlarge-v4\\values-xlarge-v4.xml",
+            "map": [
+                {
+                    "source": "/home/kyle/AndroidStudioProjects/Study-Buddy/C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\ac007ef9a9eab742f2e7c304f6fdee58\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",

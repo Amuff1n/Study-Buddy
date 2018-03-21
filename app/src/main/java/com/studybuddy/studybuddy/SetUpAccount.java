@@ -1,3 +1,4 @@
+
 package com.studybuddy.studybuddy;
 
 import android.content.Intent;
@@ -65,21 +66,23 @@ public class SetUpAccount extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "Enter all info", Toast.LENGTH_SHORT).show();
                     }
                 });
-                startActivity(new Intent(getApplicationContext(), Home.class));
+                startActivity(new Intent(getApplicationContext(), AddClasses.class));
             }
         });
     }
+
     //override default back button
     @Override
-    public void onBackPressed(){}
+    public void onBackPressed() {
+    }
 
     //delete account if user clicks cancel
-    public void delete(){
-        if(mUser != null){
+    public void delete() {
+        if (mUser != null) {
             mUser.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
-                    if(task.isSuccessful()){
+                    if (task.isSuccessful()) {
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
                     }
                 }

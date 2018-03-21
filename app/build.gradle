@@ -36,7 +36,6 @@ dependencies {
     implementation files('libs/CircleImageView-master/CircleImageView-master/gradle/wrapper/gradle-wrapper.jar')
     compile 'de.hdodenhof:circleimageview:2.2.0'
 
-
     // Required -- JUnit 4 framework
     testCompile 'junit:junit:4.12'
     // Optional -- Mockito framework

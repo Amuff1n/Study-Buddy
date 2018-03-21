@@ -1,10 +1,42 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Alex\\AndroidStudioProjects\\Study-Buddy\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "outputFile": "/home/kyle/AndroidStudioProjects/Study-Buddy/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\ac007ef9a9eab742f2e7c304f6fdee58\\res\\values-v24\\values-v24.xml",
+                    "source": "/home/kyle/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/16eef1ccd447f7be5a78d38809947e2f/res/values-v24/values-v24.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,121,182,248",
+                        "endColumns": "65,60,65,66",
+                        "endOffsets": "116,177,243,310"
+                    },
+                    "to": {
+                        "startLines": "4,5,6,7",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "347,413,474,540",
+                        "endColumns": "65,60,65,66",
+                        "endOffsets": "408,469,535,602"
+                    }
+                },
+                {
+                    "source": "/home/kyle/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/0fed216cff48debc5e0c7ae65d66cfd3/res/values-v24/values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/home/kyle/AndroidStudioProjects/Study-Buddy/C:\\Users\\Alex\\AndroidStudioProjects\\Study-Buddy\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "map": [
+                {
+                    "source": "/home/kyle/AndroidStudioProjects/Study-Buddy/C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\ac007ef9a9eab742f2e7c304f6fdee58\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +46,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.2.aar\\0bd68f887b8d0aa57da9116acb073931\\res\\values-v24\\values-v24.xml",
+                    "source": "/home/kyle/AndroidStudioProjects/Study-Buddy/C:\\Users\\Alex\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.2.aar\\0bd68f887b8d0aa57da9116acb073931\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

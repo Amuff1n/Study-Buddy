@@ -40,15 +40,16 @@
         </activity>
         <activity
             android:name="com.studybuddy.studybuddy.CreateAccount"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.studybuddy.studybuddy.SetUpAccount" />
         <activity android:name="com.studybuddy.studybuddy.Home" />
         <activity
             android:name="com.studybuddy.studybuddy.ProfileActivity"
             android:label="@string/title_activity_profile"
             android:parentActivityName="com.studybuddy.studybuddy.Home" >
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity android:name="com.studybuddy.studybuddy.AddClasses" />
 
         <meta-data
             android:name="com.google.android.gms.version"
