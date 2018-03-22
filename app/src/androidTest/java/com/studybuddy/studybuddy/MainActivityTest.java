@@ -1,11 +1,11 @@
 package com.studybuddy.studybuddy;
 
 import android.support.test.InstrumentationRegistry;
-import android.test.ActivityInstrumentationTestCase;
 import android.test.ActivityInstrumentationTestCase2;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.android.gms.common.SignInButton;
 import com.google.firebase.auth.FirebaseAuth;
 
 import org.junit.Before;
@@ -20,7 +20,8 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
     private MainActivity mMainActivity;
     private EditText mEmailField;
     private EditText mPasswordField;
-    private Button mSignIn;
+    private Button mSignInEmail;
+    private SignInButton mSignInGoogle;
     private FirebaseAuth mAuth;
 
     public MainActivityTest() {
@@ -36,19 +37,27 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
         mMainActivity = getActivity();
         mEmailField = mMainActivity.findViewById(R.id.email_field);
         mPasswordField = mMainActivity.findViewById(R.id.password_field);
-        mSignIn = mMainActivity.findViewById(R.id.email_sign_in_button);
+        mSignInEmail = mMainActivity.findViewById(R.id.email_sign_in_button);
+        mSignInGoogle = mMainActivity.findViewById(R.id.sign_in_button);
         mAuth = FirebaseAuth.getInstance();
 
         assertNotNull(mEmailField);
         assertNotNull(mPasswordField);
-        assertNotNull(mSignIn);
+        assertNotNull(mSignInEmail);
+        assertNotNull(mSignInGoogle);
     }
 
     @Test
-    public void testOnClick() throws Exception {
+    public void testOnClickSignInEmail() throws Exception {
         mEmailField.setText("kolby.rottero@gmail.com");
         mPasswordField.setText("thisisanothertest");
-        mSignIn.performClick();
+        mSignInEmail.performClick();
+        assertNotNull(mAuth.getCurrentUser());
+    }
+
+    @Test
+    public void testOnClickSignInGoogle() throws Exception {
+        mSignInGoogle.performClick();
         assertNotNull(mAuth.getCurrentUser());
     }
 
