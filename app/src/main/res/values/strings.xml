@@ -124,4 +124,10 @@
     <string name="group_location">Location</string>
     <string name="group_desc">Description</string>
     <string name="group_create">Create</string>
+    <string-array name="locations_array">
+        <item>Marston</item>
+        <item>Library West</item>
+        <item>Newell Hall</item>
+        <item>Reitz Union</item>
+    </string-array>
 </resources>
