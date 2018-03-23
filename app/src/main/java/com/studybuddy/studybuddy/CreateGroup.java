@@ -13,24 +13,32 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class CreateGroup extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     private FirebaseAuth mAuth;
+    private FirebaseUser mUser;
     private FirebaseFirestore mFirestore;
-    private EditText mClass;
+    private Spinner mClass;
     private Spinner mLocation;
     private EditText mDescription;
     private Button mCreateGroup;
+    private ArrayList<String> classList;
 
     private static final String TAG = "GoogleActivity";
 
@@ -39,6 +47,8 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_group);
         mAuth = FirebaseAuth.getInstance();
+        mUser = FirebaseAuth.getInstance().getCurrentUser();
+        mFirestore = FirebaseFirestore.getInstance();
         mClass = findViewById(R.id.group_class_field);
         mLocation = findViewById(R.id.group_location_field);
 
@@ -47,14 +57,16 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
         //Have to make an adapter to fill in drop down menu items with string array
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.locations_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //Drop down list for classes
+        getClasses();
+
         mLocation.setAdapter(adapter);
         mLocation.setOnItemSelectedListener(this);
-        mFirestore = FirebaseFirestore.getInstance();
 
         mCreateGroup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String groupClass = mClass.getText().toString();
+                String groupClass = mClass.getSelectedItem().toString();
                 String groupLocation = mLocation.getSelectedItem().toString();
                 String groupDesc = mDescription.getText().toString();
                 createGroup(groupClass, groupLocation, groupDesc);
@@ -112,5 +124,33 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
 
             return true;
         }
+    }
+    //pulls object of all data in document then finds all classes and puts them into an array to
+    //use for the drop down menu
+    public void getClasses(){
+        DocumentReference classRef = mFirestore.collection("users").document(mUser.getUid());
+        classRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                classList = new ArrayList<String>();
+                if(task.isSuccessful()){
+                    DocumentSnapshot document = task.getResult();
+                    if (document != null && document.exists()){
+                        Map<String, Object> classes = document.getData();
+                        for(Map.Entry<String,Object>mapEntry : classes.entrySet()){
+                            int index = 0;
+                            if(mapEntry.getValue().toString().equals("true")){
+                                classList.add(mapEntry.getKey());
+                                index++;
+                            }
+                        }
+                    }
+                }
+                String[] classArray = new String[classList.size()];
+                classArray = classList.toArray(classArray);
+                ArrayAdapter<String> classAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, classArray);
+                mClass.setAdapter(classAdapter);
+            }
+        });
     }
 }

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.studybuddy.studybuddy.CreateGroup">
 
-    <EditText
+    <Spinner
         android:id="@+id/group_class_field"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -24,13 +24,11 @@
     <EditText
         android:id="@+id/group_desc_field"
         android:layout_width="0dp"
-        android:layout_height="41dp"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/group_desc"
-        android:inputType="textMultiLine"
+        android:hint="Description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/group_location_field" />
