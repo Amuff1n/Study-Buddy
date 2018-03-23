@@ -104,6 +104,7 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
             groupMap.put("description", groupDesc);
             groupMap.put("creationTime", FieldValue.serverTimestamp());
             groupMap.put("user", mAuth.getUid());
+            groupMap.put("index", 1);
 
             mFirestore.collection("study_groups")
                     .add(groupMap)
@@ -138,10 +139,8 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
                     if (document != null && document.exists()){
                         Map<String, Object> classes = document.getData();
                         for(Map.Entry<String,Object>mapEntry : classes.entrySet()){
-                            int index = 0;
                             if(mapEntry.getValue().toString().equals("true")){
                                 classList.add(mapEntry.getKey());
-                                index++;
                             }
                         }
                     }
