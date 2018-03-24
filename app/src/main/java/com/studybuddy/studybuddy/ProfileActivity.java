@@ -32,6 +32,7 @@ public class ProfileActivity extends AppCompatActivity {
     private static final String TAG = "GoogleActivity";
 
     private FirebaseFirestore db;
+    private FirebaseAuth mAuth;
     private String userProfileId;
 
     private DocumentReference userProfile;
@@ -49,7 +50,7 @@ public class ProfileActivity extends AppCompatActivity {
 
 
         db = FirebaseFirestore.getInstance();
-        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
 
         // Configure sign-in to request the user's ID, email address, etc.
         GoogleSignInOptions.Builder builder =
@@ -84,7 +85,7 @@ public class ProfileActivity extends AppCompatActivity {
     private void fetchProfile(FirebaseUser user) {
         if (user != null) {
             CollectionReference collectionReference = db.collection("users");
-            String uid = "ftE8vUlZdgUktuxQyj6XeS94RDJ3";
+            String uid = mAuth.getUid();
             Query query = collectionReference.whereEqualTo("uid", uid);
             query.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                 @Override

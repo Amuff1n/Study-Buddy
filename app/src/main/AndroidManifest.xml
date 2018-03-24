@@ -21,16 +21,25 @@
         </activity>
         <activity
             android:name=".CreateAccount"
+<<<<<<< HEAD
             android:theme="@style/AppTheme.NoActionBar" />
+=======
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+>>>>>>> create_groups
         <activity android:name=".SetUpAccount" />
         <activity android:name=".Home" />
         <activity
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile"
+<<<<<<< HEAD
             android:parentActivityName=".Home">
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity android:name=".AddClasses"></activity>
+=======
+            android:parentActivityName=".Home"></activity>
+        <activity android:name=".CreateGroup"></activity>
+>>>>>>> create_groups
     </application>
 
 </manifest>

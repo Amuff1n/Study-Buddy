@@ -37,11 +37,11 @@ public class SetUpAccount extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_up_account);
-        cancel = (TextView) findViewById(R.id.Cancel);
+        cancel = findViewById(R.id.Cancel);
         mUser = FirebaseAuth.getInstance().getCurrentUser();
-        confirm = (Button) findViewById(R.id.ConfirmAccount);
-        firstName = (EditText) findViewById(R.id.FirstName);
-        lastName = (EditText) findViewById(R.id.LastName);
+        confirm = findViewById(R.id.ConfirmAccount);
+        firstName = findViewById(R.id.FirstName);
+        lastName = findViewById(R.id.LastName);
         mFirestore = FirebaseFirestore.getInstance();
         mId = FirebaseAuth.getInstance();
         cancel.setOnClickListener(new View.OnClickListener() {
@@ -77,8 +77,13 @@ public class SetUpAccount extends AppCompatActivity {
     }
 
     //delete account if user clicks cancel
+<<<<<<< HEAD
     public void delete() {
         if (mUser != null) {
+=======
+    public boolean delete(){
+        if(mUser != null){
+>>>>>>> create_groups
             mUser.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
@@ -87,6 +92,10 @@ public class SetUpAccount extends AppCompatActivity {
                     }
                 }
             });
+            return true;
+        }
+        else {
+            return false;
         }
     }
 }
