@@ -1,18 +1,25 @@
 package com.studybuddy.studybuddy;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApiNotAvailableException;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.lang.reflect.Array;
@@ -27,6 +34,7 @@ public class AddClasses extends AppCompatActivity {
     private Button done;
     private ImageButton add;
     private EditText classes;
+    private TextView cancelAdd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +45,14 @@ public class AddClasses extends AppCompatActivity {
         done = (Button) findViewById(R.id.classesAdded);
         add = (ImageButton) findViewById(R.id.addClass);
         classes = (EditText) findViewById(R.id.userClasses);
+        cancelAdd = (TextView) findViewById(R.id.CancelAdd);
+        cancelAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "No classes added", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(getApplicationContext(), Home.class));
+            }
+        });
         done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,8 +69,7 @@ public class AddClasses extends AppCompatActivity {
                 else{
                     String classString = classes.getText().toString();
                     Map<String, Object> classMap = new HashMap<>();
-                    classMap.put(classString, true);
-                    //MapPost classMapPost = new MapPost("classes", classMap);
+                    classMap.put("class" + classString, classString);
                     mFireStore.collection("users").document(mUser.getUid()).update(classMap).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
@@ -69,14 +84,4 @@ public class AddClasses extends AppCompatActivity {
     }
     @Override
     public void onBackPressed(){}
-
-    public class MapPost {
-        String classes;
-        Map<String,Boolean> list;
-
-        public MapPost(String classes, Map<String,Boolean> list) {
-            this.classes = classes;
-            this.list = list;
-        }
-    }
 }
