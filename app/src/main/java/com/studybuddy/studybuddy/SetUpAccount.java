@@ -1,4 +1,3 @@
-
 package com.studybuddy.studybuddy;
 
 import android.content.Intent;
@@ -18,7 +17,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -37,11 +35,11 @@ public class SetUpAccount extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_up_account);
-        cancel = (TextView) findViewById(R.id.Cancel);
+        cancel = findViewById(R.id.Cancel);
         mUser = FirebaseAuth.getInstance().getCurrentUser();
-        confirm = (Button) findViewById(R.id.ConfirmAccount);
-        firstName = (EditText) findViewById(R.id.FirstName);
-        lastName = (EditText) findViewById(R.id.LastName);
+        confirm = findViewById(R.id.ConfirmAccount);
+        firstName = findViewById(R.id.FirstName);
+        lastName = findViewById(R.id.LastName);
         mFirestore = FirebaseFirestore.getInstance();
         mId = FirebaseAuth.getInstance();
         cancel.setOnClickListener(new View.OnClickListener() {
@@ -70,23 +68,25 @@ public class SetUpAccount extends AppCompatActivity {
             }
         });
     }
-
     //override default back button
     @Override
-    public void onBackPressed() {
-    }
+    public void onBackPressed(){}
 
     //delete account if user clicks cancel
-    public void delete() {
-        if (mUser != null) {
+    public boolean delete(){
+        if(mUser != null){
             mUser.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
-                    if (task.isSuccessful()) {
+                    if(task.isSuccessful()){
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
                     }
                 }
             });
+            return true;
+        }
+        else {
+            return false;
         }
     }
 }

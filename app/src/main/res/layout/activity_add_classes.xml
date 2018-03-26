@@ -72,4 +72,19 @@
         app:layout_constraintTop_toBottomOf="@+id/addClass"
         app:layout_constraintVertical_bias="0.265" />
 
+    <TextView
+        android:id="@+id/CancelAdd"
+        android:layout_width="68dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Cancel"
+        android:textAlignment="center"
+        android:textColor="@color/fui_linkColor"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </android.support.constraint.ConstraintLayout>

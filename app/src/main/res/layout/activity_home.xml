@@ -8,13 +8,33 @@
     android:id="@+id/drawerLayout"
     tools:context="com.studybuddy.studybuddy.Home">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="43dp"
+            android:layout_marginEnd="41dp"
+            android:layout_marginRight="41dp"
+            android:src="@drawable/ic_add_black_24dp"
+            tools:layout_editor_absoluteX="384dp"
+            tools:layout_editor_absoluteY="455dp" />
+    </RelativeLayout>
+
     <android.support.design.widget.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        tools:ignore="ExtraText"
-        app:menu="@menu/navigation_menu"
         android:layout_gravity="start"
-        app:headerLayout="@layout/navigation_header">
+        app:headerLayout="@layout/navigation_header"
+        app:menu="@menu/navigation_menu"
+        tools:ignore="ExtraText">
 
     </android.support.design.widget.NavigationView>
 

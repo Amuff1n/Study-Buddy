@@ -27,10 +27,12 @@
         <activity
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile"
+            android:parentActivityName=".Home" />
+        <activity android:name=".CreateGroup" />
+        <activity android:name=".AddClasses">
             android:parentActivityName=".Home">
-            android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name=".AddClasses"></activity>
+        <activity android:name=".EditClasses"></activity>
     </application>
 
 </manifest>
