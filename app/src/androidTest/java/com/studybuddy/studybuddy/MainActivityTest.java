@@ -40,6 +40,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
         mSignInEmail = mMainActivity.findViewById(R.id.email_sign_in_button);
         mSignInGoogle = mMainActivity.findViewById(R.id.sign_in_button);
         mAuth = FirebaseAuth.getInstance();
+        mAuth.signOut();
 
         assertNotNull(mEmailField);
         assertNotNull(mPasswordField);
@@ -49,10 +50,13 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 
     @Test
     public void testOnClickSignInEmail() throws Exception {
+
         mEmailField.setText("kolby.rottero@gmail.com");
         mPasswordField.setText("thisisanothertest");
         mSignInEmail.performClick();
+
         assertNotNull(mAuth.getCurrentUser());
+
     }
 
     @Test
