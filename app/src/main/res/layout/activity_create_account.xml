@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradiant"
     tools:context="com.studybuddy.studybuddy.CreateAccount">
 
 
@@ -12,6 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
+        android:textColor="@color/fui_bgTwitter"
         android:text="Sign Up For Study Buddy"
         android:textSize="24sp"
         app:layout_constraintHorizontal_bias="0.496"
@@ -30,6 +32,8 @@
         android:ems="10"
         android:hint="@string/email_prompt"
         android:inputType="textEmailAddress"
+        android:textColor="@color/cardview_light_background"
+        android:textColorHint="@color/cardview_light_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.242"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -46,6 +50,8 @@
         android:ems="10"
         android:hint="@string/password_prompt"
         android:inputType="textPassword"
+        android:textColor="@color/fui_bgGoogle"
+        android:textColorHint="@color/cardview_light_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,6 +67,8 @@
         android:ems="10"
         android:hint="Re-enter your password"
         android:inputType="textPassword"
+        android:textColor="@color/fui_bgGoogle"
+        android:textColorHint="@color/cardview_light_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,11 +81,14 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorPrimaryDark"
         android:text="Sign Up"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirm_password" />
+        app:layout_constraintTop_toBottomOf="@+id/confirm_password"
+        app:layout_constraintVertical_bias="0.331" />
 
 
 </android.support.constraint.ConstraintLayout>
