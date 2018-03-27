@@ -32,6 +32,7 @@ public class ProfileActivity extends AppCompatActivity {
     private static final String TAG = "GoogleActivity";
 
     private FirebaseFirestore db;
+    private FirebaseAuth mAuth;
     private String userProfileId;
     private FirebaseAuth mAuth;
 
