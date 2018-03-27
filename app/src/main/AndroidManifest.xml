@@ -21,14 +21,22 @@
         </activity>
         <activity
             android:name=".CreateAccount"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".SetUpAccount" />
-        <activity android:name=".Home" />
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SetUpAccount"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".Home"></activity>
         <activity
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile"
-            android:parentActivityName=".Home"></activity>
-        <activity android:name=".CreateGroup"></activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".Home" />
+        <activity android:name=".CreateGroup"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".AddClasses"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".EditClasses"></activity>
     </application>
 
 </manifest>

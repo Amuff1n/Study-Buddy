@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawerLayout"
+    android:background="@drawable/home_gradiant"
     tools:context="com.studybuddy.studybuddy.Home">
 
     <RelativeLayout
@@ -24,6 +25,7 @@
             android:layout_marginEnd="41dp"
             android:layout_marginRight="41dp"
             android:src="@drawable/ic_add_black_24dp"
+            app:backgroundTint="@color/colorPrimary"
             tools:layout_editor_absoluteX="384dp"
             tools:layout_editor_absoluteY="455dp" />
     </RelativeLayout>

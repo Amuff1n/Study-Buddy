@@ -17,7 +17,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -65,7 +64,7 @@ public class SetUpAccount extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "Enter all info", Toast.LENGTH_SHORT).show();
                     }
                 });
-                startActivity(new Intent(getApplicationContext(), Home.class));
+                startActivity(new Intent(getApplicationContext(), AddClasses.class));
             }
         });
     }

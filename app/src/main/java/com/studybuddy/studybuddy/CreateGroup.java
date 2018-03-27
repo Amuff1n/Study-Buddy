@@ -1,5 +1,6 @@
 package com.studybuddy.studybuddy;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -140,11 +141,16 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
                     if (document != null && document.exists()){
                         Map<String, Object> classes = document.getData();
                         for(Map.Entry<String,Object>mapEntry : classes.entrySet()){
-                            if(mapEntry.getValue().toString().equals("true")){
-                                classList.add(mapEntry.getKey());
+                            if(mapEntry.getKey().toString().length() >= 5 && mapEntry.getKey().toString().substring(0,5).equals("class")){
+                                classList.add(mapEntry.getValue().toString());
                             }
                         }
                     }
+                }
+                if(classList.size() == 0){
+                    Toast.makeText(getApplicationContext(), "You have not added any classes yet", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(getApplicationContext(), Home.class));
+                    return;
                 }
                 String[] classArray = new String[classList.size()];
                 classArray = classList.toArray(classArray);
