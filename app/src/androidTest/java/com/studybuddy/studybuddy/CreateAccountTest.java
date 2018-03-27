@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -24,6 +25,7 @@ public class CreateAccountTest extends ActivityInstrumentationTestCase2<CreateAc
     private Button mCreateAccountBtn;
 
     private FirebaseAuth mAuth;
+    private FirebaseUser mUser;
 
     public CreateAccountTest() {
         super(CreateAccount.class);
@@ -41,6 +43,7 @@ public class CreateAccountTest extends ActivityInstrumentationTestCase2<CreateAc
         mConfirmPassword = mCreateAccount.findViewById(R.id.confirm_password);
         mCreateAccountBtn = mCreateAccount.findViewById(R.id.SignUp);
         mAuth = FirebaseAuth.getInstance();
+        mAuth.signOut();
 
         assertNotNull(mEmailField);
         assertNotNull(mPasswordField);
@@ -59,8 +62,30 @@ public class CreateAccountTest extends ActivityInstrumentationTestCase2<CreateAc
                 mCreateAccountBtn.performClick();
             }
         });
+        Thread.sleep(2000);
+        mAuth = FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
+        assertNotNull(mUser);
+        mUser.delete(); //delete profile so we can run test again
+        mAuth.signOut();
+    }
 
-        assertNotNull(mAuth.getCurrentUser());
+    @Test
+    public void testExistingProfile() throws Exception {
+        mCreateAccount.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                mEmailField.setText("kolby.rottero@gmail.com");
+                mPasswordField.setText("thisisanothertest");
+                mConfirmPassword.setText("thisisanothertest");
+                mCreateAccountBtn.performClick();
+            }
+        });
+        Thread.sleep(2000);
+        mAuth = FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
+        assertNull(mUser);
+        mAuth.signOut();
     }
 
     @Test
@@ -71,7 +96,29 @@ public class CreateAccountTest extends ActivityInstrumentationTestCase2<CreateAc
                 mCreateAccountBtn.performClick();
             }
         });
+        Thread.sleep(2000);
+        mAuth = FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
+        assertNull(mUser);
+        mAuth.signOut();
+    }
 
-        assertNull(mAuth.getCurrentUser());
+    @Test
+    public void testMismatchPasswords() throws Exception {
+        mCreateAccount.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                mEmailField.setText("nubeyili@web2mailco.com");
+                mPasswordField.setText("anothertest");
+                mConfirmPassword.setText("justanothertest");;
+                mCreateAccountBtn.performClick();
+            }
+        });
+
+        Thread.sleep(2000);
+        mAuth = FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
+        assertNull(mUser);
+        mAuth.signOut();
     }
 }

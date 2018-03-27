@@ -1,12 +1,14 @@
 package com.studybuddy.studybuddy;
 
 import android.support.test.InstrumentationRegistry;
+import android.support.test.annotation.UiThreadTest;
 import android.test.ActivityInstrumentationTestCase2;
 import android.widget.Button;
 import android.widget.EditText;
 
 import com.google.android.gms.common.SignInButton;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -23,6 +25,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
     private Button mSignInEmail;
     private SignInButton mSignInGoogle;
     private FirebaseAuth mAuth;
+    private FirebaseUser mUser;
 
     public MainActivityTest() {
         super(MainActivity.class);
@@ -48,21 +51,32 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
         assertNotNull(mSignInGoogle);
     }
 
+    //Sleeps could probably be replaced with some sort of listener
     @Test
     public void testOnClickSignInEmail() throws Exception {
+        mMainActivity.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                mEmailField.setText("kolby.rottero@gmail.com");
+                mPasswordField.setText("thisisanothertest");
+                mSignInEmail.performClick();
 
-        mEmailField.setText("kolby.rottero@gmail.com");
-        mPasswordField.setText("thisisanothertest");
-        mSignInEmail.performClick();
-
+            }
+        });
+        Thread.sleep(2000);
+        mAuth = FirebaseAuth.getInstance();
         assertNotNull(mAuth.getCurrentUser());
-
+        mAuth.signOut();
     }
 
     @Test
     public void testOnClickSignInGoogle() throws Exception {
         mSignInGoogle.performClick();
+
+        Thread.sleep(2000);
+        mAuth = FirebaseAuth.getInstance();
         assertNotNull(mAuth.getCurrentUser());
+        mAuth.signOut();
     }
 
 }
