@@ -33,14 +33,12 @@
             android:label="@string/title_activity_profile"
             android:theme="@style/AppTheme"
             android:parentActivityName=".Home" />
-        <activity
-            android:name=".ViewGroupsActivity"
-            android:label="@string/title_activity_view_groups"
-            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".CreateGroup"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".Home" />
         <activity android:name=".AddClasses"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".Home"/>
     </application>
 
 </manifest>
