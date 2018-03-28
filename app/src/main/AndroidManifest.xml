@@ -15,7 +15,6 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -26,12 +25,18 @@
             android:name=".SetUpAccount"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name=".Home"></activity>
+        <activity android:name=".Home">
+
+        </activity>
         <activity
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile"
             android:theme="@style/AppTheme"
             android:parentActivityName=".Home" />
+        <activity
+            android:name=".ViewGroupsActivity"
+            android:label="@string/title_activity_view_groups"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".CreateGroup"
             android:theme="@style/AppTheme"/>
         <activity android:name=".AddClasses"
