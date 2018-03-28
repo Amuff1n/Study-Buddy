@@ -140,7 +140,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void signInEmail() {
-        mAuth.signInWithEmailAndPassword(mEmailField.getText().toString(), mPasswordField.getText().toString())
+        String email = mEmailField.getText().toString();
+        String password = mPasswordField.getText().toString();
+
+        if (email.isEmpty() || password.isEmpty()) {
+            Toast.makeText(this, "Fill in email / password fields", Toast.LENGTH_SHORT).show();
+            return;
+
+        }
+
+
+
+        mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
