@@ -91,6 +91,12 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             return true;
         }
 
+        else if (id == R.id.nav_location) {
+            //Open location activity
+            startActivity(new Intent(getApplicationContext(), MapsActivity.class));
+            return true;
+        }
+
         DrawerLayout drawer = findViewById(R.id.drawerLayout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
