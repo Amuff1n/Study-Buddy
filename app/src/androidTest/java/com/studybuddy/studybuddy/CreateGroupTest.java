@@ -57,9 +57,4 @@ public class CreateGroupTest extends ActivityInstrumentationTestCase2<CreateGrou
             }
         });
     }
-
-    @Test
-    public void testGetClasses() throws Exception {
-    }
-
 }

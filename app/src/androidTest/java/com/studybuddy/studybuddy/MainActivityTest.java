@@ -69,6 +69,8 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
         mAuth.signOut();
     }
 
+    //Should we still have google sign-in?
+    /*
     @Test
     public void testOnClickSignInGoogle() throws Exception {
         mSignInGoogle.performClick();
@@ -78,5 +80,5 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
         assertNotNull(mAuth.getCurrentUser());
         mAuth.signOut();
     }
-
+    */
 }
