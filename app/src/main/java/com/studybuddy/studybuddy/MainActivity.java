@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
         mEmailTextView = findViewById(R.id.email_);
-        mUidTextView = findViewById(R.id.uid);
+        //mUidTextView = findViewById(R.id.uid);
         mEmailField = findViewById(R.id.email_field);
         mPasswordField = findViewById(R.id.password_field);
 
