@@ -40,12 +40,15 @@ public class AddClasses extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_classes);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         mUser = FirebaseAuth.getInstance().getCurrentUser();
         mFireStore = FirebaseFirestore.getInstance();
-        done = (Button) findViewById(R.id.classesAdded);
-        add = (ImageButton) findViewById(R.id.addClass);
-        classes = (EditText) findViewById(R.id.userClasses);
-        cancelAdd = (TextView) findViewById(R.id.CancelAdd);
+        done = findViewById(R.id.classesAdded);
+        add = findViewById(R.id.addClass);
+        classes = findViewById(R.id.userClasses);
+        cancelAdd = findViewById(R.id.CancelAdd);
         cancelAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -120,6 +120,7 @@
     <string name="major">Major: %1$s</string>
     <string name="year">Year: %1$s</string>
     <string name="save">Save</string>
+    <string name="title_activity_view_groups">ViewGroupsActivity</string>
     <string name="group_class">Class</string>
     <string name="group_location">Location</string>
     <string name="group_desc">Description</string>

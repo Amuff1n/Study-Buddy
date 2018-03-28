@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -47,6 +48,9 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_group);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         mAuth = FirebaseAuth.getInstance();
         mUser = FirebaseAuth.getInstance().getCurrentUser();
         mFirestore = FirebaseFirestore.getInstance();
@@ -59,7 +63,9 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.locations_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //Drop down list for classes
-        getClasses();
+        if (mUser != null) {
+            getClasses();
+        }
 
         mLocation.setAdapter(adapter);
         mLocation.setOnItemSelectedListener(this);
@@ -67,11 +73,15 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
         mCreateGroup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 String groupClass = mClass.getSelectedItem().toString();
                 String groupLocation = mLocation.getSelectedItem().toString();
                 String groupDesc = mDescription.getText().toString();
                 createGroup(groupClass, groupLocation, groupDesc);
                 finish();
+
+
             }
         });
     }
@@ -107,13 +117,15 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
             groupMap.put("user", mAuth.getUid());
             groupMap.put("index", 1);
 
-            mFirestore.collection("study_groups")
+            Task<DocumentReference> documentReferenceTask = mFirestore.collection("study_groups")
                     .add(groupMap)
                     .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+
                         @Override
                         public void onSuccess(DocumentReference documentReference) {
                             Log.d(TAG, "DocumentSnapshot written with ID: " + documentReference.getId());
                         }
+
                     })
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
