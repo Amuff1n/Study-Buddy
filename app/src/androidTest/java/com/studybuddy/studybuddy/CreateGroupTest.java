@@ -5,6 +5,7 @@ import android.test.ActivityInstrumentationTestCase2;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -18,6 +19,7 @@ public class CreateGroupTest extends ActivityInstrumentationTestCase2<CreateGrou
     private CreateGroup mCreateGroup;
     private FirebaseAuth mAuth;
     private FirebaseUser mUser;
+    private FirebaseFirestore mFirestore;
 
     public CreateGroupTest() {
         super(CreateGroup.class);
@@ -34,8 +36,10 @@ public class CreateGroupTest extends ActivityInstrumentationTestCase2<CreateGrou
         mAuth.signInWithEmailAndPassword("kolby.rottero@gmail.com", "thisisanothertest");
         Thread.sleep(2000);
         mUser = mAuth.getCurrentUser();
+        mFirestore = FirebaseFirestore.getInstance();
 
         assertNotNull(mUser);
+        assertNotNull(mFirestore);
     }
 
     @Test
@@ -56,5 +60,11 @@ public class CreateGroupTest extends ActivityInstrumentationTestCase2<CreateGrou
                 assertFalse(mCreateGroup.createGroup("","",""));
             }
         });
+    }
+
+    @Test
+    public void testGetClasses() throws Exception {
+        //user doc should exist first
+        assertNotNull(mFirestore.collection("users").document(mUser.getUid()));
     }
 }
