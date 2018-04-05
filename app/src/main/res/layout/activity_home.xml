@@ -9,6 +9,11 @@
     android:background="@drawable/home_gradiant"
     tools:context="com.studybuddy.studybuddy.Home">
 
+    <include
+        layout="@layout/activity_view_groups"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
