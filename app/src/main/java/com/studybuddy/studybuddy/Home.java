@@ -138,16 +138,17 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 if (task.isSuccessful()) {
                     for (DocumentSnapshot document : task.getResult()) {
                         Log.d(TAG, document.getId() + " => " + document.getData());
+
                         //Start the process of checking if user is in that group
                         //If uid matches 'user' or ''user' + index' they are in that group, so they can't join
                         boolean joining = true;
-                        double userIndex = 0; //save user's index in group for easy removal later
-                        if (document.get("user") == mAuth.getUid()) {
+                        int userIndex = 0; //save user's index in group for easy removal later
+                        if (document.get("user").equals(mAuth.getUid().toString())) {
                             joining = false;
                         }
 
-                        for (double i = 1.0; i < document.getDouble("index"); i++) {
-                            if (document.get("user" + i) == mAuth.getUid()) {
+                        for (int i = 1; i < document.getDouble("index"); i++) {
+                            if (document.get("user" + i).equals(mAuth.getUid().toString())) {
                                 joining = false;
                                 userIndex = i;
                             }

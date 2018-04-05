@@ -1,6 +1,7 @@
 package com.studybuddy.studybuddy;
 
 import android.content.Context;
+import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -49,13 +50,21 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         GroupListItem groupListItem = list.get(position);
-        //TODO this is causing the app to crash... not sure why
         holder.setTextViewHeader(groupListItem.getHeader());
         holder.setTextViewText(groupListItem.getText());
         holder.setIndex(groupListItem.getIndex());
         holder.setUserIndex(groupListItem.getUserIndex());
-        holder.setJoining(groupListItem.getJoining());
         holder.setGroupId(groupListItem.getGroupId());
+
+        //toggle visibility based on joining value when binding
+        if (groupListItem.getJoining()) {
+            holder.leaveGroupButton.setVisibility(View.GONE);
+            holder.joinGroupButton.setVisibility(View.VISIBLE);
+        }
+        else {
+            holder.joinGroupButton.setVisibility(View.GONE);
+            holder.leaveGroupButton.setVisibility(View.VISIBLE);
+        }
         //System.out.println(groupListItem.getHeader());
         //System.out.println(groupListItem.getText());
     }
@@ -70,9 +79,8 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
         private TextView textViewHeader;
         private TextView textViewText;
         private String groupId;
-        private double index;
-        private double userIndex;
-        private Boolean joining = false;
+        private int index;
+        private int userIndex;
         private ImageButton joinGroupButton;
         private ImageButton leaveGroupButton;
         private FirebaseAuth mAuth;
@@ -88,23 +96,15 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
             mAuth = FirebaseAuth.getInstance();
             db = FirebaseFirestore.getInstance();
 
-            //TODO 'joining' isn't getting defined somewhere so this crashes without manually defining
-            if (joining) {
-                leaveGroupButton.setVisibility(itemView.GONE);
-                joinGroupButton.setVisibility(itemView.VISIBLE);
-            }
-            else {
-                joinGroupButton.setVisibility(itemView.GONE);
-                leaveGroupButton.setVisibility(itemView.VISIBLE);
-            }
-
             joinGroupButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     DocumentReference groupDoc = db.collection("study_groups").document(groupId);
                     Map<String, Object> join = new HashMap<>();
+                    //new user has key ''user' + index'
+                    //also increment index (i.e. number of users in group)
                     join.put("user" + index, mAuth.getUid());
-                    join.put("index", index + 1.0);
+                    join.put("index", index + 1);
 
                     groupDoc.set(join, SetOptions.merge()).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
@@ -121,6 +121,8 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
                                     Toast.LENGTH_SHORT).show();
                         }
                     });
+
+
                 }
             });
 
@@ -129,14 +131,16 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
                 public void onClick(View v) {
                     DocumentReference groupDoc = db.collection("study_groups").document(groupId);
                     Map<String, Object> leave = new HashMap<>();
-                    if (userIndex == 0.0) {
+                    //first user has key 'user'
+                    //identified by kinda using a sentinel value userIndex == 0
+                    if (userIndex == 0) {
                         leave.put("user", FieldValue.delete());
-
                     }
+                    //otherwise we have to remove ''user' + userIndex'
                     else {
                         leave.put("user" + userIndex, FieldValue.delete());
                     }
-                    leave.put("index", index - 1.0);
+                    leave.put("index", index - 1);
                     //TODO check if index == 0, if so, delete group
                     groupDoc.update(leave).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
@@ -153,6 +157,8 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
                                     Toast.LENGTH_SHORT).show();
                         }
                     });
+
+
                 }
             });
 
@@ -166,16 +172,12 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
             textViewText.setText(text);
         }
 
-        public void setIndex(double num) {
+        public void setIndex(int num) {
             index = num;
         }
 
-        public void setUserIndex(double num){
+        public void setUserIndex(int num){
             userIndex = num;
-        }
-
-        public void setJoining(boolean join) {
-            joining = join;
         }
 
         public void setGroupId(String text) {

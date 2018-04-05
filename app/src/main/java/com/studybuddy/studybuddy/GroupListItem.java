@@ -8,15 +8,15 @@ package com.studybuddy.studybuddy;
 public class GroupListItem {
     private String header;
     private String text;
-    private double index;
-    private double userIndex;
+    private int index;
+    private int userIndex;
     private boolean joining; //true if uid not associated with group, i.e. can be joined, false otherwise
     private String groupId;
 
-    public GroupListItem(String header, String text, double index, double userIndex, boolean joining, String groupId) {
+    public GroupListItem(String header, String text, Double index, int userIndex, boolean joining, String groupId) {
         this.header = header;
         this.text = text;
-        this.index = index;
+        this.index = index.intValue(); //Firestore numbers are doubles, have to cast to int
         this.userIndex = userIndex;
         this.joining = joining;
         this.groupId = groupId;
@@ -30,11 +30,11 @@ public class GroupListItem {
         return text;
     }
 
-    public double getIndex() {
+    public int getIndex() {
         return index;
     }
 
-    public double getUserIndex() {
+    public int getUserIndex() {
         return userIndex;
     }
 
