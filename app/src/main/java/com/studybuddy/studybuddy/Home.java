@@ -33,6 +33,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
+//TODO automatically refresh screen after creating group and allow manual refresh
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout DL;
     private ActionBarDrawerToggle AB_toggle;
@@ -137,9 +138,31 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 if (task.isSuccessful()) {
                     for (DocumentSnapshot document : task.getResult()) {
                         Log.d(TAG, document.getId() + " => " + document.getData());
+                        //Start the process of checking if user is in that group
+                        //If uid matches 'user' or ''user' + index' they are in that group, so they can't join
+                        boolean joining = true;
+                        double userIndex = 0; //save user's index in group for easy removal later
+                        if (document.get("user") == mAuth.getUid()) {
+                            joining = false;
+                        }
+
+                        for (double i = 1.0; i < document.getDouble("index"); i++) {
+                            if (document.get("user" + i) == mAuth.getUid()) {
+                                joining = false;
+                                userIndex = i;
+                            }
+                        }
+
+                        //For each group, get class, desc, location, timestamp, groupID, number of users in group (index)
+                        //also get current user's index if they are in the group
+                        //if not in group, joining true
                         GroupListItem groupListItem = new GroupListItem(
                                 document.get("class").toString(),
-                                document.get("description").toString() + "\n" + document.get("location").toString() + "\n" + document.get("creationTime").toString()
+                                document.get("description").toString() + "\n" + document.get("location").toString() + "\n" + document.get("creationTime").toString(),
+                                document.getDouble("index"),
+                                userIndex,
+                                joining,
+                                document.getId()
                         );
                         list.add(0, groupListItem);
                         //System.out.println(list.get(0).getHeader()); //should use log instead
