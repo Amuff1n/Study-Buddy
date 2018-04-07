@@ -111,7 +111,7 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
             groupMap.put("description", groupDesc);
             groupMap.put("creationTime", FieldValue.serverTimestamp());
             groupMap.put("user", mAuth.getUid());
-            groupMap.put("index", 1);
+            groupMap.put("index", 1); //number of users
 
             mFirestore.collection("study_groups")
                     .add(groupMap)

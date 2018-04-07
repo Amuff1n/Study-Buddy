@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.support.v7.widget.Toolbar;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -45,6 +46,9 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     private FirebaseFirestore db;
     RecyclerView recyclerView;
     private List<GroupListItem> list;
+
+    private ImageButton joinGroupButton;
+    private ImageButton leaveGroupButton;
 
     private void setNavigationViewListner() {
         NavigationView navigationView = findViewById(R.id.nav_action);
@@ -125,6 +129,12 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         return true;
     }
 
+    //simple 'refresh' method that clears the grouplist and repopulates it
+    public void refreshRecyclerView() {
+        list.clear();
+        populateRecyclerview();
+    }
+
     private void populateRecyclerview() {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -143,16 +153,23 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                         //If uid matches 'user' or ''user' + index' they are in that group, so they can't join
                         boolean joining = true;
                         int userIndex = 0; //save user's index in group for easy removal later
-                        if (document.get("user").equals(mAuth.getUid().toString())) {
-                            joining = false;
+                        //try catch block until deleting a group implemented
+                        try {
+
+                            if (document.get("user").equals(mAuth.getUid())) {
+                                joining = false;
+                            }
+
+                            for (int i = 1; i < document.getDouble("index"); i++) {
+                                if (document.get("user" + i).equals(mAuth.getUid())) {
+                                    joining = false;
+                                    userIndex = i;
+                                }
+                            }
+                        } catch (Exception e) {
+                            Log.w(TAG, "Failed to get any user, group probably shouldn't exist", e);
                         }
 
-                        for (int i = 1; i < document.getDouble("index"); i++) {
-                            if (document.get("user" + i).equals(mAuth.getUid().toString())) {
-                                joining = false;
-                                userIndex = i;
-                            }
-                        }
 
                         //For each group, get class, desc, location, timestamp, groupID, number of users in group (index)
                         //also get current user's index if they are in the group

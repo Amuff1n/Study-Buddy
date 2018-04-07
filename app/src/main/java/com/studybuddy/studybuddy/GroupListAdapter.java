@@ -65,8 +65,7 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
             holder.joinGroupButton.setVisibility(View.GONE);
             holder.leaveGroupButton.setVisibility(View.VISIBLE);
         }
-        //System.out.println(groupListItem.getHeader());
-        //System.out.println(groupListItem.getText());
+
     }
 
     @Override
@@ -122,7 +121,7 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
                         }
                     });
 
-
+                    ((Home)context).refreshRecyclerView(); //calls refresh method in Home
                 }
             });
 
@@ -158,11 +157,9 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
                         }
                     });
 
-
+                    ((Home)context).refreshRecyclerView();
                 }
             });
-
-            //TODO FORCE REFRESH OF VIEWING GROUPS SCREEN
         }
         public void setTextViewHeader(String text) {
             textViewHeader.setText(text);
