@@ -1,5 +1,21 @@
 <resources>
 
+    <string-array name="mygroups">
+        <item>Group 1</item>
+        <item>Soup</item>
+        <item>Troup</item>
+        <item>Foop</item>
+        <item>Group 5</item>
+        <item>Group 6</item>
+        <item>Group 7</item>
+        <item>Group 8</item>
+        <item>Group 9</item>
+        <item>Group 10</item>
+        <item>Group 11</item>
+        <item>Group 12</item>
+        <item>Group 13</item>
+    </string-array>
+    
     <!-- Profile Strings -->
     <string name="profile_label_name">Name</string>
     <string name="profile_label_school">School:</string>
