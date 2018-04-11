@@ -95,6 +95,7 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
             mAuth = FirebaseAuth.getInstance();
             db = FirebaseFirestore.getInstance();
 
+            //TODO these onClickListeners should be more object oriented, maybe contain code in Home class?
             joinGroupButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

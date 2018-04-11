@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.test.InstrumentationRegistry;
+import android.support.v7.widget.RecyclerView;
 import android.test.ActivityInstrumentationTestCase2;
 import android.util.Log;
 import android.view.ActionProvider;
@@ -11,6 +12,8 @@ import android.view.ContextMenu;
 import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -36,7 +39,8 @@ public class HomeTest extends ActivityInstrumentationTestCase2<Home> {
     private FirebaseUser mUser;
     private FirebaseFirestore mFirestore;
     private MenuItem mItem;
-
+    private ImageButton joinGroupButton;
+    private ImageButton leaveGroupButton;
 
     public HomeTest() {
         super(Home.class);
@@ -333,5 +337,30 @@ public class HomeTest extends ActivityInstrumentationTestCase2<Home> {
                 }
             }
         });
+    }
+
+    //If this test fails, manually kill the app in background and start test again
+    //TODO fix above
+    @Test
+    public void testGroupJoinAndLeave() throws Exception {
+        View temp = mHome.recyclerView.findViewHolderForAdapterPosition(0).itemView;
+        joinGroupButton = temp.findViewById(R.id.join_group_button);
+        leaveGroupButton = temp.findViewById(R.id.leave_group_button);
+        mHome.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                if (leaveGroupButton.getVisibility() == View.VISIBLE) {
+                    Log.d("HomeTest", "User is already in this group, leaving...");
+                    leaveGroupButton.performClick();
+                    assertTrue(leaveGroupButton.getVisibility() == 0); //0 is value for visible
+                }
+                if (joinGroupButton.getVisibility() == View.VISIBLE) {
+                    Log.d("HomeTest", "User can join group, joining...");
+                    joinGroupButton.performClick();
+                    assertTrue(joinGroupButton.getVisibility() == 0); //0 is value for visible
+                }
+            }
+        });
+
     }
 }
