@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -36,6 +37,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     private DrawerLayout DL;
     private ActionBarDrawerToggle AB_toggle;
     Context hackContext;
+
+    private static final String TAG = "GoogleActivity";
 
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
@@ -134,12 +137,13 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
                 if (task.isSuccessful()) {
                     for (DocumentSnapshot document : task.getResult()) {
+                        Log.d(TAG, document.getId() + " => " + document.getData());
                         GroupListItem groupListItem = new GroupListItem(
                                 document.get("class").toString(),
                                 document.get("description").toString() + "\n" + document.get("location").toString() + "\n" + document.get("creationTime").toString()
                         );
                         list.add(0, groupListItem);
-                        System.out.println(list.get(0).getHeader());
+                        //System.out.println(list.get(0).getHeader()); //should use log instead
                         RecyclerView.Adapter adapter = new GroupListAdapter(list, hackContext);
                         recyclerView.setAdapter(adapter);
                     }

@@ -69,6 +69,38 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
         mAuth.signOut();
     }
 
+    @Test
+    public void testOnClickSignInEmailEmpty() throws Exception {
+        mMainActivity.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                mEmailField.setText("");
+                mPasswordField.setText("");
+                mSignInEmail.performClick();
+            }
+        });
+
+        Thread.sleep(2000);
+        mAuth = FirebaseAuth.getInstance();
+        assertNull(mAuth.getCurrentUser());
+    }
+
+    @Test
+    public void testOnClickSignInEmailNonExistent() throws Exception {
+        mMainActivity.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                mEmailField.setText("thisemaildoesntexist@fakeemail.org");
+                mPasswordField.setText("thispassworddoesntexist");
+                mSignInEmail.performClick();
+            }
+        });
+
+        Thread.sleep(2000);
+        mAuth = FirebaseAuth.getInstance();
+        assertNull(mAuth.getCurrentUser());
+    }
+
     //Should we still have google sign-in?
     /*
     @Test
