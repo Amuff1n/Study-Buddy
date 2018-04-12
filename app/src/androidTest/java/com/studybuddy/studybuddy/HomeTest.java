@@ -339,8 +339,6 @@ public class HomeTest extends ActivityInstrumentationTestCase2<Home> {
         });
     }
 
-    //If this test fails, manually kill the app in background and start test again
-    //TODO fix above
     @Test
     public void testGroupJoinAndLeave() throws Exception {
         View temp = mHome.recyclerView.findViewHolderForAdapterPosition(0).itemView;

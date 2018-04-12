@@ -35,7 +35,6 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-//TODO automatically refresh screen after creating group and allow manual refresh
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout DL;
     private ActionBarDrawerToggle AB_toggle;
