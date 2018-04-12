@@ -41,6 +41,9 @@ public class AddClasses extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_classes);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         mUser = FirebaseAuth.getInstance().getCurrentUser();
         mFireStore = FirebaseFirestore.getInstance();
         done = (Button) findViewById(R.id.classesAdded);

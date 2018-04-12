@@ -17,7 +17,7 @@
     <string name="google_status_fmt">Google User: %s</string>
     <string name="firebase_status_fmt">Firebase User: %s</string>
     <string name="signed_out">Signed Out</string>
-    <string name="email_prompt">Enter your email</string>
+    <string name="email_prompt">Email Address</string>
     <string name="password_prompt">Enter your Password</string>
     <string name="email_sign_in">Sign In</string>
     <string name="email_sign_up">Sign Up</string>
@@ -120,10 +120,15 @@
     <string name="major">Major: %1$s</string>
     <string name="year">Year: %1$s</string>
     <string name="save">Save</string>
+    <string name="title_activity_view_groups">ViewGroupsActivity</string>
     <string name="group_class">Class</string>
     <string name="group_location">Location</string>
     <string name="group_desc">Description</string>
     <string name="group_create">Create</string>
+    <string name="create_account">Create Account</string>
+    <string name="profile_set_up">Profile Set Up</string>
+    <string name="add_your_uf_classes">Add your UF classes</string>
+    <string name="done">Done!</string>
     <string-array name="locations_array">
         <item>Marston</item>
         <item>Library West</item>
