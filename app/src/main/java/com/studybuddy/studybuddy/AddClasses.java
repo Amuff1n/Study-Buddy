@@ -35,6 +35,7 @@ public class AddClasses extends AppCompatActivity {
     private ImageButton add;
     private EditText classes;
     private TextView cancelAdd;
+    private ArrayList<String> classList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

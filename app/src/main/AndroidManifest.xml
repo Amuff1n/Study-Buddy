@@ -20,6 +20,9 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ClassList.ClassRecyclerView"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".CreateAccount"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SetUpAccount" />
@@ -32,7 +35,7 @@
         <activity android:name=".AddClasses">
             android:parentActivityName=".Home">
         </activity>
-        <activity android:name=".EditClasses"></activity>
+        <activity android:name=".ClassRecyclerView"></activity>
     </application>
 
 </manifest>

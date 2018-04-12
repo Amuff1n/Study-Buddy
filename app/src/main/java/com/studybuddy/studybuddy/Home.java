@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+//import com.studybuddy.studybuddy.ClassList.ClassRecyclerView;
 
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -83,6 +84,12 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             //Open settings activity
             Toast.makeText(Home.this, "Nothing yet!",
                     Toast.LENGTH_SHORT).show();
+            return true;
+        }
+
+        else if(id == R.id.nav_add_classe){
+            //opens add classes activity
+            startActivity(new Intent(getApplicationContext(), ClassRecyclerView.class));
             return true;
         }
 
