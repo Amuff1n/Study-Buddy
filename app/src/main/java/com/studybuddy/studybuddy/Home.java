@@ -115,7 +115,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         }
 
         else if (id == R.id.nav_add_classe) {
-            startActivity(new Intent(getApplicationContext(), AddClasses.class));
+            startActivity(new Intent(getApplicationContext(), ClassRecyclerView.class));
             return true;
         }
 
