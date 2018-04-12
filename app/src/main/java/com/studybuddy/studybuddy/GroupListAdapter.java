@@ -52,6 +52,7 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
         GroupListItem groupListItem = list.get(position);
         holder.setTextViewHeader(groupListItem.getHeader());
         holder.setTextViewText(groupListItem.getText());
+        holder.setTextViewIndex(groupListItem.getIndex());
         holder.setIndex(groupListItem.getIndex());
         holder.setUserIndex(groupListItem.getUserIndex());
         holder.setGroupId(groupListItem.getGroupId());
@@ -77,6 +78,7 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
 
         private TextView textViewHeader;
         private TextView textViewText;
+        private TextView textViewIndex;
         private String groupId;
         private int index;
         private int userIndex;
@@ -89,6 +91,7 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
             super(itemView);
             textViewHeader = itemView.findViewById(R.id.header);
             textViewText = itemView.findViewById(R.id.text);
+            textViewIndex = itemView.findViewById(R.id.index);
             joinGroupButton = itemView.findViewById(R.id.join_group_button);
             leaveGroupButton = itemView.findViewById(R.id.leave_group_button);
 
@@ -168,6 +171,10 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
 
         public void setTextViewText(String text){
             textViewText.setText(text);
+        }
+
+        public void setTextViewIndex(int num) {
+            textViewIndex.setText(String.valueOf(num));
         }
 
         public void setIndex(int num) {

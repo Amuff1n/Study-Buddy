@@ -7,6 +7,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -50,6 +51,9 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     private ImageButton joinGroupButton;
     private ImageButton leaveGroupButton;
 
+    private FloatingActionButton fab;
+    private SwipeRefreshLayout mSwipeRefreshLayout;
+
     private void setNavigationViewListner() {
         NavigationView navigationView = findViewById(R.id.nav_action);
         navigationView.setNavigationItemSelectedListener(this);
@@ -76,11 +80,32 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
         populateRecyclerview();
 
-        FloatingActionButton fab = findViewById(R.id.fab);
+        fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), CreateGroup.class));
+            }
+        });
+
+        //Hide the fab when we scroll down, reveal when scroll up
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                if (dy > 0 && fab.getVisibility() == View.VISIBLE) {
+                    fab.hide();
+                } else if (dy < 0 && fab.getVisibility() != View.VISIBLE) {
+                    fab.show();
+                }
+            }
+        });
+
+        mSwipeRefreshLayout = findViewById(R.id.swipeRefreshLayout);
+        mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                refreshRecyclerView();
             }
         });
     }
@@ -133,6 +158,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     public void refreshRecyclerView() {
         list.clear();
         populateRecyclerview();
+        mSwipeRefreshLayout.setRefreshing(false); //stop refresh animation when done
     }
 
     private void populateRecyclerview() {
@@ -190,6 +216,5 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 }
             }
         });
-
     }
 }

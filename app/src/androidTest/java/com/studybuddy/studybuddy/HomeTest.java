@@ -346,21 +346,31 @@ public class HomeTest extends ActivityInstrumentationTestCase2<Home> {
         View temp = mHome.recyclerView.findViewHolderForAdapterPosition(0).itemView;
         joinGroupButton = temp.findViewById(R.id.join_group_button);
         leaveGroupButton = temp.findViewById(R.id.leave_group_button);
-        mHome.runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                if (leaveGroupButton.getVisibility() == View.VISIBLE) {
+        if (leaveGroupButton.getVisibility() == View.VISIBLE) {
+            mHome.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
                     Log.d("HomeTest", "User is already in this group, leaving...");
                     leaveGroupButton.performClick();
-                    assertTrue(leaveGroupButton.getVisibility() == 0); //0 is value for visible
                 }
-                if (joinGroupButton.getVisibility() == View.VISIBLE) {
+            });
+            Thread.sleep(5000);
+            temp = mHome.recyclerView.findViewHolderForAdapterPosition(0).itemView;
+            joinGroupButton = temp.findViewById(R.id.join_group_button);
+            assertTrue(joinGroupButton.getVisibility() == View.VISIBLE);
+        }
+        else if (joinGroupButton.getVisibility() == View.VISIBLE) {
+            mHome.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
                     Log.d("HomeTest", "User can join group, joining...");
                     joinGroupButton.performClick();
-                    assertTrue(joinGroupButton.getVisibility() == 0); //0 is value for visible
                 }
-            }
-        });
-
+            });
+            Thread.sleep(5000);
+            temp = mHome.recyclerView.findViewHolderForAdapterPosition(0).itemView;
+            leaveGroupButton = temp.findViewById(R.id.leave_group_button);
+            assertTrue(leaveGroupButton.getVisibility() == View.VISIBLE);
+        }
     }
 }
