@@ -144,22 +144,40 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
                         leave.put("user" + userIndex, FieldValue.delete());
                     }
                     leave.put("index", index - 1);
-                    //TODO check if index == 0, if so, delete group
-                    groupDoc.update(leave).addOnSuccessListener(new OnSuccessListener<Void>() {
-                        @Override
-                        public void onSuccess(Void aVoid) {
-                            Log.d("Google Activity", "User successfully left group");
-                            Toast.makeText(context, "Left group",
-                                    Toast.LENGTH_SHORT).show();
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Log.w("Google Activity", "Error leaving group");
-                            Toast.makeText(context, "Error leaving group",
-                                    Toast.LENGTH_SHORT).show();
-                        }
-                    });
+                    //if new index is 0, no users in group so delete it
+                    if (index - 1 == 0) {
+                        groupDoc.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Log.d("Google Activity", "Group successfully deleted");
+                                Toast.makeText(context, "Group disbanded!",
+                                        Toast.LENGTH_SHORT).show();
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.w("Google Activity", "Error deleting group");
+                                Toast.makeText(context, "Error deleting group",
+                                        Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    } else {
+                        groupDoc.update(leave).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Log.d("Google Activity", "User successfully left group");
+                                Toast.makeText(context, "Left group",
+                                        Toast.LENGTH_SHORT).show();
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.w("Google Activity", "Error leaving group");
+                                Toast.makeText(context, "Error leaving group",
+                                        Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
 
                     ((Home)context).refreshRecyclerView();
                 }
