@@ -1,5 +1,7 @@
 package com.studybuddy.studybuddy;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -77,6 +79,12 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
                 String groupLocation = mLocation.getSelectedItem().toString();
                 String groupDesc = mDescription.getText().toString();
                 createGroup(groupClass, groupLocation, groupDesc);
+
+                //Send back code to Home before finishing
+                //Used for automatic refresh
+                Intent intent = new Intent();
+                intent.putExtra("completed", true); //isn't used by Home right now
+                setResult(Activity.RESULT_OK, intent);
                 finish();
             }
         });

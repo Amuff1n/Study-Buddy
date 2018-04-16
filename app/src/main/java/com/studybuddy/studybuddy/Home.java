@@ -1,5 +1,6 @@
 package com.studybuddy.studybuddy;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -149,7 +150,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                         }
 
                         //For each card, get class, desc, location, timestamp, groupID, and index
-                        SimpleDateFormat sdf = new SimpleDateFormat("MMM d");
+                        SimpleDateFormat sdf = new SimpleDateFormat("MMM d HH:mm");
                         GroupListItem groupListItem = new GroupListItem(
                                 document.get("class").toString() + '\n' +
                                          sdf.format(document.get("creationTime")),
@@ -204,9 +205,27 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), CreateGroup.class));
+                //Send code with intent which CreateGroup will send back before finishing
+                Intent intent = new Intent(getApplicationContext(), CreateGroup.class);
+                int requestCode = 1;
+                startActivityForResult(intent, requestCode);
             }
         });
+    }
+
+    //Activity result of create groups so we can refresh
+    //Makes it so CreateGroup.java doesn't depend on Home.java code
+    @Override
+    protected void onActivityResult (int requestCode, int resultCode, Intent data) {
+        if (requestCode == 1) {
+            if (resultCode == Activity.RESULT_OK) {
+                refreshRecyclerView();
+            }
+            if (resultCode == Activity.RESULT_CANCELED) {
+                //do nothing if we don't create a group?
+            }
+        }
+
     }
 
     //Helper method to add listeners to swipe refresh layout
