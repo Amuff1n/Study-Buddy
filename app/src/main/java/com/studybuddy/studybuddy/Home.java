@@ -13,17 +13,19 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.support.v7.widget.Toolbar;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.Toast;
-
-import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -33,17 +35,19 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, SearchView.OnQueryTextListener {
     private DrawerLayout DL;
     private ActionBarDrawerToggle AB_toggle;
     Context hackContext;
-
     private static final String TAG = "GoogleActivity";
 
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
-    RecyclerView recyclerView;
+
+    private RecyclerView recyclerView;
+    private GroupListAdapter adapter;
     private List<GroupListItem> list;
+    private RecyclerView.LayoutManager layoutManager;
 
     private void setNavigationViewListner() {
         NavigationView navigationView = findViewById(R.id.nav_action);
@@ -67,6 +71,9 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
         recyclerView = findViewById(R.id.recyclerview);
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setHasFixedSize(true);
         list = new ArrayList<>();
 
         populateRecyclerview();
@@ -80,7 +87,46 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         });
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.search_menu,menu);
+        final MenuItem item = menu.findItem(R.id.search_groups);
+        final SearchView searchView = (SearchView) item.getActionView();
+        int searchPlateId = searchView.getContext().getResources().getIdentifier("android:id/search_plate", null, null);
+        View searchPlate = searchView.findViewById(searchPlateId);
+        searchPlate.setBackgroundResource(R.color.colorPrimaryAlt2);
+        searchView.setOnQueryTextListener(this);
+        return true;
+    }
 
+    @Override
+    public boolean onQueryTextSubmit(String s) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String s) {
+        s = s.toLowerCase();
+
+        final List<GroupListItem> filteredModelList = new ArrayList<>();
+        for (GroupListItem model : list) {
+            final String text = model.getText().toLowerCase();
+            if (text.contains(s)) {
+                filteredModelList.add(model);
+            }
+        }
+
+        /*for (GroupListItem model : filteredModelList) {
+            final String text = model.getText().toLowerCase();
+            System.out.println(text);
+            System.out.println("==========================================================");
+        }*/
+
+        adapter.animateTo(filteredModelList);
+        recyclerView.scrollToPosition(0);
+        return true;
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -144,11 +190,13 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                         Log.d(TAG, document.getId() + " => " + document.getData());
                         GroupListItem groupListItem = new GroupListItem(
                                 document.get("class").toString(),
-                                document.get("description").toString() + "\n" + document.get("location").toString() + "\n" + document.get("creationTime").toString()
+                                document.get("description").toString() + "\n" + document.get("location").toString() + "\n" + document.get("creationTime").toString(),
+                                document.get("class").toString(),
+                                document.get("location").toString()
                         );
                         list.add(0, groupListItem);
                         //System.out.println(list.get(0).getHeader()); //should use log instead
-                        RecyclerView.Adapter adapter = new GroupListAdapter(list, hackContext);
+                        adapter = new GroupListAdapter(list, hackContext);
                         recyclerView.setAdapter(adapter);
                     }
                 }

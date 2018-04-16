@@ -76,7 +76,7 @@ public class ChangeNameTest extends ActivityInstrumentationTestCase2<ProfileActi
             }
         });
         Thread.sleep(4000);
-        assertEquals("UF",mProfileActivity.getSchool(mUser));*/
+        assertEquals("UF",mProfileActivity.getSchool(mUser));//*/
     }
 
     @Test
