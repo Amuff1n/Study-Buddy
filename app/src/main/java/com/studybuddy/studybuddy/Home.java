@@ -154,7 +154,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                                 document.get("location").toString()
                         );
                         list.add(0, groupListItem);
-                        adapter = new GroupListAdapter(list, hackContext);
+                        ArrayList<GroupListItem> mutable = new ArrayList<>(list);
+                        adapter = new GroupListAdapter(mutable, hackContext);
                         recyclerView.setAdapter(adapter);
                     }
                 }
@@ -203,11 +204,10 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     @Override
     public boolean onQueryTextChange(String s) {
         s = s.toLowerCase();
-
-        final List<GroupListItem> filteredModelList = new ArrayList<>();
+        List<GroupListItem> filteredModelList = new ArrayList<>();
         for (GroupListItem model : list) {
-            final String text = model.getText().toLowerCase();
-            final String header = model.getHeader().toLowerCase();
+            String text = model.getText().toLowerCase();
+            String header = model.getHeader().toLowerCase();
             if (text.contains(s) || header.contains(s)) {
                 filteredModelList.add(model);
             }

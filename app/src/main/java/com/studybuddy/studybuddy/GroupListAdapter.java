@@ -108,8 +108,8 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
 
         public ViewHolder(View itemView) {
             super(itemView);
-            textViewHeader = (TextView) itemView.findViewById(R.id.header);
-            textViewText = (TextView) itemView.findViewById(R.id.text);
+            textViewHeader = itemView.findViewById(R.id.header);
+            textViewText = itemView.findViewById(R.id.text);
         }
         public void setTextViewHeader(String text) {
             textViewHeader.setText(text);
