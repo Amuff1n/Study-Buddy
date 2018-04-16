@@ -47,9 +47,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     RecyclerView recyclerView;
     private List<GroupListItem> list;
 
-    private ImageButton joinGroupButton;
-    private ImageButton leaveGroupButton;
-
     private FloatingActionButton fab;
     private SwipeRefreshLayout mSwipeRefreshLayout;
 
@@ -108,8 +105,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             }
         });
     }
-
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -180,7 +175,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                         int userIndex = 0; //save user's index in group for easy removal later
                         //try catch block until deleting a group implemented
                         try {
-
                             if (document.get("user").equals(mAuth.getUid())) {
                                 joining = false;
                             }

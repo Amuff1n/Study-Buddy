@@ -1,6 +1,7 @@
 package com.studybuddy.studybuddy;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -59,14 +61,16 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
 
         //toggle visibility based on joining value when binding
         if (groupListItem.getJoining()) {
+            //User belongs to group
             holder.leaveGroupButton.setVisibility(View.GONE);
             holder.joinGroupButton.setVisibility(View.VISIBLE);
+            holder.relativeLayout.setBackgroundColor(Color.WHITE);
         }
         else {
             holder.joinGroupButton.setVisibility(View.GONE);
             holder.leaveGroupButton.setVisibility(View.VISIBLE);
+            holder.relativeLayout.setBackgroundColor(Color.rgb(104, 237, 106));
         }
-
     }
 
     @Override
@@ -84,11 +88,13 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
         private int userIndex;
         private ImageButton joinGroupButton;
         private ImageButton leaveGroupButton;
+        private RelativeLayout relativeLayout;
         private FirebaseAuth mAuth;
         private FirebaseFirestore db;
 
         public ViewHolder(View itemView) {
             super(itemView);
+            relativeLayout = itemView.findViewById(R.id.background);
             textViewHeader = itemView.findViewById(R.id.header);
             textViewText = itemView.findViewById(R.id.text);
             textViewIndex = itemView.findViewById(R.id.index);

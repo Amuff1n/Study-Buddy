@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -21,6 +22,7 @@
         app:layout_constraintVertical_bias="1.0">
 
         <RelativeLayout
+            android:id="@+id/background"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -31,9 +33,9 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/header"
+                android:gravity="start"
                 android:text="This group is blah blah blah..."
-                android:textAlignment="viewStart"
-                android:gravity="start" />
+                android:textAlignment="viewStart" />
 
             <TextView
                 android:id="@+id/header"
@@ -42,11 +44,11 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
+                android:gravity="start"
                 android:text="This is a heading"
                 android:textAlignment="viewStart"
                 android:textAllCaps="true"
-                android:textStyle="bold"
-                android:gravity="start" />
+                android:textStyle="bold" />
 
             <ImageButton
                 android:id="@+id/join_group_button"
