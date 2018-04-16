@@ -165,10 +165,18 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         inflater.inflate(R.menu.search_menu,menu);
         final MenuItem item = menu.findItem(R.id.search_groups);
         final SearchView searchView = (SearchView) item.getActionView();
-        int searchPlateId = searchView.getContext().getResources().getIdentifier("android:id/search_plate", null, null);
+        /*int searchPlateId = searchView.getContext().getResources().getIdentifier("android:id/search_plate", null, null);
         View searchPlate = searchView.findViewById(searchPlateId);
-        searchPlate.setBackgroundResource(R.color.colorPrimaryAlt2);
+        searchPlate.setBackgroundResource(R.color.colorPrimaryAlt2);*/
         searchView.setOnQueryTextListener(this);
+        SearchView.OnCloseListener closeListener = new SearchView.OnCloseListener(){
+
+            @Override
+            public boolean onClose() {
+                adapter.getFilter().filter("");
+                return true;
+            }
+        };
         return true;
     }
 

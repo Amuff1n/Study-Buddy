@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by Alex on 3/20/2018.
@@ -99,6 +100,10 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
                 moveItem(fromPosition, toPosition);
             }
         }
+    }
+
+    public LayoutInflater.Filter getFilter() {
+        return filter;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

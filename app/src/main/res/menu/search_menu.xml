@@ -6,5 +6,6 @@
         android:title="@string/find_groups"
         android:icon="@android:drawable/ic_menu_search"
         app:actionViewClass="android.widget.SearchView"
-        app:showAsAction="always"/>
+        app:showAsAction="collapseActionView|always"
+        android:voiceSearchMode="showVoiceSearchButton|launchRecognizer"/>
 </menu>
