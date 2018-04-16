@@ -1,8 +1,10 @@
 package com.studybuddy.studybuddy;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.media.Image;
 import android.support.annotation.NonNull;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -10,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -61,10 +64,12 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
         if (groupListItem.isInGroup()) {
             holder.joinGroupButton.setVisibility(View.GONE);
             holder.leaveGroupButton.setVisibility(View.VISIBLE);
+            holder.constraintLayout.setBackgroundColor(Color.rgb(104, 237, 106));
         }
         else {
             holder.leaveGroupButton.setVisibility(View.GONE);
             holder.joinGroupButton.setVisibility(View.VISIBLE);
+            holder.constraintLayout.setBackgroundColor(Color.WHITE);
         }
     }
 
@@ -83,11 +88,13 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
         private int userIndex;
         private ImageButton joinGroupButton;
         private ImageButton leaveGroupButton;
+        private ConstraintLayout constraintLayout;
         private FirebaseAuth mAuth;
         private FirebaseFirestore db;
 
         public ViewHolder(View itemView) {
             super(itemView);
+            constraintLayout = itemView.findViewById(R.id.background);
             textViewHeader = itemView.findViewById(R.id.header);
             textViewText = itemView.findViewById(R.id.text);
             textViewIndex = itemView.findViewById(R.id.index);

@@ -35,6 +35,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
+
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle AB_toggle;
     private FloatingActionButton fab;
