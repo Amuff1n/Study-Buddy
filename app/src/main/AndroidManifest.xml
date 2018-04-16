@@ -39,9 +39,6 @@
             android:name=".AddClasses"
             android:parentActivityName=".Home"
             android:theme="@style/AppTheme" />
-        <activity android:name=".FindGroups"
-            android:parentActivityName=".Home"
-            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

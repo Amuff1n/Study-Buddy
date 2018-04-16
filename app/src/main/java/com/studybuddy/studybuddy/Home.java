@@ -124,11 +124,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             return true;
         }
 
-        else if (id == R.id.nav_search) {
-            startActivity(new Intent(getApplicationContext(), FindGroups.class));
-            return true;
-        }
-
         DrawerLayout drawer = findViewById(R.id.drawerLayout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
