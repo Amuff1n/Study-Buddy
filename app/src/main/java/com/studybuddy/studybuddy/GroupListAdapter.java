@@ -57,16 +57,15 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
         holder.setUserIndex(groupListItem.getUserIndex());
         holder.setGroupId(groupListItem.getGroupId());
 
-        //toggle visibility based on joining value when binding
-        if (groupListItem.getJoining()) {
-            holder.leaveGroupButton.setVisibility(View.GONE);
-            holder.joinGroupButton.setVisibility(View.VISIBLE);
-        }
-        else {
+        //Toggle options based on group membership
+        if (groupListItem.isInGroup()) {
             holder.joinGroupButton.setVisibility(View.GONE);
             holder.leaveGroupButton.setVisibility(View.VISIBLE);
         }
-
+        else {
+            holder.leaveGroupButton.setVisibility(View.GONE);
+            holder.joinGroupButton.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override
@@ -98,91 +97,9 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
             mAuth = FirebaseAuth.getInstance();
             db = FirebaseFirestore.getInstance();
 
-            //TODO these onClickListeners should be more object oriented, maybe contain code in Home class?
-            joinGroupButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    DocumentReference groupDoc = db.collection("study_groups").document(groupId);
-                    Map<String, Object> join = new HashMap<>();
-                    //new user has key ''user' + index'
-                    //also increment index (i.e. number of users in group)
-                    join.put("user" + index, mAuth.getUid());
-                    join.put("index", index + 1);
-
-                    groupDoc.set(join, SetOptions.merge()).addOnSuccessListener(new OnSuccessListener<Void>() {
-                        @Override
-                        public void onSuccess(Void aVoid) {
-                            Log.d("Google Activity", "Successfully joined user to group");
-                            Toast.makeText(context, "Joined group!",
-                                    Toast.LENGTH_SHORT).show();
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Log.w("Google Activity", "Error joining group");
-                            Toast.makeText(context, "Error joining group",
-                                    Toast.LENGTH_SHORT).show();
-                        }
-                    });
-
-                    ((Home)context).refreshRecyclerView(); //calls refresh method in Home
-                }
-            });
-
-            leaveGroupButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    DocumentReference groupDoc = db.collection("study_groups").document(groupId);
-                    Map<String, Object> leave = new HashMap<>();
-                    //first user has key 'user'
-                    //identified by kinda using a sentinel value userIndex == 0
-                    if (userIndex == 0) {
-                        leave.put("user", FieldValue.delete());
-                    }
-                    //otherwise we have to remove ''user' + userIndex'
-                    else {
-                        leave.put("user" + userIndex, FieldValue.delete());
-                    }
-                    leave.put("index", index - 1);
-                    //if new index is 0, no users in group so delete it
-                    if (index - 1 == 0) {
-                        groupDoc.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void aVoid) {
-                                Log.d("Google Activity", "Group successfully deleted");
-                                Toast.makeText(context, "Group disbanded!",
-                                        Toast.LENGTH_SHORT).show();
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                Log.w("Google Activity", "Error deleting group");
-                                Toast.makeText(context, "Error deleting group",
-                                        Toast.LENGTH_SHORT).show();
-                            }
-                        });
-                    } else {
-                        groupDoc.update(leave).addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void aVoid) {
-                                Log.d("Google Activity", "User successfully left group");
-                                Toast.makeText(context, "Left group",
-                                        Toast.LENGTH_SHORT).show();
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                Log.w("Google Activity", "Error leaving group");
-                                Toast.makeText(context, "Error leaving group",
-                                        Toast.LENGTH_SHORT).show();
-                            }
-                        });
-                    }
-
-                    ((Home)context).refreshRecyclerView();
-                }
-            });
+            addButtonListeners();
         }
+
         public void setTextViewHeader(String text) {
             textViewHeader.setText(text);
         }
@@ -205,6 +122,98 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
 
         public void setGroupId(String text) {
             groupId = text;
+        }
+
+        //The following 3 methods are helper methods to add clickable join/leave group buttons
+        private void addButtonListeners(){
+            joinGroupButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    joinGroup();
+                }
+            });
+
+            leaveGroupButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    leaveGroup();
+                }
+            });
+        }
+
+        private void joinGroup() {
+            DocumentReference groupDoc = db.collection("study_groups").document(groupId);
+            Map<String, Object> newMember = new HashMap<>();
+            //Add key "user+index" and increment index
+            newMember.put("user" + index, mAuth.getUid());
+            newMember.put("index", index + 1);
+
+            groupDoc.set(newMember, SetOptions.merge()).addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void aVoid) {
+                    Log.d("Google Activity", "Success. User joined group.");
+                    Toast.makeText(context, "Cool, you just joined a group!",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Log.w("Google Activity", "Error. Could not add user to group.");
+                    Toast.makeText(context, "Hmm there was a problem. Please try again.",
+                            Toast.LENGTH_SHORT).show();
+                }
+            });
+            ((Home)context).refreshRecyclerView(); //calls refresh method in Home
+        }
+
+        private void leaveGroup() {
+            DocumentReference groupDoc = db.collection("study_groups").document(groupId);
+            Map<String, Object> leave = new HashMap<>();
+            //first user has key 'user'
+            //identified by kinda using a sentinel value userIndex == 0
+            if (userIndex == 0) {
+                leave.put("user", FieldValue.delete());
+            }
+            //otherwise we have to remove ''user' + userIndex'
+            else {
+                leave.put("user" + userIndex, FieldValue.delete());
+            }
+            leave.put("index", index - 1);
+            //if new index is 0, no users in group so delete it
+            if (index - 1 == 0) {
+                groupDoc.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d("Google Activity", "Group successfully deleted");
+                        Toast.makeText(context, "Group disbanded!",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w("Google Activity", "Error deleting group");
+                        Toast.makeText(context, "Error deleting group",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
+            } else {
+                groupDoc.update(leave).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d("Google Activity", "User successfully left group");
+                        Toast.makeText(context, "Left group",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w("Google Activity", "Error leaving group");
+                        Toast.makeText(context, "Error leaving group",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+            ((Home)context).refreshRecyclerView();
         }
 
     }

@@ -104,6 +104,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
     //simple 'refresh' method that clears the grouplist and repopulates it
     public void refreshRecyclerView() {
+
+        recyclerView.getAdapter().notifyDataSetChanged();
         list.clear();
         populateRecyclerview();
         mSwipeRefreshLayout.setRefreshing(false); //stop refresh animation when done
@@ -126,42 +128,40 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
                         //Start the process of checking if user is in that group
                         //If uid matches 'user' or ''user' + index' they are in that group, so they can't join
-                        boolean joining = true;
+                        boolean isInGroup = false;
                         int userIndex = 0; //save user's index in group for easy removal later
                         //try catch block until deleting a group implemented
                         try {
-
                             if (document.get("user").equals(mAuth.getUid())) {
-                                joining = false;
+                                isInGroup = true;
                             }
-
-                            for (int i = 1; i < document.getDouble("index"); i++) {
-                                if (document.get("user" + i).equals(mAuth.getUid())) {
-                                    joining = false;
-                                    userIndex = i;
+                            else {
+                                for (int i = 1; i < document.getDouble("index"); i++) {
+                                    if (document.get("user" + i).equals(mAuth.getUid())) {
+                                        isInGroup = true;
+                                        userIndex = i;
+                                    }
                                 }
                             }
                         } catch (Exception e) {
-                            Log.w(TAG, "Failed to get any user, group probably shouldn't exist", e);
+                            Log.w(TAG, "Failed to retrieve users from Firestore.", e);
                         }
 
-
-                        //For each group, get class, desc, location, timestamp, groupID, number of users in group (index)
-                        //also get current user's index if they are in the group
-                        //if not in group, joining true
+                        //For each card, get class, desc, location, timestamp, groupID, and index
                         GroupListItem groupListItem = new GroupListItem(
                                 document.get("class").toString(),
-                                document.get("description").toString() + "\n" + document.get("location").toString() + "\n" + document.get("creationTime").toString(),
+                                document.get("description").toString() +
+                                        "\n" + document.get("location").toString() +
+                                        "\n" + document.get("creationTime").toString(),
                                 document.getDouble("index"),
                                 userIndex,
-                                joining,
+                                isInGroup,
                                 document.getId()
                         );
-                        list.add(0, groupListItem);
-                        //System.out.println(list.get(0).getHeader()); //should use log instead
-                        RecyclerView.Adapter adapter = new GroupListAdapter(list, hackContext);
-                        recyclerView.setAdapter(adapter);
+                        list.add(0, groupListItem);  // Add to Recycler
                     }
+                    RecyclerView.Adapter adapter = new GroupListAdapter(list, hackContext);
+                    recyclerView.setAdapter(adapter);
                 }
             }
         });
