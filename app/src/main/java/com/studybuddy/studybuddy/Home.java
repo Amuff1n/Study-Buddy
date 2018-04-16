@@ -88,47 +88,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.search_menu,menu);
-        final MenuItem item = menu.findItem(R.id.search_groups);
-        final SearchView searchView = (SearchView) item.getActionView();
-        int searchPlateId = searchView.getContext().getResources().getIdentifier("android:id/search_plate", null, null);
-        View searchPlate = searchView.findViewById(searchPlateId);
-        searchPlate.setBackgroundResource(R.color.colorPrimaryAlt2);
-        searchView.setOnQueryTextListener(this);
-        return true;
-    }
-
-    @Override
-    public boolean onQueryTextSubmit(String s) {
-        return false;
-    }
-
-    @Override
-    public boolean onQueryTextChange(String s) {
-        s = s.toLowerCase();
-
-        final List<GroupListItem> filteredModelList = new ArrayList<>();
-        for (GroupListItem model : list) {
-            final String text = model.getText().toLowerCase();
-            if (text.contains(s)) {
-                filteredModelList.add(model);
-            }
-        }
-
-        /*for (GroupListItem model : filteredModelList) {
-            final String text = model.getText().toLowerCase();
-            System.out.println(text);
-            System.out.println("==========================================================");
-        }*/
-
-        adapter.animateTo(filteredModelList);
-        recyclerView.scrollToPosition(0);
-        return true;
-    }
-
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         return AB_toggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
@@ -195,7 +154,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                                 document.get("location").toString()
                         );
                         list.add(0, groupListItem);
-                        //System.out.println(list.get(0).getHeader()); //should use log instead
                         adapter = new GroupListAdapter(list, hackContext);
                         recyclerView.setAdapter(adapter);
                     }
@@ -203,5 +161,59 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             }
         });
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.search_menu,menu);
+        final MenuItem item = menu.findItem(R.id.search_groups);
+        final SearchView searchView = (SearchView) item.getActionView();
+        int searchPlateId = searchView.getContext().getResources().getIdentifier("android:id/search_plate", null, null);
+        View searchPlate = searchView.findViewById(searchPlateId);
+        searchPlate.setBackgroundResource(R.color.cardview_light_background);
+        searchView.setOnQueryTextListener(this);
+
+        searchView.setOnQueryTextFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean queryTextFocused) {
+                if(!queryTextFocused) {
+                    item.collapseActionView();
+                    searchView.setQuery("", false);
+                    adapter.animateTo(list);
+                }
+            }
+        });
+
+        SearchView.OnCloseListener closeListener = new SearchView.OnCloseListener(){
+            @Override
+            public boolean onClose() {
+                adapter.animateTo(list);
+                return true;
+            }
+        };
+        return true;
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String s) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String s) {
+        s = s.toLowerCase();
+
+        final List<GroupListItem> filteredModelList = new ArrayList<>();
+        for (GroupListItem model : list) {
+            final String text = model.getText().toLowerCase();
+            if (text.contains(s)) {
+                filteredModelList.add(model);
+            }
+        }
+
+        adapter.animateTo(filteredModelList);
+        recyclerView.scrollToPosition(0);
+        return true;
     }
 }
