@@ -171,7 +171,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         final SearchView searchView = (SearchView) item.getActionView();
         int searchPlateId = searchView.getContext().getResources().getIdentifier("android:id/search_plate", null, null);
         View searchPlate = searchView.findViewById(searchPlateId);
-        searchPlate.setBackgroundResource(R.color.cardview_light_background);
+        searchPlate.setBackgroundResource(R.color.colorPrimaryAlt2);
         searchView.setOnQueryTextListener(this);
 
         searchView.setOnQueryTextFocusChangeListener(new View.OnFocusChangeListener() {
@@ -207,7 +207,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         final List<GroupListItem> filteredModelList = new ArrayList<>();
         for (GroupListItem model : list) {
             final String text = model.getText().toLowerCase();
-            if (text.contains(s)) {
+            final String header = model.getHeader().toLowerCase();
+            if (text.contains(s) || header.contains(s)) {
                 filteredModelList.add(model);
             }
         }
