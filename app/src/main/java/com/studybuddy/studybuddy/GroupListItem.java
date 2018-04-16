@@ -10,15 +10,16 @@ public class GroupListItem {
     private String text;
     private int index;
     private int userIndex;
-    private boolean joining; //true if uid not associated with group, i.e. can be joined, false otherwise
+    private boolean isInGroup; //true if uid not associated with group,
     private String groupId;
 
-    public GroupListItem(String header, String text, Double index, int userIndex, boolean joining, String groupId) {
+    public GroupListItem(String header, String text, Double index, int userIndex,
+                         boolean isInGroup, String groupId) {
         this.header = header;
         this.text = text;
-        this.index = index.intValue(); //Firestore numbers are doubles, have to cast to int
+        this.index = index.intValue(); //Firestore uses double, have to cast to int
         this.userIndex = userIndex;
-        this.joining = joining;
+        this.isInGroup = isInGroup;
         this.groupId = groupId;
     }
 
@@ -38,8 +39,8 @@ public class GroupListItem {
         return userIndex;
     }
 
-    public boolean getJoining() {
-        return joining;
+    public boolean isInGroup() {
+        return isInGroup;
     }
 
     public String getGroupId() {
