@@ -2,6 +2,7 @@ package com.studybuddy.studybuddy;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -10,22 +11,16 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.support.v7.widget.Toolbar;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -36,27 +31,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    private DrawerLayout DL;
-    private ActionBarDrawerToggle AB_toggle;
-    Context hackContext;
-
     private static final String TAG = "GoogleActivity";
 
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
-    RecyclerView recyclerView;
-    private List<GroupListItem> list;
-
-    private ImageButton joinGroupButton;
-    private ImageButton leaveGroupButton;
-
+    private DrawerLayout drawerLayout;
+    private ActionBarDrawerToggle AB_toggle;
     private FloatingActionButton fab;
     private SwipeRefreshLayout mSwipeRefreshLayout;
-
-    private void setNavigationViewListner() {
-        NavigationView navigationView = findViewById(R.id.nav_action);
-        navigationView.setNavigationItemSelectedListener(this);
-    }
+    RecyclerView recyclerView;
+    Context hackContext;
+    private List<GroupListItem> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,52 +49,22 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         setContentView(R.layout.activity_home);
         //setNavigationViewListener();
 
-        DL = findViewById(R.id.drawerLayout);
-        AB_toggle = new ActionBarDrawerToggle(this, DL, R.string.open, R.string.close);
-        DL.addDrawerListener(AB_toggle);
+        setClassVariables();
+        drawerLayout.addDrawerListener(AB_toggle);
         AB_toggle.syncState();
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        hackContext = this;
-        mAuth = FirebaseAuth.getInstance();
-        db = FirebaseFirestore.getInstance();
-        recyclerView = findViewById(R.id.recyclerview);
-        list = new ArrayList<>();
-
+        fabListeners();
         populateRecyclerview();
-
-        fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), CreateGroup.class));
-            }
-        });
-
-        //Hide the fab when we scroll down, reveal when scroll up
-        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
-            @Override
-            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-                super.onScrolled(recyclerView, dx, dy);
-                if (dy > 0 && fab.getVisibility() == View.VISIBLE) {
-                    fab.hide();
-                } else if (dy < 0 && fab.getVisibility() != View.VISIBLE) {
-                    fab.show();
-                }
-            }
-        });
-
-        mSwipeRefreshLayout = findViewById(R.id.swipeRefreshLayout);
-        mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                refreshRecyclerView();
-            }
-        });
+        recyclerviewListeners();
+        swipeRefreshListeners();
     }
 
-
+    //TODO what is this for?
+    private void setNavigationViewListener() {
+        NavigationView navigationView = findViewById(R.id.nav_action);
+        navigationView.setNavigationItemSelectedListener(this);
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -128,22 +83,16 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
             finish();
             return true;
-        }
-
-        else if (id == R.id.nav_settings) {
+        } else if (id == R.id.nav_settings) {
             //Open settings activity
             Toast.makeText(Home.this, "Nothing yet!",
                     Toast.LENGTH_SHORT).show();
             return true;
-        }
-
-        else if (id == R.id.nav_account) {
+        } else if (id == R.id.nav_account) {
             //Open account activity
             startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
             return true;
-        }
-
-        else if (id == R.id.nav_add_classe) {
+        } else if (id == R.id.nav_add_classe) {
             startActivity(new Intent(getApplicationContext(), AddClasses.class));
             return true;
         }
@@ -160,6 +109,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         mSwipeRefreshLayout.setRefreshing(false); //stop refresh animation when done
     }
 
+    //Populate Recycler View with data from Firebase
     private void populateRecyclerview() {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -213,6 +163,56 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                         recyclerView.setAdapter(adapter);
                     }
                 }
+            }
+        });
+    }
+
+    //Helper method to define all class data members
+    private void setClassVariables() {
+        drawerLayout = findViewById(R.id.drawerLayout);
+        fab = findViewById(R.id.fab);
+        hackContext = this;
+        mAuth = FirebaseAuth.getInstance();
+        db = FirebaseFirestore.getInstance();
+        list = new ArrayList<>();
+        recyclerView = findViewById(R.id.recyclerview);
+        AB_toggle = new
+                ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close);
+        mSwipeRefreshLayout = findViewById(R.id.swipeRefreshLayout);
+    }
+
+    //Helper method to add event listeners to recyclerview
+    private void recyclerviewListeners() {
+        //Hide the fab when we scroll down, reveal when scroll up
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                if (dy > 0 && fab.getVisibility() == View.VISIBLE) {
+                    fab.hide();
+                } else if (dy < 0 && fab.getVisibility() != View.VISIBLE) {
+                    fab.show();
+                }
+            }
+        });
+    }
+
+    //Helper method to add listeners to fab
+    private void fabListeners() {
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), CreateGroup.class));
+            }
+        });
+    }
+
+    //Helper method to add listeners to swipe refresh layout
+    private void swipeRefreshListeners() {
+        mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                refreshRecyclerView();
             }
         });
     }
