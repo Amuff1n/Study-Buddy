@@ -51,12 +51,12 @@ public class ClassRecyclerView extends AppCompatActivity {
         addClassButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(addClassText == null){
+                String classString = addClassText.getText().toString();
+                if(classString.isEmpty()){
                     Toast.makeText(getApplicationContext(),"Enter a class", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 else{
-                    String classString = addClassText.getText().toString();
                     Map<String, Object> classMap = new HashMap<>();
                     classMap.put("class" + classString, classString);
                     mFirestore.collection("users").document(mUser.getUid()).update(classMap).addOnSuccessListener(new OnSuccessListener<Void>() {
