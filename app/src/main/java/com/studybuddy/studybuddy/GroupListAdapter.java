@@ -192,7 +192,7 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
                     @Override
                     public void onSuccess(Void aVoid) {
                         Log.d("Google Activity", "Group successfully deleted");
-                        Toast.makeText(context, "Group disbanded!",
+                        Toast.makeText(context, "Group deleted!",
                                 Toast.LENGTH_SHORT).show();
                     }
                 }).addOnFailureListener(new OnFailureListener() {

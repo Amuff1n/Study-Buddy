@@ -27,6 +27,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -74,7 +75,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
         int id = item.getItemId();
 
         if (id == R.id.nav_logout) {
@@ -149,11 +149,12 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                         }
 
                         //For each card, get class, desc, location, timestamp, groupID, and index
+                        SimpleDateFormat sdf = new SimpleDateFormat("MMM d");
                         GroupListItem groupListItem = new GroupListItem(
-                                document.get("class").toString(),
+                                document.get("class").toString() + '\n' +
+                                         sdf.format(document.get("creationTime")),
                                 document.get("description").toString() +
-                                        "\n" + document.get("location").toString() +
-                                        "\n" + document.get("creationTime").toString(),
+                                        "\n" + document.get("location").toString(),
                                 document.getDouble("index"),
                                 userIndex,
                                 isInGroup,
