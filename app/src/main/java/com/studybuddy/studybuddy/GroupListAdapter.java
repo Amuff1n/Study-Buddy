@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.media.Image;
 import android.support.annotation.NonNull;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -64,12 +65,12 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
             //User belongs to group
             holder.leaveGroupButton.setVisibility(View.GONE);
             holder.joinGroupButton.setVisibility(View.VISIBLE);
-            holder.relativeLayout.setBackgroundColor(Color.WHITE);
+            holder.constraintLayout.setBackgroundColor(Color.WHITE);
         }
         else {
             holder.joinGroupButton.setVisibility(View.GONE);
             holder.leaveGroupButton.setVisibility(View.VISIBLE);
-            holder.relativeLayout.setBackgroundColor(Color.rgb(104, 237, 106));
+            holder.constraintLayout.setBackgroundColor(Color.rgb(104, 237, 106));
         }
     }
 
@@ -88,13 +89,13 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
         private int userIndex;
         private ImageButton joinGroupButton;
         private ImageButton leaveGroupButton;
-        private RelativeLayout relativeLayout;
+        private ConstraintLayout constraintLayout;
         private FirebaseAuth mAuth;
         private FirebaseFirestore db;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            relativeLayout = itemView.findViewById(R.id.background);
+            constraintLayout = itemView.findViewById(R.id.background);
             textViewHeader = itemView.findViewById(R.id.header);
             textViewText = itemView.findViewById(R.id.text);
             textViewIndex = itemView.findViewById(R.id.index);
