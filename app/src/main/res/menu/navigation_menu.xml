@@ -25,4 +25,9 @@
         android:icon="@mipmap/ic_exit_to_app_black_24dp"
         android:onClick="onNavigationItemSelected"
         android:title="Log Out" />
+
+    <item android:id="@+id/nav_chat"
+        android:icon="@mipmap/ic_settings_black_24dp"
+        android:onClick="onNavigationItemSelected"
+        android:title="Chat" />
 </menu>

@@ -24,7 +24,9 @@
         <activity
             android:name=".SetUpAccount"
             android:theme="@style/AppTheme.NoActionBar">
+
         </activity>
+        <activity android:name=".Chat" />
         <activity android:name=".Home">
 
         </activity>
@@ -49,5 +51,7 @@
             android:parentActivityName=".Home"/>
 >>>>>>> e7f74d5f28791c69bd28cb8587b6e59261b01d8b
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>

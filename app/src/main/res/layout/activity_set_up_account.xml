@@ -47,23 +47,18 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.96" />
+        app:layout_constraintVertical_bias="0.984" />
 
     <Button
         android:id="@+id/ConfirmAccount"
-        android:layout_width="0dp"
-        android:layout_height="52dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="371dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/greenbar"
         android:text="@string/create_account"
         android:textColor="@android:color/background_light"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LastName" />
+        app:layout_constraintBottom_toTopOf="@+id/Cancel"
+        tools:layout_editor_absoluteX="7dp" />
 
     <EditText
         android:id="@+id/FirstName"
@@ -89,11 +84,8 @@
 
     <EditText
         android:id="@+id/LastName"
-        android:layout_width="0dp"
+        android:layout_width="368dp"
         android:layout_height="49dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/bluebar"
         android:ems="10"
@@ -102,11 +94,8 @@
         android:paddingLeft="15dp"
         android:textColor="@color/cardview_light_background"
         android:textColorHint="@color/cardview_light_background"
-        app:layout_constraintBottom_toTopOf="@+id/ConfirmAccount"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FirstName" />
+        app:layout_constraintTop_toBottomOf="@+id/FirstName"
+        tools:layout_editor_absoluteX="8dp" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -122,5 +111,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/avatar_icon" />
+
+    <EditText
+        android:id="@+id/textViewUser"
+        android:layout_width="355dp"
+        android:layout_height="45dp"
+        android:text="Enter Username"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="407dp" />
 
 </android.support.constraint.ConstraintLayout>
