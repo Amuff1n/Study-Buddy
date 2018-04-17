@@ -32,23 +32,25 @@
             android:name=".SetUpAccount"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name=".Home"></activity>
-       <activity android:name=".MapsActivity"></activity>
+        <activity android:name=".MapsActivity"></activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAuwS9rKsgRTOrinNEIJAKOC51ccgTLlCM"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Home" />
         <activity
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".Home" />
-        <activity android:name=".CreateGroup"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".AddClasses"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".EditClasses"></activity>
-
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAuwS9rKsgRTOrinNEIJAKOC51ccgTLlCM" />
-
+            android:parentActivityName=".Home"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".CreateGroup"
+            android:parentActivityName=".Home"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".AddClasses"
+            android:parentActivityName=".Home"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

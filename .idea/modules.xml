@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/GitHub-Study-Buddy.iml" filepath="$PROJECT_DIR$/GitHub-Study-Buddy.iml" />
       <module fileurl="file://$PROJECT_DIR$/Study-Buddy.iml" filepath="$PROJECT_DIR$/Study-Buddy.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../../../Stephen/Desktop/C++/Study-Buddy/.idea/Study-Buddy.iml" filepath="$PROJECT_DIR$/../../../../Stephen/Desktop/C++/Study-Buddy/.idea/Study-Buddy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/Study-Buddy-app.iml" filepath="$PROJECT_DIR$/app/Study-Buddy-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../../../Stephen/Desktop/C++/Study-Buddy/app/app.iml" filepath="$PROJECT_DIR$/../../../../Stephen/Desktop/C++/Study-Buddy/app/app.iml" />
     </modules>

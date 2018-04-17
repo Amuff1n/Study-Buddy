@@ -58,6 +58,9 @@ public class SetUpAccount extends AppCompatActivity {
                 userMap.put("firstName", FirstName);
                 userMap.put("lastName", LastName);
                 userMap.put("uid", mId.getUid());
+                userMap.put("", "school");
+                userMap.put("", "major");
+                userMap.put("", "year");
                 mFirestore.collection("users").document(mUser.getUid()).update(userMap).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
