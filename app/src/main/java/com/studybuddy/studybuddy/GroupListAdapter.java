@@ -26,6 +26,7 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.SetOptions;
 
 import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -76,6 +77,61 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
     @Override
     public int getItemCount() {
         return list.size();
+    }
+
+    public void setItems(List<GroupListItem> items){
+        list = new ArrayList<>(items);
+    }
+
+    public GroupListItem removeItem(int position){
+        final GroupListItem item = list.remove(position);
+        notifyItemRemoved(position);
+        return item;
+    }
+
+    public void addItem(int position, GroupListItem item){
+        list.add(position,item);
+        notifyItemInserted(position);
+    }
+
+    public void moveItem(int initPosition, int destination){
+        final GroupListItem item = list.remove(initPosition);
+        list.add(destination,item);
+        notifyItemMoved(initPosition,destination);
+    }
+
+    public void animateTo(List<GroupListItem> models) {
+        applyAndAnimateRemovals(models);
+        applyAndAnimateAdditions(models);
+        applyAndAnimateMovedItems(models);
+    }
+
+    private void applyAndAnimateRemovals(List<GroupListItem> newModels) {
+        for (int i = list.size() - 1; i >= 0; i--) {
+            final GroupListItem model = list.get(i);
+            if (!newModels.contains(model)) {
+                removeItem(i);
+            }
+        }
+    }
+
+    private void applyAndAnimateAdditions(List<GroupListItem> newModels) {
+        for (int i = 0, count = newModels.size(); i < count; i++) {
+            final GroupListItem model = newModels.get(i);
+            if (!list.contains(model)) {
+                addItem(i, model);
+            }
+        }
+    }
+
+    private void applyAndAnimateMovedItems(List<GroupListItem> newModels) {
+        for (int toPosition = newModels.size() - 1; toPosition >= 0; toPosition--) {
+            final GroupListItem model = newModels.get(toPosition);
+            final int fromPosition = list.indexOf(model);
+            if (fromPosition >= 0 && fromPosition != toPosition) {
+                moveItem(fromPosition, toPosition);
+            }
+        }
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -222,6 +278,5 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
             }
             ((Home)context).refreshRecyclerView();
         }
-
     }
 }
