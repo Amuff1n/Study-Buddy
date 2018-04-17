@@ -169,14 +169,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         View searchPlate = searchView.findViewById(searchPlateId);
         searchPlate.setBackgroundResource(R.color.colorPrimaryAlt2);*/
         searchView.setOnQueryTextListener(this);
-        SearchView.OnCloseListener closeListener = new SearchView.OnCloseListener(){
-
-            @Override
-            public boolean onClose() {
-                adapter.getFilter().filter("");
-                return true;
-            }
-        };
         return true;
     }
 
