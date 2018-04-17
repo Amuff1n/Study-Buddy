@@ -3,7 +3,6 @@ package com.studybuddy.studybuddy;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -44,6 +43,10 @@ public class ProfileActivity extends AppCompatActivity {
     private TextView mMajorTextView;
     private TextView mYearTextView;
     private TextView mClassesTextView;
+    private String Name;
+    private String School;
+    private String Major;
+    private String Year;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,16 +111,20 @@ public class ProfileActivity extends AppCompatActivity {
                             firstName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1).toLowerCase();
                             String lastName = document.get("lastName").toString();
                             String name = firstName + " " + lastName.substring(0, 1).toUpperCase() + ".";
+                            Name = name;
                             mNameTextView.setText(name);
 
                             String school = document.get("school").toString();
+                            School = school;
                             mSchoolTextView.setText(school);
 
                             String major = document.get("major").toString();
                             major = major.substring(0, 1).toUpperCase() + major.substring(1).toLowerCase();
+                            Major = major;
                             mMajorTextView.setText(major);
 
                             String year = document.get("year").toString();
+                            Year = year;
                             mYearTextView.setText(year);
                         }
                     } else {
@@ -130,6 +137,100 @@ public class ProfileActivity extends AppCompatActivity {
             mNameTextView.setText(R.string.profile_error_notlogged);
         }
     }  // void fetchProfile()
+
+    public String getSchool(FirebaseUser user) {
+        if (user != null) {
+            CollectionReference collectionReference = db.collection("users");
+            String uid = mAuth.getUid();
+            Query query = collectionReference.whereEqualTo("uid", uid);
+            query.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+
+                    if (task.isSuccessful()) {
+                        for (DocumentSnapshot document : task.getResult()) {
+                            userProfileId = task.getResult().getDocuments().get(0).getId();
+                            userProfile = db.collection("users").document(userProfileId);
+                            Log.d(TAG, document.getId() + " => " + document.getData());
+
+                            String school = document.get("school").toString();
+                            School = school;
+                            mSchoolTextView.setText(school);
+                        }
+                    }
+                }
+            });
+        }
+        return School;
+    }
+
+    public String getYear(FirebaseUser user) {
+        if (user != null) {
+            CollectionReference collectionReference = db.collection("users");
+            String uid = mAuth.getUid();
+            Query query = collectionReference.whereEqualTo("uid", uid);
+            query.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+
+                    if (task.isSuccessful()) {
+                        for (DocumentSnapshot document : task.getResult()) {
+                            userProfileId = task.getResult().getDocuments().get(0).getId();
+                            userProfile = db.collection("users").document(userProfileId);
+                            Log.d(TAG, document.getId() + " => " + document.getData());
+
+                            String year = document.get("year").toString();
+                            Year = year;
+                            mYearTextView.setText(year);
+                        }
+                    }
+                }
+            });
+        }
+        return Year;
+    }
+
+    public String getMajor(FirebaseUser user) {
+        if (user != null) {
+            CollectionReference collectionReference = db.collection("users");
+            String uid = mAuth.getUid();
+            Query query = collectionReference.whereEqualTo("uid", uid);
+            query.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+
+                    if (task.isSuccessful()) {
+                        for (DocumentSnapshot document : task.getResult()) {
+                            userProfileId = task.getResult().getDocuments().get(0).getId();
+                            userProfile = db.collection("users").document(userProfileId);
+                            Log.d(TAG, document.getId() + " => " + document.getData());
+
+                            String major = document.get("major").toString();
+                            major = major.substring(0, 1).toUpperCase() + major.substring(1).toLowerCase();
+                            Major = major;
+                            mMajorTextView.setText(major);
+                        }
+                    }
+                }
+            });
+        }
+        return Major;
+    }
+
+    public void changeMajor(String major){
+        mMajorTextView.setText(major);
+        saveProfile();
+    }
+
+    public void changeSchool(String school){
+        mSchoolTextView.setText(school);
+        saveProfile();
+    }
+
+    public void changeYear(String year){
+        mYearTextView.setText(year);
+        saveProfile();
+    }
 
     private void saveProfile() {
 
