@@ -35,7 +35,6 @@ public class AddClasses extends AppCompatActivity {
     private ImageButton add;
     private EditText classes;
     private TextView cancelAdd;
-    private ArrayList<String> classList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +49,6 @@ public class AddClasses extends AppCompatActivity {
         add = (ImageButton) findViewById(R.id.addClass);
         classes = (EditText) findViewById(R.id.userClasses);
         cancelAdd = (TextView) findViewById(R.id.CancelAdd);
-        //adds no classes to firebase
         cancelAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,26 +62,20 @@ public class AddClasses extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), Home.class));
             }
         });
-        //adds classes to firebase
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //class in edit text field
-                String classString = classes.getText().toString();
-                //checks to make sure string exists
-                if(classString.isEmpty()){
+                if(classes == null){
                     Toast.makeText(getApplicationContext(),"Enter a class", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 else{
-                    //puts class in map
+                    String classString = classes.getText().toString();
                     Map<String, Object> classMap = new HashMap<>();
                     classMap.put("class" + classString, classString);
-                    //puts map in firestore
                     mFireStore.collection("users").document(mUser.getUid()).update(classMap).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
-                            //resets edit text fields
                             classes.setText(null);
                             classes.setHint("Enter your class code (IUF1000)");
                             Toast.makeText(getApplicationContext(), "Add the rest of your classes or click done", Toast.LENGTH_LONG).show();
@@ -95,6 +87,4 @@ public class AddClasses extends AppCompatActivity {
     }
     @Override
     public void onBackPressed(){}
-
 }
-

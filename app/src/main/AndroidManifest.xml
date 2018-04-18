@@ -20,9 +20,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="ClassRecyclerView"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".CreateAccount"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
