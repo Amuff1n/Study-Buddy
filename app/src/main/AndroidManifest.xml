@@ -39,6 +39,7 @@
             android:name=".AddClasses"
             android:parentActivityName=".Home"
             android:theme="@style/AppTheme" />
+        <activity android:name=".Chat" />
     </application>
 
 </manifest>
