@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(getApplicationContext(), Home.class));
             finish();
         }
-        SignUpButton = (Button) findViewById(R.id.sign_up_button);
+        SignUpButton = findViewById(R.id.sign_up_button);
         SignUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
         mEmailTextView = findViewById(R.id.email_);
-        mUidTextView = findViewById(R.id.uid);
+        //mUidTextView = findViewById(R.id.uid);
         mEmailField = findViewById(R.id.email_field);
         mPasswordField = findViewById(R.id.password_field);
 
@@ -161,17 +161,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 });
     }
-    /*private void signOut() {
-        // Firebase sign out
-        mAuth.signOut();
-        // Google sign out
-        mGoogleSignInClient.signOut().addOnCompleteListener(this, new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                updateUI(null);
-            }
-        });
-    }*/
 
     private void updateUI(FirebaseUser user) {
         if (user != null) {

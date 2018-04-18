@@ -32,8 +32,8 @@ public class ProfileActivity extends AppCompatActivity {
     private static final String TAG = "GoogleActivity";
 
     private FirebaseFirestore db;
-    private FirebaseAuth mAuth;
     private String userProfileId;
+    private FirebaseAuth mAuth;
 
     private DocumentReference userProfile;
     private TextView mNameTextView;
@@ -46,6 +46,7 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
@@ -112,8 +113,6 @@ public class ProfileActivity extends AppCompatActivity {
 
                             String year = document.get("year").toString();
                             mYearTextView.setText(year);
-
-                            mClassesTextView.setText(document.get("classes").toString());
                         }
                     } else {
                         mNameTextView.setText(R.string.profile_error_databaseread);
@@ -133,7 +132,6 @@ public class ProfileActivity extends AppCompatActivity {
             user.put("major", mMajorTextView.getText().toString());
             user.put("year", mYearTextView.getText().toString());
             user.put("school", mSchoolTextView.getText().toString());
-            user.put("classes", mClassesTextView.getText().toString());
 
         } catch (IllegalArgumentException iae) {
             Log.w(TAG, "updateProfileWithEmptyFields", iae);
