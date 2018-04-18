@@ -42,12 +42,13 @@ public class CreateGroupTest extends ActivityInstrumentationTestCase2<CreateGrou
         assertNotNull(mFirestore);
     }
 
+    //Currently doesn't have right format (e.g. UTC -4 instead of GMT)
     @Test
     public void testCreateGroup() throws Exception {
         mCreateGroup.runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                assertTrue(mCreateGroup.createGroup("Unit Test", "Cyberspace", "This is part of a unit test"));
+                assertTrue(mCreateGroup.createGroup("Unit Test", "Cyberspace", "This is part of a unit test", ""));
             }
         });
     }
@@ -57,7 +58,7 @@ public class CreateGroupTest extends ActivityInstrumentationTestCase2<CreateGrou
         mCreateGroup.runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                assertFalse(mCreateGroup.createGroup("","",""));
+                assertFalse(mCreateGroup.createGroup("","","", ""));
             }
         });
     }
