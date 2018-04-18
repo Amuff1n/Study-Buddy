@@ -17,6 +17,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.ProviderQueryResult;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
@@ -75,6 +77,8 @@ public class CreateAccount extends AppCompatActivity {
                                         emailMap.put("email", email);
                                         //adds email to database
                                         mFirestore.collection("users").document(mAuth.getUid()).set(emailMap);
+
+
                                         //starts activity to enter account information
                                         startActivity(new Intent(getApplicationContext(), SetUpAccount.class));
                                     } else {
