@@ -10,17 +10,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.firebase.client.Firebase;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
@@ -33,15 +27,8 @@ public class SetUpAccount extends AppCompatActivity {
     private Button confirm;
     private EditText firstName;
     private EditText lastName;
-    //private EditText classes;
     private FirebaseFirestore mFirestore;
     private FirebaseAuth mId;
-    private DatabaseReference mDatabase;
-
-    TextView mtextViewUser;
-
-    DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
-    DatabaseReference mUserRef = mRootRef.child("users");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,9 +36,6 @@ public class SetUpAccount extends AppCompatActivity {
         setContentView(R.layout.activity_set_up_account);
         cancel = findViewById(R.id.Cancel);
         mUser = FirebaseAuth.getInstance().getCurrentUser();
-        mtextViewUser = (TextView)findViewById(R.id.textViewUser);
-
-
         confirm = findViewById(R.id.ConfirmAccount);
         firstName = findViewById(R.id.FirstName);
         lastName = findViewById(R.id.LastName);
@@ -66,30 +50,7 @@ public class SetUpAccount extends AppCompatActivity {
         //adds first, last, and uid to database
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-// TESTING
-
-
-
-// TESTINGGGGG
-
-                String FirstName = firstName.getText().toString();
-                String LastName = lastName.getText().toString();
-                Map<String, Object> userMap = new HashMap<>();
-                userMap.put("firstName", FirstName);
-                userMap.put("lastName", LastName);
-                userMap.put("uid", mId.getUid());
-                userMap.put("", "school");
-                userMap.put("", "major");
-                userMap.put("", "year");
-                mFirestore.collection("users").document(mUser.getUid()).update(userMap).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(getApplicationContext(), "Enter all info", Toast.LENGTH_SHORT).show();
-                    }
-                });
-                startActivity(new Intent(getApplicationContext(), AddClasses.class));
-            }
+            public void onClick(View v) {create();}
         });
     }
     //override default back button
@@ -97,7 +58,7 @@ public class SetUpAccount extends AppCompatActivity {
     public void onBackPressed(){}
 
     //delete account if user clicks cancel
-    public boolean delete(){
+    private void delete(){
         if(mUser != null){
             mUser.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
@@ -107,10 +68,22 @@ public class SetUpAccount extends AppCompatActivity {
                     }
                 }
             });
-            return true;
         }
-        else {
-            return false;
-        }
+    }
+    //adds first name last name and uid to firebase
+    private void create(){
+        String FirstName = firstName.getText().toString();
+        String LastName = lastName.getText().toString();
+        Map<String, Object> userMap = new HashMap<>();
+        userMap.put("firstName", FirstName);
+        userMap.put("lastName", LastName);
+        userMap.put("uid", mId.getUid());
+        mFirestore.collection("users").document(mUser.getUid()).update(userMap).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(getApplicationContext(), "Enter all info", Toast.LENGTH_SHORT).show();
+            }
+        });
+        startActivity(new Intent(getApplicationContext(), AddClasses.class));
     }
 }

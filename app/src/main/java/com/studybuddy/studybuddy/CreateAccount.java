@@ -38,6 +38,7 @@ public class CreateAccount extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
+        final String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
         mAuth = FirebaseAuth.getInstance();
         mEmailField = findViewById(R.id.email_);
         mPasswordField = findViewById(R.id.password_);
@@ -50,19 +51,27 @@ public class CreateAccount extends AppCompatActivity {
                 final String email = mEmailField.getText().toString().trim();
                 String password = mPasswordField.getText().toString().trim();
                 String confirmPassword = mConfirmPassword.getText().toString().trim();
-                //checks to make sure email and password are valid
+                //checks to make sure email field is filled in
                 if(TextUtils.isEmpty(email)){
                     Toast.makeText(getApplicationContext(), "Enter email", Toast.LENGTH_SHORT).show();
                 }
+                //checks for valid email
+                else if(!email.matches(emailPattern)){
+                    Toast.makeText(getApplicationContext(), "Enter a valid email", Toast.LENGTH_SHORT).show();
+                }
+                //checks to make sure password field is filled in
                 else if(TextUtils.isEmpty(password)){
                     Toast.makeText(getApplicationContext(), "Enter password", Toast.LENGTH_SHORT).show();
                 }
+                //checks to make sure password confirmed is filled in
                 else if(TextUtils.isEmpty(confirmPassword)){
                     Toast.makeText(getApplicationContext(), "Confirm password", Toast.LENGTH_SHORT).show();
                 }
+                //checks to make sure passwords match
                 else if(!password.equals(confirmPassword)){
                     Toast.makeText(getApplicationContext(), "Passwords do not match", Toast.LENGTH_SHORT).show();
                 }
+                //creates account using email and password
                 else{
                     mAuth.createUserWithEmailAndPassword(mEmailField.getText().toString(), mPasswordField.getText().toString())
                             .addOnCompleteListener(CreateAccount.this, new OnCompleteListener<AuthResult>() {
@@ -71,8 +80,7 @@ public class CreateAccount extends AppCompatActivity {
                                     if (task.isSuccessful()) {
                                         // account successfully created
                                         Log.d(TAG, "createUserWithEmail:success");
-                                        Toast.makeText(getApplicationContext(), "Authentication succeeded!",
-                                                Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getApplicationContext(), "Authentication succeeded!", Toast.LENGTH_SHORT).show();
                                         Map<String, Object> emailMap = new HashMap<>();
                                         emailMap.put("email", email);
                                         //adds email to database
