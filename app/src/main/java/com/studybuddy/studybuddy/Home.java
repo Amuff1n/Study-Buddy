@@ -80,6 +80,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         hackContext = this;
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
+
         recyclerView = findViewById(R.id.recyclerview);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);

@@ -31,6 +31,20 @@ package com.studybuddy.studybuddy;
         import com.google.android.gms.maps.model.LatLng;
         import com.google.android.gms.maps.model.Marker;
         import com.google.android.gms.maps.model.MarkerOptions;
+        import com.google.android.gms.tasks.OnCompleteListener;
+        import com.google.android.gms.tasks.Task;
+        import com.google.firebase.auth.FirebaseAuth;
+        import com.google.firebase.auth.FirebaseUser;
+        import com.google.firebase.firestore.FirebaseFirestore;
+        import com.google.firebase.auth.FirebaseAuth;
+        import com.google.firebase.auth.FirebaseUser;
+        import com.google.firebase.firestore.CollectionReference;
+        import com.google.firebase.firestore.DocumentSnapshot;
+        import com.google.firebase.firestore.FirebaseFirestore;
+        import com.google.firebase.firestore.GeoPoint;
+        import com.google.firebase.firestore.Query;
+        import com.google.firebase.firestore.QuerySnapshot;
+
 
         import java.io.IOException;
         import java.util.List;
@@ -40,11 +54,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         GoogleApiClient.OnConnectionFailedListener,
         LocationListener{
 
-
     private GoogleMap mMap;
     private GoogleApiClient client;
     private LocationRequest locationRequest;
     private Location lastlocation;
+    private FirebaseAuth mAuth;
+    private FirebaseFirestore db;
     private Marker currentLocationmMarker;
     public static final int REQUEST_LOCATION_CODE = 99;
     int PROXIMITY_RADIUS = 10000;
@@ -53,6 +68,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+        mAuth = FirebaseAuth.getInstance();
+        db = FirebaseFirestore.getInstance();
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
         {
@@ -98,8 +115,35 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * installed Google Play services and returned to the app.
      */
     @Override
-    public void onMapReady(GoogleMap googleMap) {
+    public void onMapReady(final GoogleMap googleMap) {
         mMap = googleMap;
+        CollectionReference collectionReference = db.collection("study_groups");
+        Query query = collectionReference.orderBy("creationTime").limit(20);
+        query.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+                    for (DocumentSnapshot document : task.getResult()) {
+                        try {
+                            GeoPoint location = GeoPoint.class.cast(document.get("latlng"));
+                            googleMap.addMarker(new MarkerOptions()
+                                    .position(new LatLng(location.getLatitude(),location.getLongitude()))
+                                    .title((String) document.get("class"))
+                                    .snippet((String) document.get("description")));
+                        }
+                        catch (NullPointerException e) {
+                            continue;
+                        }
+                        //GeoPoint location = GeoPoint.class.cast(document.get("latlng"));
+                        //GeoPoint location = (GeoPoint) document.get("geolocation");
+                        //GeoPoint location = GeoPoint.class.cast(document.get("geolocation"));
+                        //googleMap.addMarker(new MarkerOptions().position(new LatLng(location.getLatitude(),location.getLongitude()))).setTitle("Test");
+                    }
+                }
+            }
+        });
+
+
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             bulidGoogleApiClient();
@@ -139,27 +183,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         {
             LocationServices.FusedLocationApi.removeLocationUpdates(client,this);
         }
-    }
-
-    public void onClick(View v)
-    {
-      //Will be used for Gelocation
-    }
-
-
-    private String getUrl(double latitude , double longitude , String nearbyPlace)
-    {
-
-        StringBuilder googlePlaceUrl = new StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?");
-        googlePlaceUrl.append("location="+latitude+","+longitude);
-        googlePlaceUrl.append("&radius="+PROXIMITY_RADIUS);
-        googlePlaceUrl.append("&type="+nearbyPlace);
-        googlePlaceUrl.append("&sensor=true");
-        googlePlaceUrl.append("&key="+"AIzaSyBLEPBRfw7sMb73Mr88L91Jqh3tuE4mKsE");
-
-        Log.d("MapsActivity", "url = "+googlePlaceUrl.toString());
-
-        return googlePlaceUrl.toString();
     }
 
     @SuppressLint("RestrictedApi")
