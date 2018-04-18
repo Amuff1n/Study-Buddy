@@ -129,6 +129,11 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             return true;
         }
 
+        else if(id == R.id.nav_chat) {
+            startActivity(new Intent(getApplicationContext(), Chat.class ));
+            return true;
+        }
+
         DrawerLayout drawer = findViewById(R.id.drawerLayout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
@@ -154,6 +159,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         query.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
+
                 if (task.isSuccessful()) {
                     for (DocumentSnapshot document : task.getResult()) {
                         Log.d(TAG, document.getId() + " => " + document.getData());
