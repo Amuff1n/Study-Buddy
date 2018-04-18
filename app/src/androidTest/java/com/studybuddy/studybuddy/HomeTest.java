@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.test.InstrumentationRegistry;
+import android.support.v7.widget.RecyclerView;
 import android.test.ActivityInstrumentationTestCase2;
 import android.util.Log;
 import android.view.ActionProvider;
@@ -11,6 +12,8 @@ import android.view.ContextMenu;
 import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -36,7 +39,8 @@ public class HomeTest extends ActivityInstrumentationTestCase2<Home> {
     private FirebaseUser mUser;
     private FirebaseFirestore mFirestore;
     private MenuItem mItem;
-
+    private ImageButton joinGroupButton;
+    private ImageButton leaveGroupButton;
 
     public HomeTest() {
         super(Home.class);
@@ -333,5 +337,38 @@ public class HomeTest extends ActivityInstrumentationTestCase2<Home> {
                 }
             }
         });
+    }
+
+    @Test
+    public void testGroupJoinAndLeave() throws Exception {
+        View temp = mHome.recyclerView.findViewHolderForAdapterPosition(0).itemView;
+        joinGroupButton = temp.findViewById(R.id.join_group_button);
+        leaveGroupButton = temp.findViewById(R.id.leave_group_button);
+        if (leaveGroupButton.getVisibility() == View.VISIBLE) {
+            mHome.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    Log.d("HomeTest", "User is already in this group, leaving...");
+                    leaveGroupButton.performClick();
+                }
+            });
+            Thread.sleep(5000);
+            temp = mHome.recyclerView.findViewHolderForAdapterPosition(0).itemView;
+            joinGroupButton = temp.findViewById(R.id.join_group_button);
+            assertTrue(joinGroupButton.getVisibility() == View.VISIBLE);
+        }
+        else if (joinGroupButton.getVisibility() == View.VISIBLE) {
+            mHome.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    Log.d("HomeTest", "User can join group, joining...");
+                    joinGroupButton.performClick();
+                }
+            });
+            Thread.sleep(5000);
+            temp = mHome.recyclerView.findViewHolderForAdapterPosition(0).itemView;
+            leaveGroupButton = temp.findViewById(R.id.leave_group_button);
+            assertTrue(leaveGroupButton.getVisibility() == View.VISIBLE);
+        }
     }
 }
