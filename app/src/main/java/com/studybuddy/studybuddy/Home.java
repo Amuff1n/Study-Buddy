@@ -125,7 +125,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
             return true;
         } else if (id == R.id.nav_add_classe) {
-            startActivity(new Intent(getApplicationContext(), ClassRecyclerView.class));
+            startActivity(new Intent(getApplicationContext(), AddClasses.class));
             return true;
         }
 

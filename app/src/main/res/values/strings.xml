@@ -134,7 +134,7 @@
     <string name="please_enter_a_the_time_to_schedule">Please Enter a the Time To Schedule...</string>
     <string name="description">Description</string>
     <string name="my_account">My Account</string>
-    <string name="add_classes">Classes</string>
+    <string name="add_classes">Add Classes</string>
     <string name="settings">Settings</string>
     <string name="log_out">Log Out</string>
     <string-array name="locations_array">
