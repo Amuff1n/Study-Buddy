@@ -10,7 +10,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.firebase.client.Firebase;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
@@ -70,16 +69,16 @@ public class SetUpAccount extends AppCompatActivity {
                 userMap.put("firstName", FirstName);
                 userMap.put("lastName", LastName);
                 userMap.put("uid", mId.getUid());
-                userMap.put("", "school");
-                userMap.put("", "major");
-                userMap.put("", "year");
+                userMap.put("school", " ");
+                userMap.put("major", " ");
+                userMap.put("year", " ");
                 mFirestore.collection("users").document(mUser.getUid()).update(userMap).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         Toast.makeText(getApplicationContext(), "Enter all info", Toast.LENGTH_SHORT).show();
                     }
                 });
-                startActivity(new Intent(getApplicationContext(), AddClasses.class));
+                startActivity(new Intent(getApplicationContext(), Home.class));
             }
         });
     }

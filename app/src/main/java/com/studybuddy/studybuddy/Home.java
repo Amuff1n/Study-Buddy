@@ -40,6 +40,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, SearchView.OnQueryTextListener {
@@ -170,11 +171,13 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                         int userIndex = 0; //save user's index in group for easy removal later
                         //try catch block until deleting a group implemented
                         try {
-                            if (document.get("user").equals(mAuth.getUid())) {
-                                isInGroup = true;
+                            if (document.get("user") != null) {
+                                if (document.get("user").equals(mAuth.getUid())) {
+                                    isInGroup = true;
+                                }
                             }
-                            else {
-                                for (int i = 1; i < document.getDouble("index"); i++) {
+                            for (int i = 1; i < document.getDouble("maxUserIndex"); i++) {
+                                if (document.get("user" + i) != null) {
                                     if (document.get("user" + i).equals(mAuth.getUid())) {
                                         isInGroup = true;
                                         userIndex = i;
@@ -187,15 +190,20 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
                         //For each card, get class, desc, location, timestamp, groupID, and index
                         SimpleDateFormat sdf = new SimpleDateFormat("MMM d HH:mm");
+
+                        //Cast firebase object to Date before trying to use format()
+                        Date creationTime = Date.class.cast(document.get("creationTime"));
+
                         GroupListItem groupListItem = new GroupListItem(
                                 document.get("class").toString() + '\n' +
-                                         sdf.format(document.get("creationTime")),
+                                         sdf.format(creationTime),
                                 document.get("description").toString() +
                                         "\n" + document.get("location").toString(),
                                 document.get("class").toString(),
                                 document.get("location").toString(),
                                 document.getDouble("index"),
                                 userIndex,
+                                document.getDouble("maxUserIndex"),
                                 isInGroup,
                                 document.getId()
                         );
