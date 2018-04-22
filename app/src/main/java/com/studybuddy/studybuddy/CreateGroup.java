@@ -131,6 +131,7 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
             //groupMap.put("ScheduledTime", scheduleTime);
             groupMap.put("user", mAuth.getUid());
             groupMap.put("index", 1); //number of users
+            groupMap.put("maxUserIndex", 1); //max index of user key
 
             Task<DocumentReference> documentReferenceTask = mFirestore.collection("study_groups")
                     .add(groupMap)
