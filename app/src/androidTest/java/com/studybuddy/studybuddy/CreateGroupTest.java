@@ -10,8 +10,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 /**
  * Created by Kolby on 3/26/2018.
  */
@@ -48,7 +46,7 @@ public class CreateGroupTest extends ActivityInstrumentationTestCase2<CreateGrou
         mCreateGroup.runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                assertTrue(mCreateGroup.createGroup("Unit Test", "Cyberspace", "This is part of a unit test", ""));
+                assertTrue(mCreateGroup.createGroup("Unit Test", "Cyberspace", "This is part of a unit test", "", geolocation));
             }
         });
     }
@@ -58,7 +56,7 @@ public class CreateGroupTest extends ActivityInstrumentationTestCase2<CreateGrou
         mCreateGroup.runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                assertFalse(mCreateGroup.createGroup("","","", ""));
+                assertFalse(mCreateGroup.createGroup("","","", "", geolocation));
             }
         });
     }

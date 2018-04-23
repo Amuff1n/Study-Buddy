@@ -1,7 +1,6 @@
 package com.studybuddy.studybuddy;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -15,7 +14,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -27,9 +25,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.Query;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -44,6 +40,7 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
     private EditText mTime;
     private Button mCreateGroup;
     private ArrayList<String> classList;
+    private MapsActivity location;
 
     private static final String TAG = "GoogleActivity";
 
@@ -53,7 +50,6 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
         setContentView(R.layout.activity_create_group);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         mAuth = FirebaseAuth.getInstance();
         mUser = FirebaseAuth.getInstance().getCurrentUser();
         mFirestore = FirebaseFirestore.getInstance();
@@ -81,7 +77,13 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
                 String groupLocation = mLocation.getSelectedItem().toString();
                 String groupDesc = mDescription.getText().toString();
                 String scheduleTime = mTime.getText().toString();
-                createGroup(groupClass, groupLocation, groupDesc,scheduleTime);
+                // Determines whether custom location was set in the create a group function
+                boolean geoChecker = false;
+                if(mLocation.getSelectedItem().toString().equals("Custom Location")){
+                    geoChecker = true;
+                    Log.d("Tagz","Boolean workes");
+                }
+                createGroup(groupClass, groupLocation, groupDesc,scheduleTime,geoChecker);
 
                 //Send back code to Home before finishing
                 //Used for automatic refresh
@@ -102,7 +104,7 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
 
     }
 
-    public boolean createGroup(String groupClass, String groupLocation, String groupDesc, String scheduleTime) {
+    public boolean createGroup(String groupClass, String groupLocation, String groupDesc, String scheduleTime, boolean geoChecker) {
         if(TextUtils.isEmpty(scheduleTime)){
             scheduleTime = "00:00";
         }
@@ -121,13 +123,15 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
         else {
             Map<String, Object> groupMap = new HashMap<>();
             groupMap.put("class", groupClass);
-            groupMap.put("location", groupLocation);
             groupMap.put("description", groupDesc);
             groupMap.put("creationTime", FieldValue.serverTimestamp());
-            //groupMap.put("ScheduledTime", scheduleTime);
             groupMap.put("user", mAuth.getUid());
             groupMap.put("index", 1); //number of users
-
+            // Checks whether to add the custom coordinates or choose between the predefined locations
+            if(!geoChecker) {
+                groupMap.put("location", groupLocation);
+                Log.d("Coordinates", "Not Taken");
+             }
             mFirestore.collection("study_groups")
                     .add(groupMap)
                     .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
