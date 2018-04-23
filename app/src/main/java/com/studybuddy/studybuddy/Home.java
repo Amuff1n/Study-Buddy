@@ -12,27 +12,22 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
 
-import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
@@ -41,6 +36,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, SearchView.OnQueryTextListener {
 
@@ -56,6 +52,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     RecyclerView recyclerView;
     Context hackContext;
 
+    private ArrayList<String> classList;
     private GroupListAdapter adapter;
     private List<GroupListItem> list;
     private RecyclerView.LayoutManager layoutManager;
@@ -85,6 +82,15 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
         list = new ArrayList<>();
+        classList = new ArrayList<>();
+
+        //Have to make an adapter to fill in drop down menu items with string array
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.locations_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //Drop down list for classes
+        if (mAuth != null) {
+            getClasses();
+        }
 
         fabListeners();
         populateRecyclerview();
@@ -161,48 +167,66 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
 
                 if (task.isSuccessful()) {
-                    for (DocumentSnapshot document : task.getResult()) {
+                    for (final DocumentSnapshot document : task.getResult()) {
                         Log.d(TAG, document.getId() + " => " + document.getData());
 
-                        //Start the process of checking if user is in that group
-                        //If uid matches 'user' or ''user' + index' they are in that group, so they can't join
-                        boolean isInGroup = false;
-                        int userIndex = 0; //save user's index in group for easy removal later
-                        //try catch block until deleting a group implemented
-                        try {
-                            if (document.get("user").equals(mAuth.getUid())) {
-                                isInGroup = true;
-                            }
-                            else {
-                                for (int i = 1; i < document.getDouble("index"); i++) {
-                                    if (document.get("user" + i).equals(mAuth.getUid())) {
-                                        isInGroup = true;
-                                        userIndex = i;
+                        //gets classes to only display groups of classes the user is already in
+                        db.collection("users").document(mAuth.getUid()).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                            @Override
+                            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                if(task.isSuccessful()){
+                                    DocumentSnapshot document = task.getResult();
+                                    if (document != null && document.exists()){
+                                        Map<String, Object> classes = document.getData();
+                                        for(Map.Entry<String,Object>mapEntry : classes.entrySet()){
+                                            if(mapEntry.getKey().toString().length() >= 5 && mapEntry.getKey().toString().substring(0,5).equals("class")){
+                                                classList.add(mapEntry.getValue().toString());
+                                            }
+                                        }
                                     }
                                 }
+                                //Start the process of checking if user is in that group
+                                //If uid matches 'user' or ''user' + index' they are in that group, so they can't join
+                                boolean isInGroup = false;
+                                int userIndex = 0; //save user's index in group for easy removal later
+                                //try catch block until deleting a group implemented
+                                try {
+                                    if (document.get("user").equals(mAuth.getUid())) {
+                                        isInGroup = true;
+                                    }
+                                    else {
+                                        for (int i = 1; i < document.getDouble("index"); i++) {
+                                            if (document.get("user" + i).equals(mAuth.getUid())) {
+                                                isInGroup = true;
+                                                userIndex = i;
+                                            }
+                                        }
+                                    }
+                                } catch (Exception e) {
+                                    Log.w(TAG, "Failed to retrieve users from Firestore.", e);
+                                }
+                                if(classList.contains(document.get("class").toString())){
+                                    //For each card, get class, desc, location, timestamp, groupID, and index
+                                    SimpleDateFormat sdf = new SimpleDateFormat("MMM d HH:mm");
+                                    GroupListItem groupListItem = new GroupListItem(
+                                            document.get("class").toString() + '\n' +
+                                                    sdf.format(document.get("creationTime")),
+                                            document.get("description").toString() +
+                                                    "\n" + document.get("location").toString(),
+                                            document.get("class").toString(),
+                                            document.get("location").toString(),
+                                            document.getDouble("index"),
+                                            userIndex,
+                                            isInGroup,
+                                            document.getId()
+                                    );
+                                    list.add(0, groupListItem);
+                                    ArrayList<GroupListItem> mutable = new ArrayList<>(list);
+                                    adapter = new GroupListAdapter(mutable, hackContext);
+                                    recyclerView.setAdapter(adapter);
+                                }
                             }
-                        } catch (Exception e) {
-                            Log.w(TAG, "Failed to retrieve users from Firestore.", e);
-                        }
-
-                        //For each card, get class, desc, location, timestamp, groupID, and index
-                        SimpleDateFormat sdf = new SimpleDateFormat("MMM d HH:mm");
-                        GroupListItem groupListItem = new GroupListItem(
-                                document.get("class").toString() + '\n' +
-                                        sdf.format(document.get("creationTime")),
-                                document.get("description").toString() +
-                                        "\n" + document.get("location").toString(),
-                                document.get("class").toString(),
-                                document.get("location").toString(),
-                                document.getDouble("index"),
-                                userIndex,
-                                isInGroup,
-                                document.getId()
-                        );
-                        list.add(0, groupListItem);
-                        ArrayList<GroupListItem> mutable = new ArrayList<>(list);
-                        adapter = new GroupListAdapter(mutable, hackContext);
-                        recyclerView.setAdapter(adapter);
+                        });
                     }
                 }
             }
@@ -308,6 +332,37 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             @Override
             public void onRefresh() {
                 refreshRecyclerView();
+            }
+        });
+    }
+
+    //pulls object of all data in document then finds all classes and puts them into an array to
+    //use for the drop down menu
+    public void getClasses(){
+        DocumentReference classRef = db.collection("users").document(mAuth.getUid());
+        classRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                classList = new ArrayList<String>();
+                if(task.isSuccessful()){
+                    DocumentSnapshot document = task.getResult();
+                    if (document != null && document.exists()){
+                        Map<String, Object> classes = document.getData();
+                        for(Map.Entry<String,Object>mapEntry : classes.entrySet()){
+                            if(mapEntry.getKey().toString().length() >= 5 && mapEntry.getKey().toString().substring(0,5).equals("class")){
+                                classList.add(mapEntry.getValue().toString());
+                            }
+                        }
+                    }
+                }
+                if(classList.size() == 0){
+                    Toast.makeText(getApplicationContext(), "You have not added any classes yet", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(getApplicationContext(), Home.class));
+                    return;
+                }
+                String[] classArray = new String[classList.size()];
+                classArray = classList.toArray(classArray);
+                ArrayAdapter<String> classAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, classArray);
             }
         });
     }
