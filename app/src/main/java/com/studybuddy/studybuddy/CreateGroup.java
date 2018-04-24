@@ -81,6 +81,8 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
         mCreateGroup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 String groupClass = mClass.getSelectedItem().toString();
                 String groupLocation = mLocation.getSelectedItem().toString();
                 String groupDesc = mDescription.getText().toString();
@@ -96,6 +98,8 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
                 intent.putExtra("completed", true); //isn't used by Home right now
                 setResult(Activity.RESULT_OK, intent);
                 finish();
+
+
             }
         });
     }
@@ -133,6 +137,7 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
             //groupMap.put("ScheduledTime", scheduleTime);
             groupMap.put("user", mAuth.getUid());
             groupMap.put("index", 1); //number of users
+
             if(geoChecker) {
                 ActivityCompat.requestPermissions(CreateGroup.this,new String[]{
                                 Manifest.permission.ACCESS_FINE_LOCATION,
@@ -150,13 +155,20 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
             }
             groupMap.put("location", groupLocation);
 
-            mFirestore.collection("study_groups")
+            mFirestore.collection("study_groups");
+
+            groupMap.put("maxUserIndex", 1); //max index of user key
+
+            Task<DocumentReference> documentReferenceTask = mFirestore.collection("study_groups")
+
                     .add(groupMap)
                     .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+
                         @Override
                         public void onSuccess(DocumentReference documentReference) {
                             Log.d(TAG, "DocumentSnapshot written with ID: " + documentReference.getId());
                         }
+
                     })
                     .addOnFailureListener(new OnFailureListener() {
                         @Override

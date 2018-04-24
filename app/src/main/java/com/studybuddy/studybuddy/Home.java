@@ -40,6 +40,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, SearchView.OnQueryTextListener {
@@ -126,11 +127,16 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
             return true;
         } else if (id == R.id.nav_add_classe) {
-            startActivity(new Intent(getApplicationContext(), AddClasses.class));
+            startActivity(new Intent(getApplicationContext(), ClassRecyclerView.class));
             return true;
         }
 
-        else if (id == R.id.nav_location) {
+        else if(id == R.id.nav_chat) {
+            startActivity(new Intent(getApplicationContext(), Chat.class ));
+            return true;
+        }
+
+        else if (id == R.id.nav_find_classe) {
             //Open location activity
             startActivity(new Intent(getApplicationContext(), MapsActivity.class));
             return true;
@@ -161,6 +167,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         query.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
+
                 if (task.isSuccessful()) {
                     for (DocumentSnapshot document : task.getResult()) {
                         Log.d(TAG, document.getId() + " => " + document.getData());
@@ -171,11 +178,13 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                         int userIndex = 0; //save user's index in group for easy removal later
                         //try catch block until deleting a group implemented
                         try {
-                            if (document.get("user").equals(mAuth.getUid())) {
-                                isInGroup = true;
+                            if (document.get("user") != null) {
+                                if (document.get("user").equals(mAuth.getUid())) {
+                                    isInGroup = true;
+                                }
                             }
-                            else {
-                                for (int i = 1; i < document.getDouble("index"); i++) {
+                            for (int i = 1; i < document.getDouble("maxUserIndex"); i++) {
+                                if (document.get("user" + i) != null) {
                                     if (document.get("user" + i).equals(mAuth.getUid())) {
                                         isInGroup = true;
                                         userIndex = i;
@@ -188,15 +197,20 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
                         //For each card, get class, desc, location, timestamp, groupID, and index
                         SimpleDateFormat sdf = new SimpleDateFormat("MMM d HH:mm");
+
+                        //Cast firebase object to Date before trying to use format()
+                        Date creationTime = Date.class.cast(document.get("creationTime"));
+
                         GroupListItem groupListItem = new GroupListItem(
                                 document.get("class").toString() + '\n' +
-                                         sdf.format(document.get("creationTime")),
+                                         sdf.format(creationTime),
                                 document.get("description").toString() +
                                         "\n" + document.get("location").toString(),
                                 document.get("class").toString(),
                                 document.get("location").toString(),
                                 document.getDouble("index"),
                                 userIndex,
+                                document.getDouble("maxUserIndex"),
                                 isInGroup,
                                 document.getId()
                         );
