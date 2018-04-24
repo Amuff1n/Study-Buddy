@@ -10,13 +10,14 @@ public class GroupListItem {
     private String text;
     private int index;
     private int userIndex;
+    private int maxUserIndex;
     private boolean isInGroup; //true if uid not associated with group,
     private String groupId;
     private String Class;
     private String Location_Name;
 
     public GroupListItem(String header, String text, String aClass,
-                         String location_Name, Double index, int userIndex,
+                         String location_Name, Double index, int userIndex, Double maxUserIndex,
                          boolean isInGroup, String groupId) {
         this.header = header;
         this.text = text;
@@ -24,6 +25,7 @@ public class GroupListItem {
         Location_Name = location_Name;
         this.index = index.intValue(); //Firestore uses double, have to cast to int
         this.userIndex = userIndex;
+        this.maxUserIndex = maxUserIndex.intValue();
         this.isInGroup = isInGroup;
         this.groupId = groupId;
     }
@@ -42,6 +44,10 @@ public class GroupListItem {
 
     public int getUserIndex() {
         return userIndex;
+    }
+
+    public int getMaxUserIndex() {
+        return maxUserIndex;
     }
 
     public boolean isInGroup() {

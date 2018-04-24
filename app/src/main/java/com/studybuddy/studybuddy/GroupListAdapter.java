@@ -1,8 +1,8 @@
 package com.studybuddy.studybuddy;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
-import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
@@ -10,9 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,7 +20,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.SetOptions;
 
 import java.util.HashMap;
@@ -59,17 +56,20 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
         holder.setTextViewIndex(groupListItem.getIndex());
         holder.setIndex(groupListItem.getIndex());
         holder.setUserIndex(groupListItem.getUserIndex());
+        holder.setMaxUserIndex(groupListItem.getMaxUserIndex());
         holder.setGroupId(groupListItem.getGroupId());
 
         //Toggle options based on group membership
         if (groupListItem.isInGroup()) {
             holder.joinGroupButton.setVisibility(View.GONE);
             holder.leaveGroupButton.setVisibility(View.VISIBLE);
+            holder.chatButton.setVisibility(View.VISIBLE);
             holder.constraintLayout.setBackgroundColor(Color.rgb(104, 237, 106));
         }
         else {
             holder.leaveGroupButton.setVisibility(View.GONE);
             holder.joinGroupButton.setVisibility(View.VISIBLE);
+            holder.chatButton.setVisibility(View.GONE);
             holder.constraintLayout.setBackgroundColor(Color.WHITE);
         }
     }
@@ -136,12 +136,14 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
+        private final ImageButton chatButton;
         private TextView textViewHeader;
         private TextView textViewText;
         private TextView textViewIndex;
         private String groupId;
         private int index;
         private int userIndex;
+        private int maxUserIndex;
         private ImageButton joinGroupButton;
         private ImageButton leaveGroupButton;
         private ConstraintLayout constraintLayout;
@@ -156,6 +158,7 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
             textViewIndex = itemView.findViewById(R.id.index);
             joinGroupButton = itemView.findViewById(R.id.join_group_button);
             leaveGroupButton = itemView.findViewById(R.id.leave_group_button);
+            chatButton = itemView.findViewById(R.id.chat_button);
 
             mAuth = FirebaseAuth.getInstance();
             db = FirebaseFirestore.getInstance();
@@ -183,6 +186,10 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
             userIndex = num;
         }
 
+        public void setMaxUserIndex(int num) {
+            maxUserIndex = num;
+        }
+
         public void setGroupId(String text) {
             groupId = text;
         }
@@ -202,14 +209,28 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
                     leaveGroup();
                 }
             });
+
+            chatButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    openChat();
+                }
+            });
+        }
+
+        private void openChat() {
+            Intent intent = new Intent(context, Chat.class);
+            intent.putExtra("groupId", groupId);
+            context.startActivity(intent);
         }
 
         private void joinGroup() {
             DocumentReference groupDoc = db.collection("study_groups").document(groupId);
             Map<String, Object> newMember = new HashMap<>();
             //Add key "user+index" and increment index
-            newMember.put("user" + index, mAuth.getUid());
+            newMember.put("user" + maxUserIndex, mAuth.getUid());
             newMember.put("index", index + 1);
+            newMember.put("maxUserIndex", maxUserIndex + 1);
 
             groupDoc.set(newMember, SetOptions.merge()).addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
