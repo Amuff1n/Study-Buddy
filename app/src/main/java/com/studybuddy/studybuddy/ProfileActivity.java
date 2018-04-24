@@ -119,7 +119,6 @@ public class ProfileActivity extends AppCompatActivity {
                             mSchoolTextView.setText(school);
 
                             String major = document.get("major").toString();
-                            major = major.substring(0, 1).toUpperCase() + major.substring(1).toLowerCase();
                             Major = major;
                             mMajorTextView.setText(major);
 

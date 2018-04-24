@@ -56,6 +56,7 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
         holder.setTextViewIndex(groupListItem.getIndex());
         holder.setIndex(groupListItem.getIndex());
         holder.setUserIndex(groupListItem.getUserIndex());
+        holder.setMaxUserIndex(groupListItem.getMaxUserIndex());
         holder.setGroupId(groupListItem.getGroupId());
 
         //Toggle options based on group membership
@@ -142,6 +143,7 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
         private String groupId;
         private int index;
         private int userIndex;
+        private int maxUserIndex;
         private ImageButton joinGroupButton;
         private ImageButton leaveGroupButton;
         private ConstraintLayout constraintLayout;
@@ -184,6 +186,10 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
             userIndex = num;
         }
 
+        public void setMaxUserIndex(int num) {
+            maxUserIndex = num;
+        }
+
         public void setGroupId(String text) {
             groupId = text;
         }
@@ -222,8 +228,9 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
             DocumentReference groupDoc = db.collection("study_groups").document(groupId);
             Map<String, Object> newMember = new HashMap<>();
             //Add key "user+index" and increment index
-            newMember.put("user" + index, mAuth.getUid());
+            newMember.put("user" + maxUserIndex, mAuth.getUid());
             newMember.put("index", index + 1);
+            newMember.put("maxUserIndex", maxUserIndex + 1);
 
             groupDoc.set(newMember, SetOptions.merge()).addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
