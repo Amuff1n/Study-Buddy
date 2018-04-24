@@ -84,10 +84,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        switch(requestCode) {
+        switch(requestCode)
+        {
             case REQUEST_LOCATION_CODE:
-                if(grantResults.length >0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    if(ContextCompat.checkSelfPermission(this,Manifest.permission.ACCESS_FINE_LOCATION) !=  PackageManager.PERMISSION_GRANTED) {
+                if(grantResults.length >0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)
+                {
+                    if(ContextCompat.checkSelfPermission(this,Manifest.permission.ACCESS_FINE_LOCATION) !=  PackageManager.PERMISSION_GRANTED)
+                    {
                         if(client == null)
                         {
                             bulidGoogleApiClient();
@@ -95,7 +98,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         mMap.setMyLocationEnabled(true);
                     }
                 }
-                else {
+                else
+                {
                     Toast.makeText(this,"Permission Denied" , Toast.LENGTH_LONG).show();
                 }
         }
@@ -113,7 +117,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(final GoogleMap googleMap) {
         mMap = googleMap;
-        // Collection in refernce to the db under the name, study-groups
         CollectionReference collectionReference = db.collection("study_groups");
         Query query = collectionReference.orderBy("creationTime").limit(20);
         query.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -131,6 +134,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         catch (NullPointerException e) {
                             continue;
                         }
+                        //GeoPoint location = GeoPoint.class.cast(document.get("latlng"));
+                        //GeoPoint location = (GeoPoint) document.get("geolocation");
+                        //GeoPoint location = GeoPoint.class.cast(document.get("geolocation"));
+                        //googleMap.addMarker(new MarkerOptions().position(new LatLng(location.getLatitude(),location.getLongitude()))).setTitle("Test");
                     }
                 }
             }
@@ -157,7 +164,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         latitude = location.getLatitude();
         longitude = location.getLongitude();
         lastlocation = location;
-        if(currentLocationmMarker != null) {
+        if(currentLocationmMarker != null)
+        {
             currentLocationmMarker.remove();
 
         }
@@ -171,7 +179,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         mMap.animateCamera(CameraUpdateFactory.zoomBy(10));
 
-        if(client != null) {
+        if(client != null)
+        {
             LocationServices.FusedLocationApi.removeLocationUpdates(client,this);
         }
     }
@@ -186,19 +195,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         locationRequest.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
 
 
-        if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION ) == PackageManager.PERMISSION_GRANTED) {
+        if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION ) == PackageManager.PERMISSION_GRANTED)
+        {
             LocationServices.FusedLocationApi.requestLocationUpdates(client, locationRequest, this);
         }
     }
 
 
-    public boolean checkLocationPermission() {
+    public boolean checkLocationPermission()
+    {
         if(ContextCompat.checkSelfPermission(this,Manifest.permission.ACCESS_FINE_LOCATION)  != PackageManager.PERMISSION_GRANTED ) {
 
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.ACCESS_FINE_LOCATION)) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.ACCESS_FINE_LOCATION))
+            {
                 ActivityCompat.requestPermissions(this,new String[] {Manifest.permission.ACCESS_FINE_LOCATION },REQUEST_LOCATION_CODE);
             }
-            else {
+            else
+            {
                 ActivityCompat.requestPermissions(this,new String[] {Manifest.permission.ACCESS_FINE_LOCATION },REQUEST_LOCATION_CODE);
             }
             return false;
