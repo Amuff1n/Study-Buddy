@@ -15,11 +15,6 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
@@ -32,14 +27,9 @@ public class SetUpAccount extends AppCompatActivity {
     private Button confirm;
     private EditText firstName;
     private EditText lastName;
+    //private EditText classes;
     private FirebaseFirestore mFirestore;
     private FirebaseAuth mId;
-    private DatabaseReference mDatabase;
-
-    TextView mtextViewUser;
-
-    DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
-    DatabaseReference mUserRef = mRootRef.child("users");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +37,6 @@ public class SetUpAccount extends AppCompatActivity {
         setContentView(R.layout.activity_set_up_account);
         cancel = findViewById(R.id.Cancel);
         mUser = FirebaseAuth.getInstance().getCurrentUser();
-        mtextViewUser = findViewById(R.id.textViewUser);
         confirm = findViewById(R.id.ConfirmAccount);
         firstName = findViewById(R.id.FirstName);
         lastName = findViewById(R.id.LastName);
@@ -69,16 +58,16 @@ public class SetUpAccount extends AppCompatActivity {
                 userMap.put("firstName", FirstName);
                 userMap.put("lastName", LastName);
                 userMap.put("uid", mId.getUid());
-                userMap.put("school", " ");
-                userMap.put("major", " ");
-                userMap.put("year", " ");
+                userMap.put("", "school");
+                userMap.put("", "major");
+                userMap.put("", "year");
                 mFirestore.collection("users").document(mUser.getUid()).update(userMap).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         Toast.makeText(getApplicationContext(), "Enter all info", Toast.LENGTH_SHORT).show();
                     }
                 });
-                startActivity(new Intent(getApplicationContext(), Home.class));
+                startActivity(new Intent(getApplicationContext(), AddClasses.class));
             }
         });
     }

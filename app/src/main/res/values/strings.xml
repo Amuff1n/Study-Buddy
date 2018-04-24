@@ -126,8 +126,8 @@
     <string name="group_desc">Description</string>
     <string name="group_create">Create</string>
     <string name="create_account">Create Account</string>
-    <string name="profile_set_up">PROFILE SET UP</string>
-    <string name="add_your_uf_classes">Add Your Classes</string>
+    <string name="profile_set_up">Profile Set Up</string>
+    <string name="add_your_uf_classes">Add your UF classes</string>
     <string name="done">Done!</string>
     <string name="find_groups">Find Groups</string>
     <string name="group_set_up">Group Set Up</string>

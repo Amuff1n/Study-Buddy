@@ -73,8 +73,6 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
         mCreateGroup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
                 String groupClass = mClass.getSelectedItem().toString();
                 String groupLocation = mLocation.getSelectedItem().toString();
                 String groupDesc = mDescription.getText().toString();
@@ -93,8 +91,6 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
                 intent.putExtra("completed", true); //isn't used by Home right now
                 setResult(Activity.RESULT_OK, intent);
                 finish();
-
-
             }
         });
     }
@@ -131,26 +127,18 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
             groupMap.put("creationTime", FieldValue.serverTimestamp());
             groupMap.put("user", mAuth.getUid());
             groupMap.put("index", 1); //number of users
-
             // Checks whether to add the custom coordinates or choose between the predefined locations
             if(!geoChecker) {
                 groupMap.put("location", groupLocation);
                 Log.d("Coordinates", "Not Taken");
              }
             mFirestore.collection("study_groups")
-
-            groupMap.put("maxUserIndex", 1); //max index of user key
-
-            Task<DocumentReference> documentReferenceTask = mFirestore.collection("study_groups")
-
                     .add(groupMap)
                     .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-
                         @Override
                         public void onSuccess(DocumentReference documentReference) {
                             Log.d(TAG, "DocumentSnapshot written with ID: " + documentReference.getId());
                         }
-
                     })
                     .addOnFailureListener(new OnFailureListener() {
                         @Override

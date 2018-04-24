@@ -99,13 +99,6 @@
                     android:layout_weight="1"
                     app:srcCompat="@drawable/ic_join_group" />
 
-                <ImageButton
-                    android:id="@+id/chat_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:srcCompat="?attr/actionModeShareDrawable" />
-
             </LinearLayout>
 
 

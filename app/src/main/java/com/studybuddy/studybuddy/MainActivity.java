@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
         mEmailTextView = findViewById(R.id.email_);
-        mUidTextView = findViewById(R.id.uid);
+        //mUidTextView = findViewById(R.id.uid);
         mEmailField = findViewById(R.id.email_field);
         mPasswordField = findViewById(R.id.password_field);
 
@@ -140,18 +140,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void signInEmail() {
-        String email = mEmailField.getText().toString();
-        String password = mPasswordField.getText().toString();
-
-        if (email.isEmpty() || password.isEmpty()) {
-            Toast.makeText(this, "Fill in email / password fields", Toast.LENGTH_SHORT).show();
-            return;
-
-        }
-
-
-
-        mAuth.signInWithEmailAndPassword(email, password)
+        mAuth.signInWithEmailAndPassword(mEmailField.getText().toString(), mPasswordField.getText().toString())
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {

@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,8 +33,6 @@ public class ProfileActivity extends AppCompatActivity {
     private FirebaseFirestore db;
     private String userProfileId;
     private FirebaseAuth mAuth;
-
-
 
     private DocumentReference userProfile;
     private TextView mNameTextView;
@@ -75,9 +72,6 @@ public class ProfileActivity extends AppCompatActivity {
         mMajorTextView = findViewById(R.id.profile_major);
         mYearTextView = findViewById(R.id.profile_year);
         mClassesTextView = findViewById(R.id.profile_classes);
-
-
-
 
         fetchProfile(mAuth.getCurrentUser());
 
@@ -119,6 +113,7 @@ public class ProfileActivity extends AppCompatActivity {
                             mSchoolTextView.setText(school);
 
                             String major = document.get("major").toString();
+                            major = major.substring(0, 1).toUpperCase() + major.substring(1).toLowerCase();
                             Major = major;
                             mMajorTextView.setText(major);
 
@@ -232,12 +227,6 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     private void saveProfile() {
-
-
-
-
-
-
         Map<String, Object> user = new HashMap<>();
 
         try {
