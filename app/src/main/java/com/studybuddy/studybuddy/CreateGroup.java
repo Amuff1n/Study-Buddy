@@ -65,7 +65,7 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
         mLocation = findViewById(R.id.group_location_field);
         mDescription = findViewById(R.id.group_desc_field);
         mCreateGroup = findViewById(R.id.create_group_button);
-        mTime = findViewById(R.id.scheduled_time);
+//        mTime = findViewById(R.id.scheduled_time);
 
         //Have to make an adapter to fill in drop down menu items with string array
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.locations_array, android.R.layout.simple_spinner_item);
