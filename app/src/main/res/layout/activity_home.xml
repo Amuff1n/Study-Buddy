@@ -6,13 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawerLayout"
-    android:background="@drawable/home_gradiant"
+    android:background="@drawable/temp_bg"
     tools:context="com.studybuddy.studybuddy.Home">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/blueback">
+        android:background="@drawable/temp_bg">
 
         <include
             layout="@layout/activity_view_groups"
@@ -34,7 +34,7 @@
             android:layout_marginEnd="41dp"
             android:layout_marginRight="41dp"
             android:src="@drawable/ic_add_black_24dp"
-            app:backgroundTint="@color/colorPrimary"
+            app:backgroundTint="@color/colorAccent"
             tools:layout_editor_absoluteX="384dp"
             tools:layout_editor_absoluteY="455dp" />
 

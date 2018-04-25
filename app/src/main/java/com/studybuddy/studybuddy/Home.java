@@ -129,7 +129,10 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             startActivity(new Intent(getApplicationContext(), ClassRecyclerView.class));
             return true;
         }
-
+        else if(id == R.id.nav_chat) {
+            startActivity(new Intent(getApplicationContext(), Chat.class ));
+            return true;
+        }
         else if(id == R.id.nav_chat) {
             startActivity(new Intent(getApplicationContext(), Chat.class ));
             return true;
