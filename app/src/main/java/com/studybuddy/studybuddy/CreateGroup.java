@@ -86,7 +86,7 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
                 String groupClass = mClass.getSelectedItem().toString();
                 String groupLocation = mLocation.getSelectedItem().toString();
                 String groupDesc = mDescription.getText().toString();
-                String scheduleTime = mTime.getText().toString();
+                String scheduleTime = "00:00";
                 boolean geoChecker = false;
                 if(groupLocation.equals("Custom Location"))
                     geoChecker = true;
