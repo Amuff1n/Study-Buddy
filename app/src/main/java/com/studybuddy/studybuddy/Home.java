@@ -81,6 +81,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         hackContext = this;
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
+
         recyclerView = findViewById(R.id.recyclerview);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
@@ -129,9 +130,23 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             startActivity(new Intent(getApplicationContext(), ClassRecyclerView.class));
             return true;
         }
-
         else if(id == R.id.nav_chat) {
             startActivity(new Intent(getApplicationContext(), Chat.class ));
+            return true;
+        }
+        else if(id == R.id.nav_chat) {
+            startActivity(new Intent(getApplicationContext(), Chat.class ));
+            return true;
+        }
+        else if (id == R.id.nav_find_classes) {
+            //Open location activity
+            startActivity(new Intent(getApplicationContext(), MapsActivity.class));
+            return true;
+        }
+
+        else if (id == R.id.nav_find_classes) {
+            //Open location activity
+            startActivity(new Intent(getApplicationContext(), MapsActivity.class));
             return true;
         }
 

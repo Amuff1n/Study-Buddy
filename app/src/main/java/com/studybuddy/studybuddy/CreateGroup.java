@@ -1,9 +1,12 @@
 package com.studybuddy.studybuddy;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.location.Location;
 import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -27,6 +30,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.GeoPoint;
 import com.google.firebase.firestore.Query;
 
 import java.lang.reflect.Array;
@@ -83,7 +87,10 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
                 String groupLocation = mLocation.getSelectedItem().toString();
                 String groupDesc = mDescription.getText().toString();
                 String scheduleTime = mTime.getText().toString();
-                createGroup(groupClass, groupLocation, groupDesc,scheduleTime);
+                boolean geoChecker = false;
+                if(groupLocation.equals("Custom Location"))
+                    geoChecker = true;
+                createGroup(groupClass, groupLocation, groupDesc,scheduleTime,geoChecker);
 
                 //Send back code to Home before finishing
                 //Used for automatic refresh
@@ -106,7 +113,7 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
 
     }
 
-    public boolean createGroup(String groupClass, String groupLocation, String groupDesc, String scheduleTime) {
+    public boolean createGroup(String groupClass, String groupLocation, String groupDesc, String scheduleTime, Boolean geoChecker) {
         if(TextUtils.isEmpty(scheduleTime)){
             scheduleTime = "00:00";
         }
@@ -125,15 +132,35 @@ public class CreateGroup extends AppCompatActivity implements AdapterView.OnItem
         else {
             Map<String, Object> groupMap = new HashMap<>();
             groupMap.put("class", groupClass);
-            groupMap.put("location", groupLocation);
             groupMap.put("description", groupDesc);
             groupMap.put("creationTime", FieldValue.serverTimestamp());
             //groupMap.put("ScheduledTime", scheduleTime);
             groupMap.put("user", mAuth.getUid());
             groupMap.put("index", 1); //number of users
+
+            if(geoChecker) {
+                ActivityCompat.requestPermissions(CreateGroup.this,new String[]{
+                                Manifest.permission.ACCESS_FINE_LOCATION,
+                                Manifest.permission.ACCESS_COARSE_LOCATION,},
+                        123);
+                GPStracker gps = new GPStracker(getApplicationContext());
+                Location myLoc = gps.getLocation();
+                if(myLoc != null){
+                    double latitude = myLoc.getLatitude();
+                    double longitute = myLoc.getLongitude();
+                    Log.d("Coordinates",String.valueOf(latitude + " , " +longitute));
+                    GeoPoint coordinateData = new GeoPoint(latitude,longitute);
+                    groupMap.put("latlng",coordinateData);
+                }
+            }
+            groupMap.put("location", groupLocation);
+
+            mFirestore.collection("study_groups");
+
             groupMap.put("maxUserIndex", 1); //max index of user key
 
             Task<DocumentReference> documentReferenceTask = mFirestore.collection("study_groups")
+
                     .add(groupMap)
                     .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
 

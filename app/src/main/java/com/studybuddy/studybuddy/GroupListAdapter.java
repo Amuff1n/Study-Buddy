@@ -64,13 +64,13 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
             holder.joinGroupButton.setVisibility(View.GONE);
             holder.leaveGroupButton.setVisibility(View.VISIBLE);
             holder.chatButton.setVisibility(View.VISIBLE);
-            holder.constraintLayout.setBackgroundColor(Color.rgb(104, 237, 106));
+            holder.constraintLayout.setBackgroundColor(Color.rgb(30,237,71));
         }
         else {
             holder.leaveGroupButton.setVisibility(View.GONE);
             holder.joinGroupButton.setVisibility(View.VISIBLE);
             holder.chatButton.setVisibility(View.GONE);
-            holder.constraintLayout.setBackgroundColor(Color.WHITE);
+            holder.constraintLayout.setBackgroundColor(Color.WHITE); //rgb(205,234,255)
         }
     }
 

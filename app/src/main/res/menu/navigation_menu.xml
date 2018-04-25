@@ -8,13 +8,30 @@
         android:icon="@mipmap/ic_person_black_24dp"
         android:onClick="onNavigationItemSelected"
         android:title="My Profile" />
-    <item android:title="Find A Group" />
-    <item android:title="Create A Group" />
+
+    <item
+        android:id="@+id/nav_create_group"
+        android:icon="@drawable/create_group"
+        android:onClick="onNavigationItemSelected"
+        android:title="Create A Group" />
+
     <item
         android:id="@+id/nav_add_classe"
-        android:icon="@mipmap/ic_settings_black_24dp"
+        android:icon="@drawable/add_class"
         android:onClick="onNavigationItemSelected"
         android:title="Add Classes" />
+
+    <item
+        android:id="@+id/nav_find_classes"
+        android:icon="@drawable/map"
+        android:onClick="onNavigationItemSelected"
+        android:title="Find A Group" />
+
+    <item android:id="@+id/nav_chat"
+        android:icon="@drawable/ic_message"
+        android:onClick="onNavigationItemSelected"
+        android:title="Chat" />
+
     <item
         android:id="@+id/nav_settings"
         android:icon="@mipmap/ic_settings_black_24dp"
@@ -26,8 +43,5 @@
         android:onClick="onNavigationItemSelected"
         android:title="Log Out" />
 
-    <item android:id="@+id/nav_chat"
-        android:icon="@mipmap/ic_settings_black_24dp"
-        android:onClick="onNavigationItemSelected"
-        android:title="Chat" />
+
 </menu>
