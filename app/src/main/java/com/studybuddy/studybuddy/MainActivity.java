@@ -195,7 +195,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     // Do stuff when we click button
-    //
     @Override
     public void onClick(View v) {
         int i = v.getId();

@@ -1,5 +1,6 @@
 package com.studybuddy.studybuddy;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -48,6 +49,8 @@ public class ClassRecyclerView extends AppCompatActivity {
         mFirestore = FirebaseFirestore.getInstance();
         mUser = FirebaseAuth.getInstance().getCurrentUser();
 
+        checkUserLogged();
+
         addClassButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,6 +72,18 @@ public class ClassRecyclerView extends AppCompatActivity {
                 }
             }
         });
+        populateList();
+    }
+
+    public void checkUserLogged(){
+        if(mUser == null){
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            finish();
+        }
+
+    }
+
+    private void populateList(){
         mFirestore.collection("users").document(mUser.getUid()).addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(DocumentSnapshot documentSnapshot, FirebaseFirestoreException e) {
