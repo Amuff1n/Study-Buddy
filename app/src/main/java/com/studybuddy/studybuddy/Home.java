@@ -144,7 +144,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             return true;
         }
 
-        else if (id == R.id.nav_find_classe) {
+        else if (id == R.id.nav_find_classes) {
             //Open location activity
             startActivity(new Intent(getApplicationContext(), MapsActivity.class));
             return true;
