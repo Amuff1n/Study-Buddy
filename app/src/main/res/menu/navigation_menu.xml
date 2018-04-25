@@ -8,7 +8,15 @@
         android:icon="@mipmap/ic_person_black_24dp"
         android:onClick="onNavigationItemSelected"
         android:title="My Profile" />
-    <item android:title="Find A Group" />
+
+    <item
+
+        android:id="@+id/nav_find_classe"
+        android:icon="@mipmap/ic_settings_black_24dp"
+        android:onClick="onNavigationItemSelected"
+        android:title="Find A Group"
+        />
+    
     <item android:title="Create A Group" />
     <item
         android:id="@+id/nav_add_classe"
