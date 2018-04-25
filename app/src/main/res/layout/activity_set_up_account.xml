@@ -5,7 +5,7 @@
     android:id="@+id/activity_set_up_account_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/blueback"
+    android:background="@drawable/temp_bg"
     tools:context="com.studybuddy.studybuddy.SetUpAccount">
 
     <TextView
@@ -87,10 +87,10 @@
         android:layout_width="368dp"
         android:layout_height="49dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/bluebar"
         android:ems="10"
         android:hint="Enter Your Last Name"
         android:inputType="textPersonName"
+        android:background="@drawable/bluebar"
         android:paddingLeft="15dp"
         android:textColor="@color/cardview_light_background"
         android:textColorHint="@color/cardview_light_background"
@@ -117,6 +117,10 @@
         android:layout_width="355dp"
         android:layout_height="45dp"
         android:text="Enter Username"
+        android:background="@drawable/bluebar"
+        android:paddingLeft="15dp"
+        android:textColor="@color/cardview_light_background"
+        android:textColorHint="@color/cardview_light_background"
         tools:layout_editor_absoluteX="15dp"
         tools:layout_editor_absoluteY="407dp" />
 

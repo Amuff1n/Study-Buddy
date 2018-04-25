@@ -64,7 +64,7 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
             holder.joinGroupButton.setVisibility(View.GONE);
             holder.leaveGroupButton.setVisibility(View.VISIBLE);
             holder.chatButton.setVisibility(View.VISIBLE);
-            holder.constraintLayout.setBackgroundColor(Color.rgb(30,237,71));
+            holder.constraintLayout.setBackgroundColor(Color.rgb(190,255,190));
         }
         else {
             holder.leaveGroupButton.setVisibility(View.GONE);

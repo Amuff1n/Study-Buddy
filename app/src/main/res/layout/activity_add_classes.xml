@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/blueback"
+    android:background="@drawable/temp_bg"
     tools:context="com.studybuddy.studybuddy.AddClasses">
 
     <TextView
@@ -16,7 +16,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/add_your_uf_classes"
-        android:textColor="#ffffff"
+        android:textColor="@color/colorPrimaryAlt1"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,13 +83,13 @@
         android:id="@+id/CancelAdd"
         android:layout_width="68dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="32dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:background="@android:color/transparent"
+        android:background="@color/cancel"
         android:text="Cancel"
         android:textAlignment="center"
-        android:textColor="@color/fui_linkColor"
+        android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
