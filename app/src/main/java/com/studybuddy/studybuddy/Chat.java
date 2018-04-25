@@ -2,10 +2,11 @@ package com.studybuddy.studybuddy;
 
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
@@ -53,6 +54,10 @@ public class Chat extends AppCompatActivity {
         chatRef = studyGroup.collection("chat");
         setGroupName(studyGroup);
 
+        //noinspection ConstantConditions
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         uid = FirebaseAuth.getInstance().getUid();
         setDisplayName();
         getViews();
@@ -64,13 +69,22 @@ public class Chat extends AppCompatActivity {
         return intent.getStringExtra("groupId");
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            chatListener.remove();
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     private void setGroupName(DocumentReference groupRef) {
         Task<DocumentSnapshot> groupTask = groupRef.get();
-        final TextView groupName = findViewById(R.id.group_name);
         groupTask.addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
-                groupName.setText((CharSequence) documentSnapshot.get("class"));
+                //noinspection ConstantConditions
+                getSupportActionBar().setTitle((CharSequence) documentSnapshot.get("class"));
             }
         });
     }
@@ -98,7 +112,7 @@ public class Chat extends AppCompatActivity {
 
                 if (!messageText.equals("")) {
                     Map<String, String> messageMap = new HashMap<>();
-                    messageMap.put("message", messageText);
+                    messageMap.put("message", messageText.trim());
                     messageMap.put("user", uid);
                     messageMap.put("displayName", displayName);
                     chatRef.add(messageMap);
@@ -138,36 +152,42 @@ public class Chat extends AppCompatActivity {
                 String messageDisplayName = chatMessage.get("displayName").toString();
 
                 if (messageUid.equals(uid)) {
-                    addMessageBox("You:-\n" + messageString, 1);
+                    addMessageBox( "You:", messageString, 1);
                 } else {
-                    addMessageBox(messageDisplayName + ":-\n" + messageString, 2);
+                    addMessageBox(messageDisplayName + ":", messageString, 2);
                 }
             }
         });
     }
 
-    private void addMessageBox(String message, int type) {
-        TextView textView = new TextView(Chat.this);
-        textView.setText(message);
+    private void addMessageBox(String user, String message, int type) {
+        View chatView;
+        if (type == 1) {
+            chatView = View.inflate(this, R.layout.message_sent, null);
+        } else {
+            chatView = View.inflate(this, R.layout.message_received, null);
+        }
+        TextView nameView = chatView.findViewById(R.id.message_user);
+        TextView messageView = chatView.findViewById(R.id.message_text);
+        nameView.setText(user);
+        messageView.setText(message);
 
         LinearLayout.LayoutParams lp2 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         lp2.weight = 1.0f;
 
         if (type == 1) {
             lp2.gravity = Gravity.START;
-            textView.setBackgroundResource(R.drawable.common_google_signin_btn_icon_dark_focused);
         } else {
             lp2.gravity = Gravity.END;
-            textView.setBackgroundResource(R.drawable.common_google_signin_btn_icon_dark);
         }
-        textView.setLayoutParams(lp2);
-        layout.addView(textView);
+        chatView.setLayoutParams(lp2);
+        layout.addView(chatView);
         scrollView.fullScroll(View.FOCUS_DOWN);
     }
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
         chatListener.remove();
+        super.onBackPressed();
     }
 }
