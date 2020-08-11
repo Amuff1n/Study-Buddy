@@ -36,7 +36,7 @@ public class SetUpAccount extends AppCompatActivity {
     private FirebaseAuth mId;
     private DatabaseReference mDatabase;
 
-    TextView mtextViewUser;
+    //TextView mtextViewUser;
 
     DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
     DatabaseReference mUserRef = mRootRef.child("users");
@@ -47,7 +47,7 @@ public class SetUpAccount extends AppCompatActivity {
         setContentView(R.layout.activity_set_up_account);
         cancel = findViewById(R.id.Cancel);
         mUser = FirebaseAuth.getInstance().getCurrentUser();
-        mtextViewUser = findViewById(R.id.textViewUser);
+        //mtextViewUser = findViewById(R.id.textViewUser);
         confirm = findViewById(R.id.ConfirmAccount);
         firstName = findViewById(R.id.FirstName);
         lastName = findViewById(R.id.LastName);
